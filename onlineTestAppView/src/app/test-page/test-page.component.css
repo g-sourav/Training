@@ -1,0 +1,171 @@
+/* Container for flexboxes */
+    
+.attempted {
+    height:40px;
+    width:40px;
+    font-size: 22px;
+    background-color: rgb(12, 87, 12);
+    display: inline-block;
+    letter-spacing: 2px;
+    border-top-right-radius: 40%;
+    color:white;
+}  
+.notattempted {
+    height:40px;
+    width:40px;
+    font-size: 22px;
+    background-color: rgb(189, 230, 230);
+    color: rgb(61, 3, 63);
+    display: inline-block;
+    letter-spacing: 2px;
+    border-top-right-radius: 40%;
+}    
+.notattempted:hover{
+    background-color: rgb(47, 10, 68);
+    color: rgb(235, 234, 243);
+
+}
+
+.attempted:hover{
+    background-color: rgb(16, 148, 55);
+
+}
+
+.gonext{
+    height:40px;
+    width:120px;
+    font-size: 13px;
+    background-color: rgb(12, 87, 12);
+    border-top-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+    color:white;
+}
+    
+    /* Style the content */
+.quesT{
+    display:inline-block;
+}
+
+    * {
+        box-sizing: border-box;
+    }
+    .body {
+        font-family: Arial;
+        background: #8f96d1;
+    }
+    
+    .top{
+        width:100%;
+        padding-bottom: 20px;
+    
+    }
+    /* Create two equal columns that floats next to each other */
+    .column1 {
+        float: left;
+        width: 70%;
+        margin-bottom: 5px;
+        padding-left: 15px;
+        height:30px;
+        margin-right: 14px;
+        background: #0b396e;
+        min-height:125px;
+        color:white;
+        font-family: 'Amaranth';
+        border: 3px solid  rgb(248, 245, 245) ;
+        border-color: rgb(18, 128, 136);
+    }
+    .column2 {
+        float: left;
+        width: 28%;
+        color:white;
+        margin-bottom: 5px;
+        height:30px;
+        background: #0d6985;
+        padding-left: 15px;
+        height:125px;
+        font-size: 22px;  
+        border: 3px solid  rgb(12, 59, 73) ;
+        border-bottom-right-radius: 40%  
+    }
+    .column3 {
+        float: left;
+        width: 70%;
+        height: 500px; /* Should be removed. Only for demonstration */
+        margin-bottom: 10px;
+        background-color: rgb(251, 251, 253);
+        border: 3px solid  rgb(209, 137, 137) ;
+        margin-right: 15px;
+    
+    }
+    .column4 {
+        float: left;
+        width: 100%;
+        border-color: rgb(14, 83, 45);
+        border-style: solid;
+        text-align: left;
+        height:50px;
+        font-size: 20px;
+        overflow:auto;
+    }
+    .column5 {
+        float: left;
+        position: relative;
+        width: 66%;
+        text-align:left;
+        min-height: 460px; /* Should be removed. Only for demonstration */
+        margin-right:10px;
+        padding:10px;
+        padding-top: 20px;
+        font-size: 20px;
+        border-style: dotted;
+        border-color: rgb(168, 123, 194);
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+        border-top-color: transparent;
+
+
+    }
+    .column6 {
+        float: left;
+        position: relative;
+        width: 32%;
+        text-align:left;
+        margin-left:5px;
+        padding:10px;
+        height: 350px;
+        padding-top: 60px;
+        font-size: 15px;
+
+    }
+    .column7 {
+        float: left;
+        position: absolute;
+        top:350px;
+        bottom: 100px;
+        width: 32%;
+        text-align:left;
+        margin-left:5px;
+        padding:10px;
+        height: 80px;
+    }
+    .column8{
+        position:absolute;
+        padding:90px;
+    }
+    /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 800px) {
+        .leftcolumn, .rightcolumn {   
+            width: 100%;
+            padding: 0;
+        }
+    }
+    
+    /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+    @media screen and (max-width: 400px) {
+        .topnav a {
+            float: none;
+            width: 100%;
+        }
+    }
+    
+

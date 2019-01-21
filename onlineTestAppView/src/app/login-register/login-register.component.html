@@ -1,0 +1,294 @@
+
+<HEAD>  
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</HEAD>
+
+<div  *ngIf="show">
+
+<div class="backTotop">
+    <a href="#topnav"><img src="https://png.pngtree.com/svg/20170821/back_top_474441.png" alt="Smiley face" height="52" width="52"></a>
+
+</div>
+
+
+
+
+
+
+<!--navbar-->
+<div id= "topnav" class="topnav">
+  <a href="#center" >Home</a>
+  <a href="#about">About Us</a>
+  <a href="#testimonial">Success Story</a>
+  <a href="#contact">Contact Us</a>
+
+  <button  class="navbtn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;float:right">Log In/Sign Up</button> 
+</div>
+
+<div class="head" style="background: url(https://static1.squarespace.com/static/569d4b5afb36b14cb9816729/t/569d9a361a520349a517ca87/1453169210270/Silver-Blur-Background-Wallpaper.jpg?format=1000w)">
+
+  <img src="https://content3.jdmagicbox.com/comp/chennai/d2/044pxx44.xx44.110909134358.t1d2/catalogue/cognizant-technology-solutions-india-pvt-ltd-alwarpet-chennai-bpo-3xuy7pm.jpg"  alt="Smiley face" height="42" width="42" style="float:center"> &nbsp; &nbsp;
+  <span style="text-align: center; font-size: 23px;color:rgb(13, 41, 36)">COGNIZANT LEARNING </span>  
+  <span style="text-align: center; font-size: 13px;color:rgb(28, 38, 94)  ;font-family: Comic Sans MS;">the unfair ADVANTAGE</span>  
+
+  <span style="float: right ;color: rgb(8, 39, 32);font-size: 150%">Toll-Free: 1800-401-1212</span>&nbsp; &nbsp;
+  <span style="float: right"><img src="https://images.vexels.com/media/users/3/137415/isolated/preview/0e475bb9b17b3fa4f94f31fba1635b8f-telephone-call-icon-logo-by-vexels.png" height="25px" width="25px"></span>&nbsp; &nbsp;
+</div>
+
+<div id="id01" class="modal"> 
+  <div class="modal-content animate" style="max-width:500px;margin:auto">
+    <div class="login-wrap">
+      <div class="login-html">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+        <div class="login-form">
+          <form class="sign-in-htm" (ngSubmit)="onLogin();">
+            <div class="group">
+              <label for="user" class="label">Username</label>
+              <input  type="text" class="input" name = "name" id="store" [(ngModel)]="student.email">
+            </div>
+            <div class="group">
+              <label for="pass" class="label">Password</label>
+              <input  type="password" class="input" name = "password" data-type="password" [(ngModel)]="student.password">
+            </div>
+            <div class="group">
+              <input id="check" type="checkbox" class="check" checked>
+              <label for="check" ><span class="icon"></span> Keep me Signed in</label>
+            </div>
+            <div class="group">
+              <input type="submit"  class="button " value="Sign In" >
+            </div>
+            <div class="group">
+            <button type="button" class="button" onclick="document.getElementById('id01').style.display='none'">Cancel</button>
+          </div>
+          </form>
+
+
+          <form #logform="ngForm" class="sign-up-htm" (ngSubmit)="logform.valid && onRegister();">
+            <div class="group">
+              <label for="name" class="label">Name</label>
+              <input type="text" #name="ngModel" class="input" name = "name" placeholder="Enter your Name" [(ngModel)]="student.name" required>
+              <div *ngIf="logform.submitted && name.invalid" class="invalid-feedback">
+                  <div *ngIf="name.errors.required" style="color: yellow">User Name is required</div>
+              </div>
+            </div>
+            <div class="group">
+              <label for="password" class="label">Password</label>
+              <input  type="password" #password="ngModel" id="password-field" class="input form-control" name = "password" placeholder="Enter your Password"  [(ngModel)]="student.password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+              <div *ngIf="logform.submitted && password.invalid" class="invalid-feedback">
+                  <div *ngIf="password.errors.required" style="color: yellow">Password is required</div>
+              </div>
+            </div>
+          
+            <div class="group">
+              <label for="email" class="label">Email Id</label>
+              <input  type="email" #email="ngModel" class="input" name="email" placeholder="Enter your email"  [(ngModel)]="student.email" required>
+              <div *ngIf="logform.submitted && email.invalid" class="invalid-feedback">
+                  <div *ngIf="email.errors.required" style="color: yellow">Email is required</div>
+              </div>
+            </div>
+            <div class="group">
+              <label for="age" class="label">Age</label>
+              <input  type="number" class="input" #age="ngModel" name="age" placeholder="Enter Your age"  [(ngModel)]="student.age" required>
+              <div *ngIf="logform.submitted && age.invalid" class="invalid-feedback">
+                  <div *ngIf="age.errors.required" style="color: yellow">Age is required</div>
+              </div>
+            </div>
+            <div class="group">
+              <label for="phone" class="label">Phone No</label>
+              <input  type="number" #phone="ngModel" class="input" name = "phone" minlength="10" maxlength="10" placeholder="Enter your Phone no"  [(ngModel)]="student.phone" required>
+              <div *ngIf="logform.submitted && phone.invalid" class="invalid-feedback">
+                  <div *ngIf="phone.errors.required || phone.errors.minlength || phone.errors.maxlength" style="color: yellow">A valid 10 digit Phone No is required</div>
+              </div>
+              
+            </div>
+            <div class="group">
+              <label for="qualification" class="label">Qualification</label>
+              <input  type="text" #qualification="ngModel" class="input"name = "qualification"  placeholder="Enter Your Highest Qualification"  [(ngModel)]="student.qualification" required>
+              <div *ngIf="logform.submitted && qualification.invalid" class="invalid-feedback">
+                  <div *ngIf="qualification.errors.required" style="color: yellow">Qualification is required</div>
+              </div>
+            </div>
+            <div class="group">
+            <label for="Gender" class="label">Gender</label>
+            <div class="input">
+              
+              <input type="radio" #gender="ngModel" name="gender" value="male"  [(ngModel)]="student.gender" required> Male
+              <input type="radio" #gender="ngModel" name="gender" value="female"  [(ngModel)]="student.gender" required> Female
+              <input type="radio" #gender="ngModel" name="gender" value="other"  [(ngModel)]="student.gender" required> Other
+             
+            </div>
+            <div *ngIf="logform.submitted && gender.invalid" class="invalid-feedback">
+                <div *ngIf="gender.errors.required" style="color: yellow">Gender is required</div>
+            </div>
+          </div>
+
+            <div class="group">
+                <label for="city" class="label">City</label>
+                <input  type="text" #city="ngModel" class="input" name = "city"  placeholder="Enter Your city"  [(ngModel)]="student.city" required>
+                <div *ngIf="logform.submitted && city.invalid" class="invalid-feedback">
+                    <div *ngIf="city.errors.required" style="color: yellow">City is required</div>
+                </div>
+              </div>
+            <div class="group">
+              
+              <input type="submit" class="button" value="Sign Up">
+              <br>
+              <button type="button" class="button" onclick="document.getElementById('id01').style.display='none'">Cancel</button>
+            </div>
+          </form>    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="center" class="center" style=" margin:0px; padding:0px">
+
+ 
+    <slideshow #slideshow
+               [imageUrls]="imageUrls"
+               [height]="maxHeight"
+               [minHeight]="minHeight"
+               [arrowSize]="arrowSize"
+               [showArrows]="showArrows"
+               [disableSwiping]="disableSwiping"
+               [autoPlay]="autoPlay"
+               [stopAutoPlayOnSlide]="stopAutoPlayOnSlide"
+               [debug]="debug"
+               [backgroundSize]="backgroundSize"
+               [backgroundPosition]="backgroundPosition"
+               [backgroundRepeat]="backgroundRepeat"
+               [showDots]="showDots"
+               [dotColor]="dotColor"
+               [showCaptions]="showCaptions"
+               [captionColor]="captionColor"
+               [captionBackground]="captionBackground"
+               [lazyLoad]="lazyLoad"
+               [hideOnNoSlides]="hideOnNoSlides">
+    </slideshow>
+  
+  
+  </div>
+
+
+
+
+
+
+<div id="about" class="container-fluid bg-grey" style=" font-family: Georgia, serif;margin-top:20px; font-size: 20px;padding:10px; background-image: url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/itCjTBE/blue-moving-flowing-abstract-waves-on-white-background-blurred-smooth-seamless-loop-design-video-animation-1920x1080_spqkl7pg__F0000.png);background-size: 100% 100%">
+  <h2 style="text-align:center"> About Us</h2>
+    <h2 style="text-align:center">Prof. Nagesh Raghunath Rane – The Man Behind SASS</h2>
+    <p>In the field of management education,  SASS boasts of being one of the oldest institutions in India, 
+providing a platform for students to further their careers. At a time when management education in India had neither popularity nor significance,
+unlike in developed countries, Professor N.R. Rane realized the importance of such an education.
+With the limited technological resources available at the time, 
+Prof Rane started correspondence training courses for various management entrance examinations to Indian business schools, 
+and was the ambassador for the MBA degree and its opportunities in India. 
+It was because of  SASS’s efforts that awareness about the MBA came to the masses. 
+Instead of the MBA being an obscure, little-heard of field of study in India, 
+ SASS turned it into a dream education for the majority.</p>
+<p>
+Our motto is to be with our students, to mentor, motivate, guide and accompany them in their educational journey, 
+till they cross the milestone of their coveted entrance examination. We nurture aspirations and facilitate achievement, 
+and we specialize in providing correct and relevant information related to business school admissions. 
+Today, after more than 40 years in this industry, we have managed to touch the minds and lives of millions of 
+students through our network of more than 90 centers across 44 cities, with a family of over 1,000 working with the  SASS brand.
+It gives us enormous satisfaction to see millions of our students successfully making it to some of the most prestigious business 
+schools and universities across countries and taking leadership positions at some of the best organizations in the world. 
+It fulfills our purpose – to ensure, for the next generation, a successful and rewarding future.
+
+</p>
+</div>
+
+
+
+
+
+  <div id="testimonial" class="testimonial">
+ <h2 style="text-align: center">What They Say!!</h2>
+                <div class="testtext">
+                    <blockquote><span style="text-align: left ;font-size:30px">"</span>
+                      <span>I believe in Hard working. My short term goal was to Crack Competitive Examination like SSC, 
+                        IAS and my long term goal is to serve our country.
+                        </span>
+                      <span style="text-align: left ;font-size:30px">"</span>
+                      <p style="text-align: right">Saswata, CAT 2018 -100%iler</p></blockquote>
+</div>
+<div class="testtext">
+
+                      <blockquote><span style="text-align: left ;font-size:30px">"</span>
+                        <span>After Graduation I started studying hard and took the
+                         Bank examination in 2018. This platform made me so much comfortable that I never faced 
+                         any problem being a first-timer.
+                          </span>
+                        <span style="text-align: left ;font-size:30px">"</span>
+                        <p style="text-align: right">Sourav, SBI-Clerk</p></blockquote>
+
+</div>
+<div class="testtext">
+
+                        <blockquote><span style="text-align: left ;font-size:30px">"</span>
+                          <span>Online Test App which not only allows us to take mock in 
+                            different topics but also give a proper guidance to achieve goals in life.
+
+                            </span>
+                          <span style="text-align: left ;font-size:30px">"</span>
+                          <p style="text-align: right">Sankha,Gate/EE topper</p></blockquote>
+</div>
+<div class="testtext">
+
+
+                          <blockquote><span style="text-align: left ;font-size:30px">"</span>
+                            <span>I always wanted to be a software developer since I fell love with coding during my graduation. 
+                                Online Test App provided me the chance to fulfil my dream.
+                              </span>
+                            <span style="text-align: left ;font-size:30px">"</span>
+                            <p style="text-align: right">Ankur, Software Developer/Google</p></blockquote>
+</div>
+
+                      </div>
+  
+
+
+  <div id="contact" class="container-fluid bg-grey" style="  font-family: Georgia, serif;margin-top:2px;background-image: url(https://www.one-italia.com/wp-content/uploads/2017/02/contact-blur.jpg);background-size:135% 100% ">
+
+    <h2 style="text-align:center;color: rgb(21, 49, 56)">CONTACT</h2><br><br>
+
+    <span style="float:left; font-size: 25px;">
+        <p style="color: rgb(26, 49, 44)">Contact us and we'll get back to you within 24 hours.</p>
+        <p><span class="glyphicon glyphicon-map-marker"></span> ASV Suntech, Thoraipakkam, Chennai, India</p>
+        <p><span class="glyphicon glyphicon-phone"></span> +91 9051645879 </p>
+        <p><span class="glyphicon glyphicon-envelope"></span> myemail@cognizant.com</p>
+    
+    </span>
+      <span style="float:right; width: 50%;">
+          
+            <input  class="form-control" id="name" name="name" placeholder="Name" type="text" required >
+            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+            <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+            <button style="float:center" class="btn btn-info btn-lg pull-right button" type="submit"> <span class="glyphicon glyphicon-chevron-right"></span> Send</button>
+      </span>
+  </div>
+
+
+
+<div class="footer" >
+  
+  
+  <span style="font-size: 50%">© 2018 COGNIZANT Learning Resources Pvt. Limited, All rights reserved. <a href="#">Privacy policy and Disclaimer.</a></span>
+  <span class="fa fa-facebook" style="color:rgb(57, 34, 143);padding-left:25%;"></span>&nbsp;
+  <span class="fa fa-twitter" style="color:rgb(156, 19, 138)"></span>&nbsp;
+  <span class="fa fa-linkedin" style="color:rgb(238, 18, 55)"></span>&nbsp;
+  <span class="fa fa-google" style="color:rgb(28, 158, 93)"></span>&nbsp;
+  <span class="fa fa-instagram" style="color:rgb(150, 12, 115)"></span>&nbsp;
+</div>
+</div>
+<router-outlet></router-outlet>

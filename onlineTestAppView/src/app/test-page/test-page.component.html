@@ -1,0 +1,61 @@
+<div *ngIf="show">
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+  </head>
+    
+    <!--navbar-->
+    <div class="top">
+          <div class="column1" >
+            <p></p>
+              <p >Welcome  {{name}} !</p>
+              <p >No of questions: {{highest}}</p>
+              <button class="attempted" type="button">1</button>
+              Visited Questions    
+              <button class="notattempted" type="button">2</button>
+              Remaining Questions  
+              
+    </div>
+
+    <div class="column2">
+            <p></p>
+            <p></p>
+            <div>{{message}}</div>
+              <p style="font: size 1vw;">Total time: 00:20:00</p>
+              
+    </div>
+        
+    <div class="column4" >
+      <p></p>
+      <span style="text-align: left">Questions</span>
+      <div class="column8">
+        <div class="quesT" name="buttons" *ngFor="let i of list " >       
+          <input *ngIf="answered[i.questionNo-1]==true" class="attempted" type="button" name="button_{{i.questionNo}}" (click)="onClick(i.questionNo)" [(ngModel)]=i.questionNo>
+          <input *ngIf="answered[i.questionNo-1]==false||answered[i.questionNo-1]==null" class="notattempted" type="button" name="button_{{i.questionNo}}" (click)="onClick(i.questionNo)" [(ngModel)]=i.questionNo>  
+        </div>         
+      </div>
+    </div>
+
+        <div name="question">
+            <form (ngSubmit)="onAnswer(questionoption.questionNo);">
+               <div class="column5">
+                  <p>{{questionoption.questionNo}}. {{questionoption.question}}</p>
+               </div>
+                <div class="column6">
+                    <input name="Option" type="radio" value="1" [(ngModel)]="selectedOption">{{questionoption.option1}}<br/>
+                    <input name="Option" type="radio" value="2" [(ngModel)]="selectedOption">{{questionoption.option2}}<br/>
+                    <input name="Option" type="radio" value="3" [(ngModel)]="selectedOption">{{questionoption.option3}}<br/>
+                    <input name="Option" type="radio" value="4" [(ngModel)]="selectedOption">{{questionoption.option4}}<br/>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <div class="column7">
+                    <input *ngIf="questionoption.questionNo==highest" type="submit" value="Submit" class="gonext">
+                    <input *ngIf="questionoption.questionNo!=highest" type="submit" value="Save and Next" class="gonext">
+                  </div>
+                </div>
+            </form>
+       </div>
+
+
+    
+  </div>
