@@ -1,0 +1,22 @@
+
+body{
+  background-color: LightYellow   ;    position: absolute;
+  top: 0; 
+  left: 0; min-width: 100%; min-height: 100%;  
+}
+
+h2{
+  border-bottom: 2px solid currentColor;
+  display: inline-block;
+  line-height: 1.50;
+}
+
+
+ul {
+    list-style: none;
+  }
+  
+  ul li:before {
+    content: '✓';
+    padding-right: 2%;
+  }

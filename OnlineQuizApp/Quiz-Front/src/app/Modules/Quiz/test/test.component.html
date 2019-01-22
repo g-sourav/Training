@@ -1,0 +1,227 @@
+<div class="container">
+<span *ngIf="isavailable; then condition1 else condition2"></span>
+<ng-template #condition1>
+  <div class="jumbotron">
+    <div class="container">
+      <div class="container-fluid">
+        <div class="col-md-4"></div>
+        <div class="clearfix"></div>
+        <div class="row">
+          <div class="clearfix"></div>
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <div class="active-purple-3 active-purple-4 mb-4">
+              <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+            </div>
+          </div>
+          <div class="col-md-4"></div>
+        </div>
+        <br><br>
+
+        <div class="center" layout="row" layout-align="center center" style="color:black;font-weight: bold" #message1></div>
+        <div class="row">
+          <div class="col-md-12" style="height : 20px;"></div>
+        </div>
+        <div class="row" style="overflow:auto; height:300px">
+          <div class="col-md-2"></div>
+          <div class="col-md-8">
+            <table class="table table-bordered">
+
+              <thead>
+                <tr>
+                  <th> Index</th>
+
+                  <th> Question</th>
+                  <th> Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of questions1  | paginate: { itemsPerPage: 5, currentPage: p };let i=index;">
+                  <td>{{questions1.indexOf(item)+1}}</td>
+                  <td>{{item.questionInfo}}
+                  </td>
+                  <td><label><input type="checkbox" [value]="item" (change)=onCheck(item,$event) [(ngModel)]="isCheckedQuestion[item.questionId]"></label></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="clearfix"></div>
+            <div class="clearfix"></div>
+            <div class="col-xs-6">
+              <div class="clearfix"></div>
+              <div class="h-100 row align-items-center" style="color:black;font-weight: bold" #message></div>
+            </div>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+          </div>
+          <div class="col-md-3">
+            <button type="button" class="btn btn-success" (click)="onSubmit()">Submit</button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <button (click)="addnewquestion()" class="btn btn-info btn-lg">
+            <span class="glyphicon glyphicon-plus"></span> Add new question
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<ng-template #condition2>
+
+    <div class="container container-fluid">
+      <div class="row">
+        <div>
+
+          <h1>Add Questions</h1>
+
+          <form [formGroup]="form" ngNativeValidate (ngSubmit)="save(form)">
+            <div formArrayName="arr" *ngFor="let a of form.get('arr').controls; let i=index">
+                <div class="form-group">
+                  </div>
+                  <div class="form-group">
+                    </div>
+
+              <div class="card bg-light" style="width: 50rem;">
+                <div class="card-header">
+                  <span><b>Question:{{i + 1}}</b></span>
+
+                  <i class="fa fa-times pull-right" *ngIf="form.get('arr').controls.length>1" (click)="remove(i)" style="cursor:pointer;"></i>
+                </div>
+
+                <div class="card-body" [formGroupName]="i">
+                  <div class="form-group col-xs-9">
+                    <label><b> Question:</b></label>
+                    <textarea formControlName="id" class="form-control" type="text" required></textarea>
+
+
+                    <label for="exampleFormControlFile1"></label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="form-group">
+                    <i class="fa fa-exclamation">&nbsp;<b style="color:red">Two options are mandatory</b></i>
+                  </div>
+                  <div formArrayName="arr2" *ngFor="let b of a.get('arr2').controls; let j=index">
+                    <div [formGroupName]="j">
+                      <div class="form-group col-xs-9">
+                        <label><b>Option:{{j+1}}</b></label>
+
+                        <span class="fa fa-times pull-right" *ngIf="a.get('arr2').controls.length>2" (click)="removeOption(j,a)"
+                          style="cursor:pointer;"></span>
+
+                        &nbsp;
+                        <div class="container">
+                          <div class="row">
+                            <div class="input-group">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                  <input type="checkbox" (change)="toggleEditable($event,j,a)" formControlName="ck" />
+                                </span>
+                              </div>
+                              <input formControlName="op" class="form-control" type="text" required />
+                            </div>
+                          </div>
+                        </div>
+                        <br />
+                        <div class="clearfix"></div>
+                        <label for="exampleFormControlFile1"></label>
+                        <input type="file" id="exampleFormControlFile1">
+                      </div>
+
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+
+                  <div class="margin-20">
+
+                    <button (click)="addOption(a)" type="button" class="btn btn-link">Add Another Option +</button>
+                    <div class="form-group pull-right">
+                      <i class="fa fa-check-circle"> &nbsp;<b style="color:green">Check the correct answer(s)</b></i>
+
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    </div>
+                  <div class="margin-20">
+
+                    <div class="form-group pull-right">
+                      <i class="fa fa-ban"> &nbsp;<b style="color:green">maximun four options are allowed</b></i>
+
+                    </div>
+                    
+                  </div>
+                  <div class="form-group">
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="clearfix"></div>
+                 
+
+                  
+                  <div formArrayName="arr3" *ngFor="let c of a.get('arr3').controls; let k=index">
+                    <div [formGroupName]="k">
+                        <div class="form-group">
+                          </div>
+                      <div class="form-group col-xs-5">
+                        <label><b>Hint:{{k+1}}</b></label>
+                        
+                        
+
+                        <span class="fa fa-times pull-right" *ngIf="a.get('arr3').controls.length>1" (click)="removeHint(k,a)"
+                          style="cursor:pointer;"></span>
+                        <input type="text" class="form-control" formControlName="ht" required />
+                        <div class="form-group">
+                        </div>
+
+                      </div>
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="margin-20">
+
+                    <button (click)="addHint(a)" type="button" class="btn btn-link"> Add Another Hint +</button>
+                    <div class="form-group pull-right">
+                      <i class="fa fa-ban"> &nbsp;<b style="color:green">Maximun three hints are allowed</b></i>
+
+                    </div>
+                  </div>
+                  <div class="form-group">
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="clearfix"></div>
+                  <div class="form-group col-xs-9">
+                    <label><b>Fact:</b></label>
+                    <input formControlName="ft" class="form-control" type="text" required />
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+            <div class="form-group">
+            </div>
+            <div class="form-group">
+              </div>
+            <div class="margin-20">
+
+              <a (click)="adddiv()" class="text-success" style="cursor:pointer;"><b> Add More Questions+</b></a>
+            </div>
+            <div class="margin-20">
+              <button type="submit" class="btn btn-primary btn-lg pull-right" style="cursor:pointer;">
+                Submit
+              </button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+</ng-template>
+</div>

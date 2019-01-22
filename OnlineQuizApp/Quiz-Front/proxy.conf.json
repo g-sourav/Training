@@ -1,0 +1,7 @@
+{
+    "/QuizApp-1.0.0/*":{
+        "target":"http://10.230.169.216:8080",
+        "secure":false,
+        "changeOrigin":true
+    }
+}

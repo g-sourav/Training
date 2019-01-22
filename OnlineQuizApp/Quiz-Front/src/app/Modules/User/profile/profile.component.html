@@ -1,0 +1,88 @@
+<div class="bg-img" style="margin-top: -15px;">
+  <br>
+  <div class="contents">
+    <span *ngIf="isavailable; then condition1 else condition2"></span>
+    <ng-template #condition1>
+            <!-- <h2 align="center" class="heading"> <b>My Profile</b></h2> -->
+        <div class="heading">
+          <h2> <b>My Profile</b></h2>
+        </div>
+        <div class="clear-fix"></div>
+      <div class="container">
+        <img src="assets/User/pictures/user2.png" alt="Avatar" class="avatar">
+        <br>
+        <table class="table table-striped">
+            <!-- <tr>
+              <td>
+                <font face="Times new roman" size="4.5px"><b>UserId:</b> </font>
+              </td>
+              <td>
+                <font face="Comic" size="4.5px">{{user.userId}} </font>
+              </td>
+            </tr> -->
+            <tr>
+                <td>
+                  <font face="Comic" size="4.5px"><b>Email-Id:</b> </font>
+                </td>
+                <td>
+                  <font face="Comic" size="4.5px">{{user.userEmail}}</font>
+                </td>
+              </tr>
+            <tr>
+              <td>
+                <font face="Comic" size="4.5px"><b>UserName:</b> </font>
+              </td>
+              <td>
+                <font face="Comic" size="4.5px">{{user.userName}} </font>
+              </td>
+            </tr>
+           
+            <tr>
+              <td>
+                <font face="Comic" size="4.5px"><b>Gender: </b></font>
+              </td>
+              <td>
+                <font face="Comic" size="4.5px">{{user.userGender}}</font>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+              <button class="btn btn-info" (click)="gotoEdit()" 
+                style="margin-left: 20px;width:80px;font-size:18px; float:right; padding-right:5px;"> <i class="fa fa-edit"></i> Edit</button>
+              </td>
+            </tr>
+          </table>
+          
+          </div>
+        </ng-template> 
+        <ng-template #condition2> 
+            <div class="heading">
+                <h2> <b>Edit Profile</b></h2>
+            </div>  <hr/>   
+            
+            
+            
+
+        <div class="container">  
+            <form (ngSubmit)="update()">
+                <!-- <label for="address" class="label"> ID:</label>
+                <input class="form-control" type="text" name="title" [(ngModel)]="user.userId" [readonly]="isReadOnly">
+                <br /> -->
+                <label for="address" class="label">Email-Id: </label>
+                <input class="form-control" type="text" name="Email" [(ngModel)]="updatedUser.userEmail" readonly>
+                <br />
+                <label for="address" class="label"> Name: </label>
+                <input class="form-control" type="text" name="Uname" [(ngModel)]="updatedUser.userName">
+                <br />
+                <label for="address" class="label"> Gender: </label>
+                <input class="form-control" type="text" name="Gender" [(ngModel)]="updatedUser.userGender">
+                <br />
+                <!-- <input type = "submit" class="button1" value = "update"><br/> -->
+                <button class="btn btn-info" style="margin-left: 20px;width:80px;font-size:18px"> Update</button>
+              </form>
+      </div>
+      </ng-template>
+      
+      </div> 
+   </div>       

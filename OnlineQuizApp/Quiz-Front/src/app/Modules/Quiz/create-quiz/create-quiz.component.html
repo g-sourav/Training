@@ -1,0 +1,119 @@
+<div class="container-fluid">
+ 
+  <div *ngIf="show">
+  <br><span style="float: center; color: rgb(12, 70, 70);font-size: 30px; font-family:'Times New Roman', Times, serif">Quiz Details Form</span><br>
+  <span style="color:red; font-size: 20px"> *</span>  Marked fields are mandatory<br><br>
+  <form  #createquizform="ngForm"  (ngSubmit)="createquizform.valid">
+  <div class="row">
+    
+      <div class="col-md-2">
+         <label for="quiztitle">Title: <span style="color:red; font-size: 20px"> *</span></label>
+        <input type="text" #quizTitle="ngModel"  placeholder="Enter Quiz Title" class="form-control"   name="quizTitle" [(ngModel)]="CreateQuiz.quizTitle" required>
+
+        <div *ngIf="quizTitle?.touched">
+          <div *ngIf="quizTitle.errors?.required" style="color:red">
+            Title is required
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-2"></div>
+      <div class="col-md-2">
+        <label for="quizCategory"> Category: <span style="color:red; font-size: 20px"> *</span></label>
+        <input type="text" #quizCategory="ngModel" placeholder="Quiz Category" class="form-control"  name="quizCategory" [(ngModel)]="CreateQuiz.quizCategory" required>
+      
+        <div *ngIf="quizCategory?.touched">
+          <div *ngIf="quizCategory.errors?.required" style="color:red">
+            Category is required
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-2"></div>
+      <div class="col-md-2"> 
+       
+      
+      
+          <label for="levelselect">Level of Quiz: <span style="color:red; font-size: 20px"> *</span></label>
+          <select class="form-control" [(ngModel)]="CreateQuiz.quizDifficulty_level" name="quizDifficultyLevel">
+              <option value="Easy">Easy</option>
+              <option value="Moderate">Moderate</option>
+              <option value="Difficult">Hard</option>
+            </select><br>
+      
+      </div>
+
+         <div class="col-md-2"></div>
+
+    </div>
+
+    <br><br>
+  
+   
+    <div class="row">
+       
+       
+        <div class="col-md-2">
+            <label for="typePerQuestion">Per Question Time: <span style="color:red; font-size: 20px"> *</span></label>
+            <select class="form-control" name="perQuestionTimeType"  [(ngModel)]="perQuestionTimeType">
+                <option value="Fixed Time">Fixed </option> 
+                <option value="Variable Time">Variable </option>
+              </select><br>
+          </div>
+
+          <div class="col-md-2"></div>
+          <div class="col-md-2">  
+            <label for="perQuestionTime">Timer: <span style="color:red; font-size: 20px"> *</span></label>
+            <div *ngIf="perQuestionTimeType=='Fixed Time'">                
+            <input type="number" min="0" #QuestionTime="ngModel" placeholder="Enter Time in Second" class="form-control"  name="QuestionTime" [(ngModel)]="perQuestionTime" required>
+            <div *ngIf="QuestionTime?.touched">
+              <div *ngIf="QuestionTime.errors?.required" style="color:red">
+                Timer is required
+              </div>
+            </div>
+          </div>
+         
+            <div *ngIf="perQuestionTimeType=='Variable Time'">                
+              <input type="number" placeholder="" class="form-control"  readonly>
+                        
+            </div>      
+         
+          </div> 
+
+          <div class="col-md-2"></div>
+          <div class="col-md-2">  
+              <label for="type">Type: <span style="color:red; font-size: 20px"> *</span></label>
+              <select class="form-control"  [(ngModel)]="CreateQuiz.quizType"  name="quizType">
+                 <option value="Public"> Public</option> 
+                 <option value="Group" disabled> Group</option> 
+      
+               </select><br>
+           
+          </div>
+            </div>
+         
+          <br><br>
+
+          <div class="row">
+        
+              <div class="col-md-2">
+                  <div *ngIf="CreateQuiz.quizType=='Public'">                
+                      <label for="title">Session Time: <span style="color:red; font-size: 20px"> *</span></label>
+                        <input type="text" placeholder="Lifetime" class="form-control " readonly>
+                    </div>                 
+             </div>
+
+
+                <div class="col-md-2"></div>
+                <div class="col-md-3"><label for="title"> References: </label> <textarea class="form-control"  rows="3"  [(ngModel)]="CreateQuiz.quizReferences" name="quizReferences"></textarea></div>
+                <div class="col-md-1"></div>
+                <div class="col-md-1" style="color:blue"><br><br><br>  <button type="submit" (click)="saveQuiz()" class="btn btn-success" style="width: 240px;" [disabled]="createquizform.invalid"> Continue to add question <i class="fa fa-chevron-circle-right"></i></button>
+               
+                <div class="col-md-5"></div>
+             
+            </div>
+            </div>
+        </form>
+      </div>
+
+</div>

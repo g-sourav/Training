@@ -1,0 +1,61 @@
+<header class="main-header">
+
+  <!-- Logo -->
+  <a routerLink="../user" class="logo">
+    <!-- mini logo for sidebar mini 50x50 pixels -->
+    <span class="logo-mini"><b>C</b>Q</span>
+    <!-- logo for regular state and mobile devices -->
+    <span class="logo-lg"><b>Cogni</b>Quiz </span>
+  </a>
+
+  <!-- Header Navbar: style can be found in header.less -->
+  <nav class="navbar navbar-static-top" style="height:50px;">
+    <!-- Sidebar toggle button-->
+    <a class="sidebar-toggle" data-toggle="push-menu" role="button">
+      <span class="sr-only">Toggle navigation</span>
+    </a>
+    <!-- Navbar Right Menu -->
+    <div class="navbar-custom-menu">
+      <ul class="nav navbar-nav">
+        <!-- Messages: style can be found in dropdown.less-->
+        <!-- <li class="dropdown messages-menu">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <i class="fa fa-calendar"></i>
+            <span class="label label-success">3</span>
+          </a>
+          
+        </li> -->
+
+        <!-- User Account: style can be found in dropdown.less -->
+        <!-- <li class="dropdown user user-menu ">
+          <a class="dropdown-toggle" data-toggle="dropdown" >
+            <img src="/assets/User/pictures/user2.png" class="user-image" alt="User Image">
+            <span class="hidden-xs">{{user.userName}}</span>
+          </a>
+          <ul class="dropdown-menu " style="margin-top: 15px;">
+            <li class="user-header">
+              <img src="/assets/User/pictures/user2.png" class="img-circle"  style="float:left;" alt="User Image">
+
+              <p>
+                  {{user.userName}} - Profession
+                <small>Member since: Date</small>
+              </p>
+            </li>
+            <li class="user-footer" >
+              <div class="pull-left">
+                  <button routerLink="profile" type="button" class="btn btn-outline-primary"> <i class="fa fa-user" aria-hidden="true"></i> Profile</button>
+                </div>
+              <div class="pull-right">
+                  <button type="button" (click)="signout()" class="btn btn-outline-danger"><i class="fa fa-sign-out" aria-hidden="true"></i>Signout</button>
+              </div>
+            </li>
+          </ul>
+        </li> -->
+<li>
+  <button type="button" (click)="signout()" class="btn btn-outline-danger"><i class="fa fa-sign-out"></i>Signout</button>
+</li>
+      </ul>
+    </div>
+
+  </nav>
+</header>

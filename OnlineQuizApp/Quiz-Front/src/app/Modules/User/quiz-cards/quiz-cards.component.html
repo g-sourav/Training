@@ -1,0 +1,83 @@
+
+<div class="container mt-40">
+    <br>
+   
+    <div class=" input-group md-form form-sm form-1 pl-0">
+        <div class="input-group-prepend">
+          <span class="input-group-text blue lighten-3" id="basic-text1"><i class="fas fa-search text-blue"
+              aria-hidden="true"></i></span>
+        </div>
+        <input class="form-control my-0 py-1" type="text" [(ngModel)]="title" placeholder="Search Quiz..." aria-label="Search">
+      </div>
+
+      <hr>
+      
+  <div class="container-fluid filter-box" >    
+  <h5 class="text-secondary">Filters</h5>
+    <div class="container_fluid filter">
+
+        <label class="select-inline filter-el-l">Difficulty:</label><br>
+          <select class="browser-default custom-select filter-el" name="difficulty" type="select" role="button" [(ngModel)]="difficulty">
+            <option value="">all</option>
+            <option  value="easy">easy</option>
+            <option  value="medium">medium</option>
+            <option  value="hard">hard</option>
+          </select>
+          <label class="select-inline filter-el-l">Category:</label><br>
+          <select class="browser-default custom-select filter-el" name="Category" type="select" role="button" 
+          [(ngModel)]="Category">
+              <option value="">all</option>
+            <option *ngFor="let cat of category" [ngValue]>{{cat}}</option>
+          </select>
+    </div>
+  </div>
+    
+    <br>
+    <div class="row">
+      <div class=" col-md-3 col-sm-4 group" *ngFor="let card of cardlist | dropdown : Category : 'quizCategory'| filter : title : 'quizTitle'| dropdown : difficulty : 'quizDifficulty_level' |paginate: { itemsPerPage:4, currentPage: p }; let i = index" >
+         
+        <div class="box14">
+            <div class="ribbon"></div>
+          <img src="assets/card.jpg" class="resize" alt="">
+            <div class="box-content">
+              <h3 class="title">{{card.quizTitle}} 
+                <span>
+                    <i class="fas fa-globe-asia"></i>
+                </span>
+              </h3>
+              <ul class="post">
+                <li>{{card.quizCategory}}</li>
+                
+                  <li>{{card.quizType}}</li>
+                 
+                    <li>level - {{card.quizDifficulty_level}}</li>
+              </ul>
+                  <ul class="icon">
+                    <li>
+                      <a href="#">
+                          <i class="fas fa-sign-in-alt"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                          <i class="fas fa-share-alt"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container page ">
+            <nav aria-label="Page navigation example">
+              <pagination-controls class="pagination" (pageChange)="p = $event"></pagination-controls>
+            </nav>
+          </div>
+        </div>
+  
+
+        <script>
+          $(document).ready(function(){
+             $('.dropdown-toggle').dropdown()
+         });
+     </script>

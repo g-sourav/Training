@@ -1,0 +1,114 @@
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12" style="background-color: #809fff; height :40px ">
+      
+    </div>
+  </div>
+  
+  <!--for gap purpose after navigation bar-->
+    <div class="row">
+    <div class="col-md-12" style="height : 20px;"></div>
+    </div>  
+
+
+<div class="row">
+
+  <div class="col-md-3"></div>
+ 
+  <div class="col-md-8">
+    <div class="row">
+  <!--generate one card-->
+  <div class="col-md-5">
+    <table>
+    <tr>
+    <td>Quiz Title :</td>
+    <td>{{quiz.quizTitle}}</td>
+    </tr>
+    <tr>
+      <td>Type:</td>
+      <td style="align:right">{{quiz.quizType}}</td>
+    </tr>
+    <tr>
+      <td>No of Questions :</td>
+      <td style="align: right">{{allquestions.length}}</td>
+    </tr>
+    </table>
+    <div class="quizcode">
+      Quiz Code:{{quiz.quizCode}}
+    </div>
+  </div>
+  <div class="col-md-5">
+      <table>
+          <tr>
+          <td style="align : center">Catgory:</td>
+          <td style="align:right">{{quiz.quizCategory}}</td>
+          </tr>
+          <!-- <tr>
+            <td style="align : center">Session Time:</td>
+            <td style="align:right">20 minutes</td>
+          </tr> -->
+          <tr>
+            <td style="align : center"> Level </td>
+            <td style="align : right">{{quiz.quizDifficulty_level}}</td>
+          </tr>
+          </table>
+          <div class="quizcode">
+              Sharable Link :
+            </div>
+           
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</div>
+  <div class="col-md-1"></div>
+</div>
+<div class="row">
+    <div class="col-md-12" style="height : 50px;"></div>
+    </div>
+    
+    <div class="center" style="color:black;font-weight: bold" #message></div>
+    <div class="row">
+        <div class="col-md-12" style="height : 50px;"></div>
+        </div>
+
+<div class="row">
+  <div class="col-md-2"></div>
+ 
+  <div class="col-md-8">
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Index</th>
+            <th scope="col">Question</th>
+            <th scope="col">Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let i of allquestions |paginate : {itemsPerPage : 5, currentPage :p,id: '1' },let j=index " >
+
+            
+            <th>{{allquestions.indexOf(i)+1}}</th>
+            <td>{{i.questionInfo}}</td>
+            <td>{{time}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <pagination-controls (pageChange)="p = $event" id="1"
+       directionLinks="true"
+       autoHide="true">
+      </pagination-controls>
+      <!-- <pagination-controls (pageChange)="p = $event"></pagination-controls> -->
+
+
+
+    </div>
+    <div class="col-md-2"></div>
+</div>
+
+</div>
+
+<div class="col-md-3">
+  <button type="button" class="btn btn-success" (click)="gotoDash()">Home</button>
+  </div> 

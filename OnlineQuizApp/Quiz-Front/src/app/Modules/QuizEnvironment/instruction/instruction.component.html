@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+<div style="text-align: center;">
+    <h2>Quiz Instructions </h2>
+</div>
+
+
+<div class="container" style="padding-bottom:30px; padding-top:20px">
+    <div class="row" style="font-size:20px">
+        <div class="col col-4" style="text-align:left">  Number of questions: {{numberOfQues}}</div>
+        <div class="col col-4" style="text-align:center"> Difficulty Level: {{quiz.quizDifficulty_level}}</div>
+        <div class="col col-4" style="text-align:right">   Time: {{ques.questionTime}} Seconds </div>
+    </div>
+</div>
+
+
+<div class="container" style= "font-size: 20px; text-align:justify; padding-bottom: 15px">
+<ul>
+<li>Follow the prompts as given.</li>
+<li>To start your quiz attempt, click the 'Take Quiz' button.</li>
+<li>After selecting your answer click on 'Save & Next' button to move to the next question.</li>
+<li>You can select 'Clear Response' in order to modify your answer.</li>
+<li>There may be more than one correct answer(s) for one question.</li>
+<li>Do not cancel/refresh the page. Also you cannot navigate back to the previous page.</li>
+<li>Multiple hints are available for each question.</li>
+<li>Keep track of the timer.</li>
+<li>After you have attempted all the questions, click the 'Finish' button to submit your answers and see your score.</li>
+<li>That's all you need to know about the quiz. GOOD LUCK!</li>
+</ul>
+
+</div>
+
+
+<div class="custom-control custom-checkbox"  style="padding-left: 9%; font-size: 18px; text-align:left">
+        <input type="checkbox" id="defaultCheck" name="example2" value="true" [(ngModel)]="check">
+    <label>&nbsp;I have read the instructions and ready to start the quiz.</label>
+  </div>
+
+
+<div style="text-align: center;padding-top: 5%">
+   
+     
+    <button class="btn btn-primary" (click)="onConfirm()" id="submit" [disabled]="!check">
+        <span class="glyphicon glyphicon-play-circle"></span> Take Quiz
+    </button>
+
+      <button style="margin-left:16px;" class="btn btn-info" (click)="goBack()">Back</button>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

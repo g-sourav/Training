@@ -1,0 +1,35 @@
+<div class="jumbotron container">
+    <div class="heading">
+        <h3>Are you sure you want to Deactivate Account? </h3>
+    </div>
+    <hr />
+    <div class="state">
+        <p>Deactivating your account will disable your profile and most of the things you've shared on Cognizant Quiz.
+            Perhaps, no one will be able to add you to their groups and you will no longer be part of any existing groups.</p>
+        <hr />
+    </div>
+    <div class="body">
+        <div class="content">
+            <form (ngSubmit)="deactivate()" method="post">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <h4>Select your reason for deactivation</h4>
+                        <select class="form-control" id="inputState" [(ngModel)]="reason" name="box" required>
+                            <option selected>Select your reason for deactivation</option>
+                            <option value="1">Found a better site</option>
+                            <option value="2">Services no longer required</option>
+                            <option value="3">Taking a break</option>
+                            <option value="other">Others- Please Specify Below</option>
+                        </select>
+                    </div>
+                    <div class="form-group" *ngIf="reason === 'other'">
+                        <h4>Please tell us why you want to leave us?</h4>
+                        <textarea class="form-control" rows="6" id="reason" ngModel name="other-reason" required></textarea>
+                    </div>
+                </div><br />
+                <button type="reset" class="btn btn-danger" value="reset">Cancel</button> &nbsp;
+                <button type="button" class="btn btn-primary" data-toggle="modal" (click)="deactivate()">Confirm</button>
+                </form>
+        </div>
+    </div>
+</div>

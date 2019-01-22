@@ -1,0 +1,60 @@
+body{
+    background-color: rgb(196, 230, 235)   ;    position: absolute;
+    top: 0; 
+    left: 0; min-width: 100%; min-height: 100%;  
+}
+.title{padding: 5px; margin-top: 20px; font-size: 17px;
+    float:left ; border: 5px solid rgb(32, 115, 240); width: 15%; text-align: center;
+    color: white; background-color: rgb(67, 138, 243);
+}
+.category{padding: 5px; margin-top: 20px;font-size: 17px;
+    float:right ; border: 5px solid rgb(32, 115, 240); width: 15%; text-align: center;
+    color: white;background-color: rgb(67, 138, 243);
+}
+
+
+.question{ font-size: 30px;
+    width: 90%;
+    border: 5px solid white;
+    padding-top: 3%;
+    margin: 25px;
+ 
+}
+
+a:hover {
+    color: green;
+  }
+a{
+    font-size: 100%; float: right
+}
+.hint{
+    text-align: center ; font-size: 15px;margin-top: 15%; margin-left: 63%;
+    width: 200px; height: auto; border: 2px solid; background-color: rgb(228, 214, 214)   ;
+}
+
+@media screen and (max-width:600px) {
+    .title, .category , .btn {
+        
+      width:100%; 
+    }
+}
+@media screen and (max-width:900px){
+    .hint, .timer, .col-sm-5{
+       text-align:center; font-size: 30px;
+        width:auto; 
+        margin-left:27%;
+        clear:both;
+    }
+}
+.ss{
+    margin-top:-20px
+}
+
+ /* @media screen and (max-width:900px){
+    .timer{
+        font-size: 20px;
+        width:auto;
+        margin-left: 40px;
+        clear:both;
+    }
+}   */

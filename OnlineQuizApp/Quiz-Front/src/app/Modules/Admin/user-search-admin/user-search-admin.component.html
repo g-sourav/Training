@@ -1,0 +1,74 @@
+<br><br><br><br>
+<div class="container-fluid">
+  <div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">   
+  <div class="search">
+      <form class="search-form">
+          <input type="text" placeholder="Search Users..." [value]="search" aria-describedby="searchUserName" [formControl]="userName" (keyup)="somethingChanged()"/>
+          <input type="submit" value="Search" (click)="getUserList()">
+      </form>
+  </div>
+  
+  </div>
+  <div class="col-md-4"></div>
+  </div>
+  <div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">    
+  <div *ngIf="userName.value" class="searchList" [ngStyle]="{'display':visible?'block':'none'}">
+          <span *ngIf="userLoading">Loading</span>
+          <a class="dropdown-item" style="width:100%;" *ngFor="let u of users | async" (click)="setValue(u)">
+          {{u}}<br></a>
+          <span class="dropdown-item" *ngIf="(users|async).length==0">No resutls found</span>
+  </div>
+  </div>
+  <div class="col-md-4"></div>
+  </div>
+          
+         
+      </div>
+  
+    <br><br> <br><br>  <br><br>    
+   <div *ngIf="cardsShow">
+      
+              <div class="container mt-40">
+                     
+                      
+                    <div class="row">
+                            <div class=" col-md-3 col-sm-3 group" *ngFor="let a of userslist | paginate : {itemsPerPage:6, currentPage :p }">
+                                  
+                              <div class="box14">
+                                   
+                              <span *ngIf="a. userGender == name1; then condition1 else condition2"> </span>
+                              <ng-template #condition1>
+                            
+                                  <img src="assets/Admin/photos/male.jpg" class="resize" alt="">
+                              </ng-template>
+                             
+                              <ng-template #condition2>
+                                  
+                                      <img src="assets/Admin/photos/girl.jpeg" class="resize" alt="">
+                              </ng-template>
+                          
+                              
+                                    <div class="box-content">
+                                      <h4 class="title">{{a.userName}}</h4>
+                                      <span class="post"><span>{{a. userGender}}</span><br><span>{{a.userEmail}}</span></span>
+                                      <ul class="icon">
+                                          <li id="delete"><a (click)=deactivateUser(a.userEmail)><i class="fa fa-trash"></i></a></li>
+                                      </ul>
+                                    </div>
+                            
+                             </div>
+                          </div>
+                      </div>
+                      <pagination-controls  class="pagination"  (pageChange)="p =$event"></pagination-controls> 
+                    </div>
+                    
+                    
+     
+     
+  </div>
+  
+  

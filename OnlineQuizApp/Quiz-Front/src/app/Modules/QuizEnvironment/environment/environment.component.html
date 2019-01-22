@@ -1,0 +1,56 @@
+<div>
+  <div class="title">Title : {{quiz.quizTitle}}</div>
+ <div class="category" >Category : {{quiz.quizCategory}}</div>
+</div>
+<p></p>
+<div  class="text-center text-primary" style="padding-top:2%" >
+ <h3> Question  {{currentQuestionNumber+1}} of {{totalNumberOfQuestions}}</h3>
+</div>
+
+<div class="container-fluid" n>
+<div class="row">
+    <div class="col-sm-7" style="font-size:20px; padding-top: 3%;">
+               {{currentQuestionNumber+1}}  <span>.</span> {{currentQuestionPojo.questionInfo}}
+
+ <!-- 
+       <div class="options" *ngFor="let op of qu.option">
+        <input type="radio" name="option" [(ngModel)]="selectedOption"
+         [value]="op">{{op.optionInfo}} <br>
+
+        </div>
+        -->
+
+        <div *ngFor="let option of currentQuestionPojo.optionsList,let i=index">
+            <input name="option" type="checkbox" (click)=onCheck(i) value="option.optionId" [(ngModel)]="checkedOptions[i]">  {{option.optionInfo}}<br>
+        </div>
+        
+        </div>
+
+
+    <div class="col-sm-5" style="font-size:30px; ">
+      
+      <div  class="t"style="text-align:right">
+
+      <br> <h1 class="timer" *ngIf="seconds>4" style="color:rgb(13, 146, 24);padding-right:10%">{{message}}</h1>      
+        <h1 class="timer" *ngIf="seconds<=4" style="color:rgb(245, 78, 27);padding-right:10%">{{message}}</h1> 
+        <br><h4 class="ss">Seconds To go</h4>      
+      </div>
+
+
+  <button type="button" class="btn btn-link" style="float:right;" (click)="showHint()"><h2>{{hintText}}</h2></button>
+<div [ngStyle]="{'display':visible?'block':'none'}">
+     <div class="hint">{{currentQuestionPojo.hintsList[currentHintNumber].hintInfo}}</div>
+  </div>
+</div>
+
+</div>
+
+
+
+<div>
+    <button type="button" class="btn btn-danger btn-lg" style="font-size:30px;" (click)="clearResponse(currentQuestionNumber)">Clear Response</button>
+    <button *ngIf="(currentQuestionNumber+1)!=totalNumberOfQuestions" type="button" class="btn btn-success btn-lg"style="font-size:30px; " (click)="onNext()">Save & Next</button>
+    <button *ngIf="(currentQuestionNumber+1)==totalNumberOfQuestions" type="button" class="btn btn-success btn-lg"style="font-size:30px; " (click)="onSubmit()">Submit</button>
+
+  </div>
+</div>

@@ -1,0 +1,87 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<div class="container register">
+    <div class="row">
+        <div class="col-md-3 register-left ">
+            <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
+            <h1>Welcome</h1>
+            <h2>You are few steps away from exploring the Online Quiz App!</h2>
+
+
+        </div>
+        <div class="col-md-9 register-right">
+            <!-- <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                            <li class="nav-item lg">
+                                <a >Login</a>
+                            </li>
+                            
+                        </ul> -->
+            <div class="container">
+                <h3 class="register-heading ">Login As User</h3>
+                <div class="row register-form">
+                    <div class="col-md-12">
+                        <!-- <div class="row omb_row-sm-offset-3 omb_socialButtons">
+                                            <div class="col-xs-4 col-sm-3">
+                                              <a href="#" class="btn btn-lg btn-block omb_btn-facebook">
+                                                <i class="fa fa-facebook visible-xs"></i>
+                                                <span class="hidden-xs">Facebook</span>
+                                              </a>
+                                            </div>
+                                            <div class="col-xs-4 col-sm-3">
+                                              <a href="#" class="btn btn-lg btn-block omb_btn-twitter">
+                                                <i class="fa fa-twitter visible-xs"></i>
+                                                <span class="hidden-xs">Twitter</span>
+                                              </a>
+                                            </div>	
+                                            <div class="col-xs-4 col-sm-3">
+                                              <a href="#" class="btn btn-lg btn-block omb_btn-google">
+                                                <i class="fa fa-google visible-xs"></i>
+                                                <span class="hidden-xs">Google</span>
+                                              </a>
+                                            </div>	
+                                      </div> -->
+                        <div class="row omb_row-sm-offset-3 omb_loginOr">
+                            <div class="col-xs-12 col-sm-6">
+                                <hr class="omb_hrOr">
+
+                            </div>
+                        </div>
+                        <form #log="ngForm">
+                            <div class="col-md-12">
+
+                                <div class="form-group form-group-lg">
+                                    <input type="text " class="form-control input-lg" name="uname" placeholder="User Name  @gmail *"
+                                        ngModel>
+                                    <!-- <div *ngIf="userName?.errors?.required">*userName is required.</div>
+                                    <div *ngIf="userName?.errors?.userName && !userName?.errors?.required">*Invalid
+                                        userName.</div> -->
+                                </div>
+                                <div class="form-group form-group-lg">
+                                    <input type="password" class="form-control input-lg" name="psw" placeholder="Password *"
+                                        ngModel>
+                                    <!-- <div *ngIf="Password?.touched && Password?.invalid">
+                                        <div *ngIf="Password?.errors?.required">*Password is required</div>
+                                    </div> -->
+
+                                </div>
+                                <button type="button" class="btn btn-link lg">Forgot Password?</button>
+                                <button class="btnRegister" (click)="login(log.value)" value="Login">Login</button>
+                            </div>
+
+
+                        </form>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

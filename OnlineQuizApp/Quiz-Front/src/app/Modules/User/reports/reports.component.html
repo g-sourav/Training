@@ -1,0 +1,37 @@
+<br>
+<br>
+<form class="example"  style="margin:auto;max-width:700px;">
+  <input type="text" placeholder="Search.." id="title" [(ngModel)]="title" name="search2">
+  <button type="submit"><i class="fa fa-search" ></i></button>
+</form>
+<br>
+
+
+<div class="container">
+
+<div class="row" style="margin-left: 10%;">
+  
+  <div class="col-md-3 col-sm-3 " *ngFor="let quiz of resultSet | filter : title : 'quizTitle'| paginate: { itemsPerPage:3, currentPage: p }; let i = index" >
+    <div class="container" style="border: 1px solid whitesmoke;">
+      <div>
+      <h5 class="card-title" style="background-color:wheat;text-align: center;">{{quiz.quizTitle}}</h5>
+    </div>
+      <div class="jumbotron" style="background: white;"><img src='assets/User/pictures/quizImg.jpg' class="card-img-top" alt="..."></div>
+      <div class="card-body text-center" id="cardBG">
+        <p class="card-text">Category: <span>{{quiz.quizCategory}}</span></p>
+        <p class="card-text">Difficulty: <span>{{quiz.quizDifficulty_level}}</span></p>
+        <button (click)="showResult(quiz)" class="btn btn-danger">
+          View Result
+        </button>
+      </div>
+    </div>
+    <br><br>
+    </div>
+    
+  </div>
+  <div class="container page" style="text-align:center;">
+      <nav aria-label="Page navigation example">
+        <pagination-controls class="pagination" (pageChange)="p = $event"></pagination-controls>
+      </nav>
+    </div>
+    </div>

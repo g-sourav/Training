@@ -1,0 +1,83 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<div class="container register">
+        
+               
+<div class="row">
+    <div class="col-md-3 register-left">
+        <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+        <h1>Welcome</h1>
+        <h2>You are few steps away from exploring the Online Quiz App!</h2>
+        
+    </div>
+    <div class="col-md-9 register-right">
+        <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+            <!-- <li class="nav-item">
+        <a>Register</a>
+            </li> -->
+        </ul>
+        <div class="container">
+                <h3 class="register-heading" >Register As User</h3>
+            <form class="form-horizontal"  [formGroup]="form" #f >
+                <div class="row register-form">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" formControlName="userName" class="form-control" [(ngModel)]="user.userName" placeholder="User Name *" name="userName">
+                            <div class="err" *ngIf="userName.errors&&userName.touched">
+                                <span *ngIf="userName.errors.required" style="color:red">Username is required</span>
+                            </div>
+                    
+                        </div>
+                        <div class="form-group">
+                            <input type="password" formControlName="userPassword" class="form-control" [(ngModel)]="user.userPassword" placeholder="Password *" name="password">
+                            <div class="err" *ngIf="userPassword.errors&&userPassword.touched">
+                                <span *ngIf="userPassword.errors.required" style="color:red">Password is required</span>
+                            </div>
+                        </div>
+                        
+                            <div class="form-group form-group lg ">
+                                <select class="form-control" formControlName="userGender" [(ngModel)]="user.userGender">
+                                <option  value="" selected disabled >Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                </select>
+                            </div>
+                        
+                        <div class="form-group form-group lg">
+                            <input type="userEmail" class="form-control " formControlName="userEmail" [(ngModel)]="user.userEmail" placeholder="Your userEmail *" name="userEmail">
+                            <div class="err" *ngIf="userEmail.errors&&userEmail.touched">
+                                <span *ngIf="userEmail.errors.required" style="color:red">Email is required</span>
+                                <span *ngIf="userEmail.errors.pattern" style="color:red">Invalid Email</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select class="form-control " formControlName="userQuesId"  [(ngModel)]="user.userQuesId" name="question">
+                                <option  [ngValue]="null" [selected]="user.userQuesId==1"disabled>Please select your Security Question</option>
+                                <option *ngFor="let seq of arr" [value]="seq.securityquestionid">{{seq.securityquestion}}</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group form-group lg">
+                            <input type="text" class="form-control " formControlName="userSecurityAnswer" [(ngModel)]="user.userSecurityAnswer" placeholder="Enter Your Answer *" name="answer">
+                            <div class="err" *ngIf="userSecurityAnswer.errors&&userSecurityAnswer.touched">
+                                <span *ngIf="userSecurityAnswer.errors.required" style="color:red">Security Answer is required</span>
+                            </div>
+                        </div>
+                        <button type="submit"  class="btnRegister" value="Register" (click)="create(f)" [disabled]="form.invalid">Register
+                            </button>
+                    </div>
+                </div>
+        </form>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+            
+            
+            

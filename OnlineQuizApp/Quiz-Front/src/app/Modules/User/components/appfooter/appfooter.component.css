@@ -1,0 +1,5 @@
+.hero-image__figure img {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+  }
+  

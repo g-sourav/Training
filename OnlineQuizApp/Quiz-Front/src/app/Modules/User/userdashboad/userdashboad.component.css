@@ -1,0 +1,15 @@
+*{
+
+    font-size: 15px;
+}
+
+
+/* @media only screen and (max-width: 900px) {
+   #lion{
+       display: inline-block;
+   }
+  } */
+
+  .jumbotron{
+    background-color:transparent;
+    }

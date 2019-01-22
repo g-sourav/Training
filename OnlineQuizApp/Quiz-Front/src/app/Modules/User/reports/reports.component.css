@@ -1,0 +1,57 @@
+#cardBG {
+    background-color:#1565c0;
+    color: white;
+}
+
+/* #cards { 
+    height: 30px; 
+    width: 8%;
+ } /*
+
+/* #cardHolder {
+    height: 20px;
+} */
+#cards{
+    height:30px;
+    width:8%;
+}
+#cardImg {
+    width: 100%;
+    height: 20%;
+}
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+  }
+  
+  form.example button {
+    float: left;
+    width: 10%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    height:48px;
+    
+  }
+  
+  form.example button:hover {
+    background: #0b7dda;
+  }
+  
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .pagination {
+    justify-content: center;
+ }

@@ -1,0 +1,12 @@
+.heading{
+    display: flex;
+  justify-content: center;
+}
+.content {
+    width:50%;
+    height:100%;
+    margin: auto;
+    border: 3px solid #1a63d1;
+    text-align: center;
+    background-color: whitesmoke;
+}

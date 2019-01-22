@@ -1,0 +1,69 @@
+<head>
+    
+</head>
+<br><br>
+<h2 class="text-center"><b>Attempted Quiz Details</b></h2>
+<div class="container login-container">
+        <div class="row">
+            <div class="col-md-6 login-form-1">
+                <h3>Quiz Details</h3>
+                <br><br><br>
+                <div class="table-responsive">     
+  
+  <table class="table table-striped">
+      <tr>
+          <td><font face="Arial" size="4.5px">Quiz Name</font></td>
+          <td><font face="Arial" size="4.5px"><b>{{quiz.quizTitle}}</b></font></td></tr>
+          <tr>
+                <td><font face="Arial" size="4.5px">Quiz Code</font></td>
+                <td><font face="Arial" size="4.5px"><b>{{quiz.quizCode}} </b></font></td></tr>
+  
+             <tr>
+            <td><font face="Arial" size="4.5px">Quiz Category</font></td>
+            <td><font face="Arial" size="4.5px"><b>{{quiz.quizCategory}} </b></font></td></tr>
+            <tr>
+                <td><font face="Arial" size="4.5px">Difficulty Level</font></td>
+                <td><font face="Arial" size="4.5px"><b>{{quiz.quizDifficulty_level}} </b></font></td></tr>
+                <tr>
+                    <td><font face="Arial" size="4.5px">Credit Points</font></td>
+                    <td><font face="Arial" size="4.5px"><b>{{quiz.creditPoints}} </b></font></td></tr>
+               </table>
+            
+            </div>  
+
+            </div>
+            <div class="col-md-6 login-form-2">
+                <h3>  Quiz Result</h3>
+                <br><br><br>
+                <div class="progress" data-percentage="30">
+                    <span class="progress-left">
+                      <span class="progress-bar"></span>
+                    </span>
+                    <span class="progress-right">
+                      <span class="progress-bar"></span>
+                    </span>
+                    <div class="progress-value">
+                      <div>
+                        &nbsp; &nbsp;&nbsp;<b>{{res.score}}</b><br>
+                        &nbsp; &nbsp;&nbsp;<span><b>scored</b></span>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <br><br><br>
+                    <div class="form-group">
+                       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        <input type="submit" class="btnSubmit" value="Retake Quiz" />
+                    </div>
+                    <div class="form-group">
+
+                         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;         
+                      <input type="submit" class="btnSubmit" value="Share Quiz" />
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+
