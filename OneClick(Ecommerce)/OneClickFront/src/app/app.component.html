@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>OneClick </title>
+       <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script> 
+</head> 
+<body>
+    <div *ngIf="top"> 
+  <!--nav bar-->
+<nav class="navbar navbar-expand-md navbar-dark " style="background-color: #293a6c;">
+    <div class="container-fluid" style="padding-top:30px; padding-bottom:50px; width:100%; height:10px;">
+      
+        
+        <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
+            <h1 class="navbar-brand" style=" font-size: 50px; ">OneClick</h1>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+            <ul class="navbar-nav m-auto" style="padding-top:20px;">
+                <li class="nav-item m-auto ">
+                    <a class="nav-link" href="">Home <span class="sr-only">(current)</span> </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Product</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="settings" (click)="AddSettings()">Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Cart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="Aboutpage" (click)="Addabout()">About</a>
+                </li>
+            </ul>
+
+            <form class="form-inline my-2 my-lg-0" style="padding-left:10%;padding-top:20px;">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="custom-search-input">
+                            <div class="input-group col-md-12">
+                                <input type="text" class="form-control input-lg" placeholder="Search...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-info btn-lg" type="button">
+                                        <i class="glyphicon glyphicon-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+              </div>   
+                <span *ngIf="hide;then condition1 else condition2"></span>
+
+                <ng-template #condition1 >
+                  <div style="padding-bottom:30px; position:absolute;left:85%; top:40%;">
+                <button class="btn btn-success btn-sm ml-3" onclick="document.getElementById('id01').style.display='block'"  >
+                    <i class="fa fa-unlock-alt"></i>Login
+                </button>
+
+                <button class="btn btn-success btn-sm ml-3"  onclick="document.getElementById('id02').style.display='block'">
+                  <i class="fa fa-sign-in"></i>Signup
+              </button>
+            </div>
+              </ng-template>
+              <ng-template #condition2>
+                <div style="padding-bottom:30px; position:absolute;left:90%; top:48%;">
+                  <button class="btn btn-success btn-sm ml-3" (click)="LogOut()"  style="margin-left: 60%;">
+                      <i class="fa fa-unlock-alt"></i>Logout
+                  </button>
+                </div>
+
+              </ng-template>
+            </form>
+        </div>
+      </div>
+  
+</nav>
+<header>
+  <div class="overlay"></div>
+  
+
+
+
+</header>
+<!--nav bar-->
+   
+     <!-- <div class="container-fluid" id="headingposition">
+        <h1 id="CompanyName" style="color:white">Welcome to OneClick</h1>
+        <h4 id="ConmpanyText" style="color:white">One stop,one click!</h4>
+        </div> -->
+        
+       
+
+
+        <div class="container-fluid">
+        
+       
+        <div id="id01" class="modal">
+          
+          <form   class="modal-content animate" (ngSubmit)=" getUser()">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+              
+            </div>
+        
+            <div class="container" class="form_text" id="box_login">
+              <label for="userName"><b>Username</b></label>
+              <input type="text"  #userName="ngModel" placeholder="Enter Username" name="userName" [(ngModel)]="user.userName" required>
+              
+              <label for="password"><b>Password</b></label>
+              <input type="password" #password="ngModel" placeholder="Enter Password" name="password" [(ngModel)]="user.password" required>
+              
+              <button class="button11" type="submit">Log In</button>
+            </div>
+        
+          </form>
+        </div>
+        <div id="id02" class="modal">
+            <form  class="modal1-content" (ngSubmit)="saveUser()">
+          <div class="imgcontainer">
+          <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+            </div>
+            <div class="container" class="form_text" id="box_login">
+              <h1>Sign Up</h1>
+             
+        
+
+             
+              
+              <label for="userName"><b>User Name</b></label>
+              <input type="text" #userName="ngModel" placeholder="Enter User Name" name="userName"  [(ngModel)]="user.userName" required>
+              <label for="psw"><b>Password</b></label>
+              <input type="password" #psw="ngModel" placeholder="Enter Password" name="password"  [(ngModel)]="user.password" required>
+              <label for="name"><b>Name</b></label>
+              <input type="text" #name="ngModel" placeholder="Enter Name" name="name"  [(ngModel)]="user.name" required>
+              <label for="email"><b>Email</b></label>
+              <input type="text" #email="ngModel" placeholder="Enter Email" name="email"  [(ngModel)]="user.email" required>
+              <label for="phoneNumber"><b>Phone Number</b></label>
+              <input type="text" #phoneNumber="ngModel" placeholder="Enter Phone Number" name="phoneNumber"  [(ngModel)]="user.phoneNumber" required>
+              <label for="recentAddress"><b>Recent Address</b></label>
+              <input type="text" #recentAddress="ngModel" placeholder="Enter Recent Address" name="recentAddress"  [(ngModel)]="user.recentAddress" required>
+              <!-- <div *ngIf="logform.submitted && (userName.invalid || psw.invalid || name.invalid || email.invalid || phoneNumber.invalid || recentAddress.invalid) " class="invalid-feedback">
+              <div *ngIf="((userName.errors.required)&&(password.errors.required)&&(name.errors.required)&&(email.errors.required)&&(phoneNumber.errors.required)&&(recentAddress.errors.required))">All details required</div>
+              </div> -->
+              <div class="clearfix">
+               
+                <button style="background-color: green;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 100%;" type="submit" class="signupbtn">Sign Up</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        </div>
+
+        <!-- <div id="t">
+        <form class="example" >
+          <input type="text" onkeyup="filterdata()" placeholder="Search.." name="myInput">
+          <button type="submit"><i class="fa fa-search"></i></button><br><br><br>
+
+          <ul id="myUL" style="display:none;">
+            <li><a id= "Mobiles" (click)="h2('M100')" onmouseover="alertM()" Value="Mobiles">Mobiles</a></li>
+            
+            <li><a id= "Laptops"  (click)="h2('L200')" onmouseover="alertL()" Value="Laptops">Laptops</a></li>
+          
+            <li><a id= "Menswear"  (click)="h2('MW300')" onmouseover="alertMW()" Value="Men's wear" >Men's wear</a></li>
+            
+            <li><a id= "Womenswear" (click)="h2('FW400')" onmouseover="alertWW()" Value="Women's wear" >Women's wear</a></li>
+          
+            <li><a id= "NonFictionBooks"  (click)="h2('BNF600')" onmouseover="alertNF()" Value="Non-Fiction Books" >Non-Fiction Books</a></li>
+            
+            <li><a id= "FictionBooks"  (click)="h2('BF500')" onmouseover="alertF()" Value="Fiction Books">Fiction Books</a></li>
+          </ul>
+        </form>
+        </div> 
+        <br><br>  -->
+    </div> 
+       
+        <div *ngIf="!sw">
+        <home></home>
+        </div>
+      
+      
+        <div *ngIf="sw">
+            <router-outlet></router-outlet>
+          </div>
+
+
+
+
+</body>
+</html> 

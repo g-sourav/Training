@@ -1,0 +1,55 @@
+
+<div id="main">
+  <h1>Shopping Cart</h1>
+   
+  <div class="shopping-cart">
+   
+    <div class="column-labels">
+      <label class="product-image">Image</label>
+      <label class="product-details">Product</label>
+      <label class="product-price">Price</label>
+      <label class="product-quantity">Quantity</label>
+      <label class="product-removal">Remove</label>
+      <label class="product-line-price">Total</label>
+    </div>
+   
+    <div class="product"   *ngFor="let a of products">
+      <div class="product-image">
+        <img src="{{ imgpath+a.imgSource }}">
+      </div>
+      <div class="product-details">
+        <div class="product-title">{{a.productName}}</div>
+        <p class="product-description"> {{a.description}}</p>
+      </div>
+      <div class="product-price">{{a.price}}</div>
+      <div class="product-quantity">
+        <input id="qnty" type="number"  min="1" onstatechange="takequantity()">
+      </div>
+      <div class="product-removal">
+        <button class="remove-product">
+          Remove
+        </button>
+      </div>
+      <div class="product-line-price">{{totalProductprice}}</div>
+    </div>
+  
+   
+    <div class="totals">
+      <div class="totals-item">
+        <label>Subtotal</label>
+        <div class="totals-value" [(ngModule)]="Subtotal" id="cart-subtotal">{{SubTotal}}</div>
+      </div>
+      <div class="totals-item">
+        <label>Shipping</label>
+        <div class="totals-value" id="cart-shipping">{{Shipping}}</div>
+      </div>
+      <div class="totals-item totals-item-total">
+        <label>Grand Total</label>
+        <div class="totals-value" [(ngModule)]="GrandTotal" id="cart-total">{{GrandTotal}}</div>
+      </div>
+    </div>
+         
+        <button class="checkout">Checkout</button>
+   
+  </div>
+  </div>

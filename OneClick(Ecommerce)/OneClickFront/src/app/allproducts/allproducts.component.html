@@ -1,0 +1,265 @@
+<!-- side navbar -->
+
+<div class="container-fluid">
+        <div class="row">
+
+
+
+
+            <aside class="col-sm-3">
+       
+        
+        
+        <div class="card">
+
+
+
+            <article class="card-group-item" >
+                <header class="card-header">
+                    <h4 class="title">Mobiles </h4>
+                    <h6 class="title">Brands </h6>
+                </header>
+                <div class="filter-content">
+                    <div class="card-body">
+                    <form>
+                        <label class="form-check"style="padding-left:2%;">
+                          <input class="form-check-input" type="checkbox" value="">
+                          <span class="form-check-label">
+                            Apple
+                          </span>
+                        </label> <!-- form-check.// -->
+                        <label class="form-check"style="padding-left:2%;">
+                          <input class="form-check-input" type="checkbox" value="">
+                          <span class="form-check-label">
+                            Samsung
+                          </span>
+                        </label>  <!-- form-check.// -->
+                        <label class="form-check"style="padding-left:2%;">
+                          <input class="form-check-input" type="checkbox" value="">
+                          <span class="form-check-label">
+                            Another Brand
+                          </span>
+                        </label>  <!-- form-check.// -->
+                    </form>
+        
+                    </div> <!-- card-body.// -->
+                </div>
+            </article> <!-- card-group-item.// -->
+
+
+
+
+
+
+            <article class="card-group-item" >
+                <header class="card-header">
+                    <h4 class="title">Clothing </h4>
+                    <h6 class="title">Brands </h6>
+                </header>
+                <div class="filter-content">
+                    <div class="card-body">
+                    <form>
+                        <label class="form-check"style="padding-left:2%;">
+                          <input class="form-check-input" type="checkbox" value="">
+                          <span class="form-check-label">
+                            Manyavar
+                          </span>
+                        </label> <!-- form-check.// -->
+                        <label class="form-check"style="padding-left:2%;">
+                          <input class="form-check-input" type="checkbox" value="">
+                          <span class="form-check-label">
+                            Gucci
+                          </span>
+                        </label>  <!-- form-check.// -->
+                        <label class="form-check"style="padding-left:2%;">
+                          <input class="form-check-input" type="checkbox" value="">
+                          <span class="form-check-label">
+                            Another Brand
+                          </span>
+                        </label>  <!-- form-check.// -->
+                    </form>
+        
+                    </div> <!-- card-body.// -->
+                </div>
+            </article> <!-- card-group-item.// -->
+
+
+
+
+
+
+
+            <article class="card-group-item" >
+                <header class="card-header">
+                    <h4 class="title">Books </h4>
+                    <h6 class="title">BestSeller </h6>
+                </header>
+                <div class="filter-content">
+                    <div class="card-body">
+                    <form>
+                        <label class="form-check"style="padding-left:2%;">
+                          <input class="form-check-input" type="checkbox" value="">
+                          <span class="form-check-label">
+                            Wings of fire
+                          </span>
+                        </label> <!-- form-check.// -->
+                        <label class="form-check"style="padding-left:2%;">
+                          <input class="form-check-input" type="checkbox" value="">
+                          <span class="form-check-label">
+                            Revolution 2020
+                          </span>
+                        </label>  <!-- form-check.// -->
+                        <label class="form-check"style="padding-left:2%;">
+                          <input class="form-check-input" type="checkbox" value="">
+                          <span class="form-check-label">
+                            Other Books
+                          </span>
+                        </label>  <!-- form-check.// -->
+                    </form>
+        
+                    </div> <!-- card-body.// -->
+                </div>
+            </article> <!-- card-group-item.// -->
+
+
+
+
+
+
+
+            
+            <article class="card-group-item" >
+                <header class="card-header">
+                    <h4 class="title">Choose type </h4>
+                </header>
+                <div class="filter-content">
+                    <div class="card-body">
+                    <label class="form-check"style="padding-left:2%;">
+                      <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                      <span class="form-check-label">
+                        First hand items
+                      </span>
+                    </label>
+                    <label class="form-check"style="padding-left:2%;">
+                      <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                      <span class="form-check-label">
+                        Brand new items
+                      </span>
+                    </label>
+                    <label class="form-check"style="padding-left:2%;">
+                      <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                      <span class="form-check-label">
+                        Most visited
+                      </span>
+                    </label>
+                    </div> <!-- card-body.// -->
+                </div>
+            </article> <!-- card-group-item.// -->
+
+
+
+
+
+            
+
+
+
+
+        </div> <!-- card.// -->
+        
+        
+        
+        
+            </aside> <!-- col.// -->
+
+
+
+
+
+<!-- from here -->
+
+<aside class="col-sm-4">
+        <div class="prods">
+
+                <div *ngFor="let a of products" >
+                  <div class="container">
+              
+                          <div class="row" id="ads">
+                          <!-- Category Card -->
+                          <div class="col-md-8">
+                              <div class="main" >
+                              <div class="flip-box" style="float:center;"> 
+                                <div class="flip-box-inner">
+                                <div class="flip-box-front">
+                              
+                              <div class="card rounded" style="background-color:transparent;">
+                                  <div class="card-image" style="background-color:transparent;">
+                                      <span class="card-notify-badge">{{a.brand}}</span>
+                                      <span class="card-notify-year">2018</span>
+                                      <img class="img-fluid" src="{{ imgpath+a.imgSource }}" alt="Alternate Text" >
+                                  </div>
+                                  <div class="card-image-overlay m-auto">
+                                      <br>
+                                      <span class="card-detail-badge">Rs.{{a.price}}</span>
+                                      
+                                  </div>
+                                  <div class="card-body text-center">
+                                      <div class="ad-title m-auto">
+                                          <h5 style="color: black;">{{a.productName}}</h5>
+                                      </div>
+                                      
+                                  </div>
+                              </div>
+                               </div>
+                                <div class="flip-box-back" >
+                                <div class="card rounded" style="background-color:transparent;">
+                                  <div class="card-image" style="background-color:transparent;">
+                                  <img class="img-fluid" src="./assets/photos/699458-icon-27-one-finger-click-512.png" alt="Alternate Text" >
+                                <a class="ad-btn" (click)="singleproduct(a.productId)">View</a>
+                                <br><br>
+                                </div>
+                              </div>
+                                </div>
+                               </div>
+                              </div> 
+                            </div>
+                          </div>
+                          
+                      
+                      
+                      </div>
+                     
+                      </div>
+                      <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                      
+              
+              
+              </div>
+              
+              </div>  
+</aside>
+
+<!-- to here -->
+
+
+
+
+        
+        </div> <!-- card.// -->
+        </div>
+        
+        
+        
+     
+
+
+
+<!-- next code -->
+
+
+
+  
+
+  
+  
+  

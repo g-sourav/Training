@@ -1,0 +1,69 @@
+
+
+
+<br><br><br><br>
+
+
+<div class="container" style="width:65%;">
+<div class="thumbnail" > 
+    <section class="module">
+          <div class="module-inner">
+              
+              <div class="content-panel">
+                    <span><figure class="figure col-md-2 col-sm-3 col-xs-12">
+                            <img id="dicon" class="img-rounded img-responsive" src="assets/photos/699458-icon-27-one-finger-click-512.png" alt="">
+                        </figure>
+                        <h1 class="title">Edit Profile</h1>
+                    </span>
+                  
+                  <form class="form-horizontal" (ngSubmit)="edit()">
+                      <fieldset class="fieldset">
+                          <h3 class="fieldset-title"></h3>
+                          <div class="form-group avatar">
+                              
+                              
+                          </div>
+                          <div class="form-group">
+                              <label class="col-md-2 col-sm-3 col-xs-12 control-label">Name</label>
+                              <div class="col-md-10 col-sm-9 col-xs-12">
+                                  <input type="text" class="form-control" name="name" [(ngModel)]="user.name" >
+                              </div>
+                          </div>
+      
+                          <div class="form-group">
+                              <label class="col-md-2 col-sm-3 col-xs-12 control-label">Email</label>
+                              <div class="col-md-10 col-sm-9 col-xs-12">
+                                  <input type="text" class="form-control" name="email" [(ngModel)]="user.email">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="col-md-2 col-sm-3 col-xs-12 control-label">Phone Number</label>
+                              <div class="col-md-10 col-sm-9 col-xs-12">
+                                  <input type="text" class="form-control" name="phoneNumber" [(ngModel)]="user.phoneNumber">
+                              </div>
+                          </div>
+                      
+                          <div class="form-group">
+                              <label class="col-md-2  col-sm-3 col-xs-12 control-label">Recent Address</label>
+                              <div class="col-md-10 col-sm-9 col-xs-12">
+                                  <input type="email" class="form-control" name="recentAddress" [(ngModel)]="user.recentAddress">
+                                  
+                              </div>
+                          </div>
+              
+                      
+                      </fieldset>
+                      <hr>
+                      <div class="form-group">
+                          <div class="col-md-10 col-sm-9 col-xs-12 col-md-push-2 col-sm-push-3 col-xs-push-0">
+                              <input class="btn btn-primary" type="submit" value="Update Profile"><br><br>
+                              <input class="btn btn-primary" style="width:120px;background-color:red;color:white;" (click)=deleteuser(user.userName) value="Delete Profile">
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          </div>
+   </section>
+ </div> 
+  <br><br>
+</div>

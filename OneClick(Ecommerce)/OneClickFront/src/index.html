@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
+  <meta charset="utf-8">
+  <title>OneClick</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+
+  <script>
+
+        function filterdata() {
+          var input, filter, ul, li, a, i, txtValue, selectedoption;
+          input = document.getElementsByName("myInput");
+          ul = document.getElementById("myUL");
+          
+          if(input.value.length>0){
+          
+             
+              
+              filter = input.value.toUpperCase();
+              li = ul.getElementsByName("li");
+              for (i = 0; i < li.length; i++) {
+                  a = li[i].getElementsByTagName("a")[0];
+                  if(li){
+                  txtValue = a.textContent || a.innerText;
+                  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                      li[i].style.display = "";
+                     
+                  } else {
+                      li[i].style.display = "none";
+                      selectedoption = li[i].innerhtml;
+                  }
+                 }
+                  ul.style.display = 'block';
+               }  
+             }
+             
+             else{
+                 ul.style.display = 'none';
+             }
+          }
+          
+          function alertM(){
+          var selectedoption;
+          selectedoption = document.getElementById("Mobiles").innerHTML;
+          document.getElementById("myInput").innerHTML=selectedoption;
+          }
+          
+          function alertL(){
+          var selectedoption;
+          selectedoption = document.getElementById("Laptops").innerHTML;
+          document.getElementById("myInput").innerHTML=selectedoption;
+          }
+          
+          function alertMW(){
+          var selectedoption;
+          selectedoption = document.getElementById("Menswear").innerHTML;
+          document.getElementById("myInput").innerHTML=selectedoption;
+          }
+          
+          function alertWW(){
+          var selectedoption;
+          selectedoption = document.getElementById("Womenswear").innerHTML;
+          document.getElementById("myInput").innerHTML=selectedoption;
+          }
+          
+          function alertNF(){
+          var selectedoption;
+          selectedoption = document.getElementById("NonFictionBooks").innerHTML;
+          document.getElementById("myInput").innerHTML=selectedoption;
+          }
+          
+          function alertF(){
+          var selectedoption;
+          selectedoption = document.getElementById("FictionBooks").innerHTML;
+          document.getElementById("myInput").innerHTML=selectedoption;
+          }
+          
+        </script>
+
+
+</head>
+<body>
+        <!-- <video autoplay muted loop id="myVideo">
+                <source src="\assets\video\shopping_mall_time_lapse.mp4" type="video/mp4">
+                </video> -->
+
+                <app-root></app-root>
+  
+
+
+  <div class="footer">
+        <span style="font-size:60%;padding-left:38%;">  ©2017-2018,Oneclick.com, Inc. or its affiliates</span>
+        <span class="fa fa-facebook" style="color:white;padding-left:22%;"></span>
+        <span class="fa fa-twitter" style="color:rgb(252, 239, 250)"></span>
+        <span class="fa fa-linkedin" style="color:white"></span>
+        <span class="fa fa-google" style="color:white"></span>
+        <span class="fa fa-instagram" style="color:white"></span>
+      
+        
+      
+        </div>
+ 
+
+
+ 
+
+       
+</body>
+</html>
