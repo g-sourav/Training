@@ -1,0 +1,12 @@
+div{
+    opacity: .7;
+    border-radius: 25px;
+    padding-top: 18%
+}
+
+p{
+    font-size: 50px;
+    text-align: center;
+    font-family: cursive;
+    background-color:rgb(240, 170, 170);
+}

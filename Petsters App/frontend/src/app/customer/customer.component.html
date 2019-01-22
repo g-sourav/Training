@@ -1,0 +1,61 @@
+
+<html lang="en">
+        <head>
+          <meta charset="utf-8">
+          <title>PETSTERs</title>
+          <base href="/">
+        
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="icon" type="image/x-icon" href="favicon.ico">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+        <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+        
+        </head>
+        <body>
+            <div class="panel-heading">
+      <div class="panel-title text-center">
+        <h1 class="title">Customer Registration</h1>  
+      </div>
+    </div>
+    
+    <div class="main-login main-center">
+    <form class="form-horizontal"(ngSubmit) = "create()" >
+        
+        <div class="form-group">
+        Name: <input  type = "text" class="cols-sm-2 " name = "name"  [(ngModel)]="c.name" ><br/>
+        </div>
+
+        <div class="form-group">
+        Gender: <input type="radio" [(ngModel)]="c.gender" name="gender" value=Male >Male
+        <input type="radio" [(ngModel)]="c.gender" name="gender" value=Female>Female<br/>
+        </div>
+    
+        <div class="form-group">
+        Phone: <input  type = "text" name = "phone"  [(ngModel)]="c.phone"><br/>
+        </div>
+
+        <div class="form-group">
+         E-mail: <input  type = "text" name = "email"  [(ngModel)]="c.email"><br/>
+        </div>
+
+        <div class="form-group">
+        City: <input  type = "text" name = "city"  [(ngModel)]="c.city"><br/>
+        </div>
+
+        <div class="form-group">
+        Address: <input  type = "text" name = "address"  [(ngModel)]="c.address"><br/>
+        </div>
+
+        <div class="form-group ">
+        <button type="submit" class="btn btn-danger btn-block" (click)="registermsg()" style="border:solid rgb(128, 44, 128);" data-toggle="tooltip" title="you are about to register!">Register</button>
+        </div>
+     </form>
+    </div>  
+    </body>
+    </html>   
+    
+    
+    
+    

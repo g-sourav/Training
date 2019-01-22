@@ -1,0 +1,7 @@
+{
+    "/PETSTERS/*":{
+        "target":"http://10.223.99.44:8080",
+        "secure":false,
+        "changeOrigin":true
+    }
+}
