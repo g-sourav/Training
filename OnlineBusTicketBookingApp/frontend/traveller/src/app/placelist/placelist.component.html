@@ -1,0 +1,88 @@
+<html>
+<head>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+        <form (ngSubmit)="busList()" method="post">
+
+                <section class="search-banner bg-danger py-5" id="search-banner">
+
+                        <div class="container py-5 my-5">
+                                <b><div #message style="color:black"></div></b>
+
+                        <div class="row text-center pb-4">
+                            <div class="col-md-12">
+                                <marquee><h2>HAVE A SAFE AND COMFORTABLE JOURNEY</h2></marquee>
+                            </div>
+                        </div>   
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row">
+                                                <label for="inputState"><b>Select Place</b></label>
+                                       <div class="col-md-4">
+                                        <div class="form-group ">
+                                              <select name="box" [(ngModel)]="fare"  id="inputState" class="form-control">
+                                                <option selected >Select journey</option>
+                                                <option value="317">Hyderabad(HYD)-Vijayawada(VIJ)</option>
+                                                <option value="313" >Vijayawada(VIJ)-Hyderabad(HYD)</option>
+                                                <option value="500" >Chennai(CHN)-Bangalore(BLR)</option>
+                                                <option  value="500" >Bangalore(BLR)-Chennai(CHN)</option>
+                                                <option  value="750" >Mumbai(MUM)-Kolkatta(KOL)</option>
+                                                <option  value="500" >Chennai(CHN)-Coimabtore(CMB)</option>
+                                                <option value="620">Coimabtore(CMB)-Chennai(CHN)</option>
+                                                <option value="730">Hyderabad(HYD)-Chennai(CHN)</option>
+                                                <option value="724">Chennai(CHN)-Hyderabad(HYD)</option>
+                                                <option value="900">Trichy(TRI)-KanyaKumari(KAN)</option>
+                                                <option value="900">KanyaKumari(KAN)-Trichy(TRI)</option>
+                                                <option value="390">Chitoor(CHI)-Ongole(ONG)</option>
+                                                <option value="390">Ongole(ONG)-Chitoor(CHI)</option>
+                                                <option value="650">Thiruvanandapuram(THR)-Madurai(MAD)</option>
+                                                <option value="750">Madurai(CHN)-Thiruvanandapuram(THR)</option>
+                                                <option value="306">Visakhapatnam(VIS)-Razole(RAZ)</option>
+                                                <option value="306">Razole(RAZ)-Visakhapatnam(VIS)</option>
+                                                <option value="466">Visakhapatnam(VIS)-Machilipatnam(MAC)</option>
+                                                <option value="160">Tirupathi(TPT)-Chennai(CHN)</option>
+                                                <option value="160">Chennai(CHN)-Tirupathi(TPT)</option>
+                                                <option value="220">Tirupathi(TPT)-Bangalore(BLR)</option>
+                                                <option value="220">Bangalore(BLR)-Tirupathi(TPT)</option>
+  
+                                                <option value="466">Machilipatnam(MAC)-Visakhapatnam(VIS)</option>
+                                                <option value="120">Razole(RAZ)-Machilipatnam(MAC)</option>
+                                                <option value="120" >Machilipatnam(MAC)-Razole(RAZ)</option>
+                                              </select>
+                                            </div>
+                                    </div>
+                                    <label for="doj"><b>Journey Date</b></label>
+                                    <div class="col-md-3">
+                                        <input type="date" placeholder="mm/dd/yyyy" min="2018-12-07" max="2018-12-31" name="doj"  [(ngModel)]="Date" id="doj">
+                                    </div>
+                    
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-dark">Submit</button>
+
+
+                </div>
+            </div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div>
+        <br><br>
+    </div>
+</div>
+
+</section>
+        </form>
+</body>
+</html>
+
+
+
+

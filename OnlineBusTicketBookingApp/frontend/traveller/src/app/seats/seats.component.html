@@ -1,0 +1,273 @@
+<form (ngSubmit)="Booking()" method="post">
+
+<div class="plane">
+    <b><div #message style="color:crimson"></div></b>
+
+    <div class="cockpit">
+      <h1>Please select seat(s)</h1>
+
+    </div>
+   
+    <ol class="cabin fuselage" >
+        <li class="row row--1">
+          <ol class="seats" type="A">
+            <li class="seat" [class.go]="test[0]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="checkbox" id="1A"  [checked]="check[0]" (change)="check[0] = !check[0]" />
+              <label for="1A">1A</label>
+            </li>
+            <li class="seat" [class.go]="test[1]">
+              <input type="checkbox" id="1B"[class.go]="check[1]"[checked]="check[1]" (change)="check[1] = !check[1]"/>
+              <label for="1B">1B</label>
+            </li>
+ 
+           
+            <li class="seat" [class.go]="test[2]">
+              <input type="checkbox" id="1C" [class.go]="check[2]" [checked]="check[2]" (change)="check[2] = !check[2]"/>
+              <label for="1C">1C</label>
+            </li>
+            <li class="seat" [class.go]="test[3]" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="checkbox" id="1D"[class.go]="check[3]"[checked]="check[3]" (change)="check[3] = !check[3]"/>
+              <label for="1D">1D</label>
+            </li>
+                                    <li class="seat" [class.go]="test[4]">
+              <input type="checkbox" id="1E" [checked]="check[4]" (change)="check[4] = !check[4]"/>
+              <label for="1E">1E</label>
+            </li>
+          </ol>
+        </li>
+        <li class="row row--2">
+          <ol class="seats" type="A"> 
+            <li class="seat" [class.go]="test[5]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="checkbox" id="2A" [checked]="check[5]" (change)="check[5] = !check[5]"/>
+              <label for="2A">2A</label>
+            </li>
+            <li class="seat" [class.go]="test[6]">
+              <input type="checkbox" id="2B" [checked]="check[6]" (change)="check[6] = !check[6]"/>
+              <label for="2B">2B</label>
+            </li>
+           
+            <li class="seat" [class.go]="test[7]">
+              <input type="checkbox" id="2C" [checked]="check[7]" (change)="check[7] = !check[7]"/>
+              <label for="2C">2C</label>
+            </li>
+            <li class="seat" [class.go]="test[8]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="checkbox" id="2D" [checked]="check[8]" (change)="check[8] = !check[8]"/>
+              <label for="2D">2D</label>
+            </li>
+            <li class="seat" [class.go]="test[9]">
+              <input type="checkbox" id="2E" [checked]="check[9]" (change)="check[9] = !check[9]"/>
+              <label for="2E">2E</label>
+            </li>
+          </ol>
+        </li>
+        <li class="row row--3">
+          <ol class="seats" type="A">
+            <li class="seat" [class.go]="test[10]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="checkbox" id="3A" [checked]="check[10]" (change)="check[10] = !check[10]"/>
+              <label for="3A">3A</label>
+            </li>
+            <li class="seat" [class.go]="test[11]">
+              <input type="checkbox" id="3B" [checked]="check[11]" (change)="check[11] = !check[11]"/>
+              <label for="3B">3B</label>
+            </li>
+           
+            <li class="seat" [class.go]="test[12]">
+              <input type="checkbox" id="3C" [checked]="check[12]" (change)="check[12] = !check[12]"/>
+              <label for="3C">3C</label>
+            </li>
+            <li class="seat" [class.go]="test[13]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="checkbox" id="3D" [checked]="check[13]" (change)="check[13] = !check[13]"/>
+              <label for="3D">3D</label>
+            </li>
+            <li class="seat" [class.go]="test[14]">
+              <input type="checkbox" id="3E" [checked]="check[14]" (change)="check[14] = !check[14]"/>
+              <label for="3E">3E</label>
+            </li>
+          </ol>
+        </li>
+        <li class="row row--4">
+          <ol class="seats" type="A">
+            <li class="seat" [class.go]="test[15]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="checkbox" id="4A" [checked]="check[15]" (change)="check[15] = !check[15]"/>
+              <label for="4A">4A</label>
+            </li>
+            <li class="seat" [class.go]="test[16]">
+              <input type="checkbox" id="4B" [checked]="check[16]" (change)="check[16] = !check[16]"/>
+              <label for="4B">4B</label>
+            </li>
+          
+            <li class="seat" [class.go]="test[17]">
+              <input type="checkbox" id="4C" [checked]="check[17]" (change)="check[17] = !check[17]"/>
+              <label for="4C">4C</label>
+            </li>
+            <li class="seat" [class.go]="test[18]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="checkbox" id="4D" [checked]="check[18]" (change)="check[18] = !check[18]"/>
+              <label for="4D">4D</label>
+            </li>
+            <li class="seat" [class.go]="test[19]">
+              <input type="checkbox" id="4E" [checked]="check[19]" (change)="check[19] = !check[19]"/>
+              <label for="4E">4E</label>
+            </li>
+          </ol>
+        </li>
+        <li class="row row--5">
+          <ol class="seats" type="A" >
+            <li class="seat" [class.go]="test[20]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="checkbox" id="5A" [checked]="check[20]"  (change)="check[20] = !check[20]"/>
+              <label for="5A">5A</label>
+            </li>
+            <li class="seat" [class.go]="test[21]">
+              <input type="checkbox" id="5B" [checked]="check[21]" (change)="check[21] = !check[21]"/>
+              <label for="5B">5B</label>
+            </li>
+         
+            <li class="seat" [class.go]="test[22]">
+              <input type="checkbox" id="5C" [checked]="check[22]" (change)="check[22] = !check[22]"/>
+              <label for="5C">5C</label>
+            </li>
+            <li class="seat" [class.go]="test[23]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="checkbox" id="5D" [checked]="check[23]" (change)="check[23] = !check[23]"/>
+              <label for="5D">5D</label>
+            </li>
+            <li class="seat" [class.go]="test[24]">
+              <input type="checkbox" id="5E" [checked]="check[24]" (change)="check[24] = !check[24]"/>
+              <label for="5E">5E</label>
+            </li>
+          </ol>
+        </li>
+        <li class="row row--6">
+          <ol class="seats" type="A">
+            <li class="seat" [class.go]="test[25]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="checkbox" id="6A" [checked]="check[25]" (change)="check[25] = !check[25]"/>
+              <label for="6A">6A</label>
+            </li>
+            <li class="seat" [class.go]="test[26]">
+              <input type="checkbox" id="6B" [checked]="check[26]" (change)="check[26] = !check[26]"/>
+              <label for="6B">6B</label>
+            </li>
+         
+            <li class="seat" [class.go]="test[27]">
+              <input type="checkbox" id="6C" [checked]="check[27]" (change)="check[27] = !check[27]"/>
+              <label for="6C">6C</label>
+            </li>
+            <li class="seat" [class.go]="test[28]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="checkbox" id="6D" [checked]="check[28]" (change)="check[28] = !check[28]"/>
+              <label for="6D">6D</label>
+            </li>
+            <li class="seat" [class.go]="test[29]">
+              <input type="checkbox" id="6E" [checked]="check[29]" (change)="check[29] = !check[29]"/>
+              <label for="6E">6E</label>
+            </li>
+          </ol>
+        </li>
+        <li class="row row--7">
+          <ol class="seats" type="A">
+            <li class="seat" [class.go]="test[30]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="checkbox" id="7A" [checked]="check[30]" (change)="check[30] = !check[30]"/>
+              <label for="7A">7A</label>
+            </li>
+            <li class="seat" [class.go]="test[31]">
+              <input type="checkbox" id="7B" [checked]="check[31]" (change)="check[31] = !check[31]"/>
+              <label for="7B">7B</label>
+            </li>
+          
+            <li class="seat" [class.go]="test[32]">
+              <input type="checkbox" id="7C" [checked]="check[32]" (change)="check[32] = !check[32]"/>
+              <label for="7C">7C</label>
+            </li>
+            <li class="seat" [class.go]="test[33]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="checkbox" id="7D" [checked]="check[33]" (change)="check[33] = !check[33]"/>
+              <label for="7D">7D</label>
+            </li>
+            <li class="seat" [class.go]="test[34]">
+              <input type="checkbox" id="7E" [checked]="check[34]" (change)="check[34] = !check[34]"/>
+              <label for="7F">7E</label>
+            </li>
+          </ol>
+        </li>
+        <li class="row row--8">
+          <ol class="seats" type="A">
+            <li class="seat" [class.go]="test[35]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="checkbox" id="8A" [checked]="check[35]" (change)="check[35] = !check[35]"/>
+              <label for="8A">8A</label>
+            </li>
+            <li class="seat" [class.go]="test[36]">
+              <input type="checkbox" id="8B" [checked]="check[36]" (change)="check[36] = !check[36]"/>
+              <label for="8B">8B</label>
+            </li>
+         
+            <li class="seat" [class.go]="test[37]">
+              <input type="checkbox" id="8C" [checked]="check[37]" (change)="check[37] = !check[37]"/>
+              <label for="8C">8C</label>
+            </li>
+           <li class="seat" [class.go]="test[38]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="checkbox" id="8D" [checked]="check[38]" (change)="check[38] = !check[38]"/>
+              <label for="8D">8D</label>
+            </li>
+            <li class="seat" [class.go]="test[39]">
+              <input type="checkbox" id="8E" [checked]="check[39]" (change)="check[39] = !check[39]"/>
+              <label for="8E">8E</label>
+            </li>
+          </ol>
+        </li>
+        <li class="row row--9">
+          <ol class="seats" type="A">
+            <li class="seat" [class.go]="test[40]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="checkbox" id="9A" [checked]="check[40]" (change)="check[40] = !check[40]"/>
+              <label for="9A">9A</label>
+            </li>
+            <li class="seat" [class.go]="test[41]">
+              <input type="checkbox" id="9B" [checked]="check[41]" (change)="check[41] = !check[41]"/>
+              <label for="9B">9B</label>
+            </li>
+            <li class="seat" [class.go]="test[42]">
+              <input type="checkbox" id="9C" [checked]="check[42]" (change)="check[42] = !check[42]"/>
+              <label for="9C">9C</label>
+            </li>
+            <li class="seat" [class.go]="test[43]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="checkbox" id="9D" [checked]="check[43]" (change)="check[43] = !check[43]"/>
+              <label for="9D">9D</label>
+            </li>
+            <li class="seat" [class.go]="test[44]">
+              <input type="checkbox" id="9E" [checked]="check[44]" (change)="check[44] = !check[44]"/>
+              <label for="9E">9E</label>
+            </li>
+          </ol>
+        </li>
+        <li class="row row--10">
+          <ol class="seats" type="A">
+            <li class="seat" [class.go]="test[45]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="checkbox" id="10A" [checked]="check[45]" (change)="check[45] = !check[45]"/>
+              <label for="10A">10A</label>
+            </li>
+            <li class="seat" [class.go]="test[46]">
+              <input type="checkbox" id="10B" [checked]="check[46]" (change)="check[46] = !check[46]"/>
+              <label for="10B">10B</label>
+            </li>
+            <li class="seat" [class.go]="test[47]">
+              <input type="checkbox" id="10C" [checked]="check[47]" (change)="check[47] = !check[47]"/>
+              <label for="10C">10C</label>
+            </li>
+            <li class="seat" [class.go]="test[48]">
+              <input type="checkbox" id="10D" [checked]="check[48]" (change)="check[48] = !check[48]"/>
+              <label for="10D">10D</label>
+            </li>
+            <li class="seat" [class.go]="test[49]">
+              <input type="checkbox" id="10E" [checked]="check[49]" (change)="check[49] = !check[49]"/>
+              <label for="10E">10E</label>
+            </li>
+          </ol>
+        </li>
+      </ol>
+      
+    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <input type="submit" value="Book Seat(s)" />
+    </form>
+  

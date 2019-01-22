@@ -1,0 +1,75 @@
+<html>
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row row-flex">
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <div class="price-table pt-bg-black">
+                <div>
+                    <span>Super Luxury</span>
+                    <span>Indulge in the luxury during your journey</span>
+                </div>
+                <ul>
+                    <li>AC Sleeper</li>
+                    <li>Single Tier</li>
+                    <li>Food and Refreshments(Free)</li>
+                    <li>Uninterrupted Free WiFi</li> 
+                    <li><span>Price</span><b>{{fare1}}</b></li>  
+                </ul> 
+                <a (click)="Bus1()">BOOK NOW</a>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <div class="price-table pt-bg-green">
+                <div>
+                    <span>Sleeper</span>
+                    <span>Experience Awesomeness</span>
+                </div>
+                <ul>
+                    <li>AC Sleeper</li>
+                    <li>Two Tier</li>
+                    <li>Uninterrupted Free WiFi</li> 
+                    <li><span>Price</span><b>{{fare2}}</b></li> 
+                </ul>
+                <a (click)="Bus2()">BOOK NOW</a>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <div class="price-table pt-bg-red">
+                <div>
+                    <span>Semi Sleeper</span>
+                    <span>Simply Comfortable</span>
+                </div>
+                <ul>
+                    <li>Semi Sleeper seat</li>
+                    <li>AC</li>
+                    <li>Uninterrupted Free WiFi</li> 
+                    <li><span>Price</span><b>{{fare3}}</b></li> 
+                </ul>
+                <a (click)="Bus3()">BOOK NOW</a>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <div class="price-table pt-bg-blue">
+                <div>
+                    <span>Seater</span>
+                    <span>Best of any economic class</span>
+                </div>
+                <ul>
+                    <li>Comfortable Seater</li>
+                    <li>Pushback</li> 
+                    <li>Uninterrupted Free WiFi</li>
+                    <li><span>Price</span><b>{{fare}}</b></li> 
+                </ul>
+                <a (click)="Bus4()">BOOK NOW</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

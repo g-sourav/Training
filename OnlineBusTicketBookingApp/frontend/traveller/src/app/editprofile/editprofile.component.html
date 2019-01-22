@@ -1,0 +1,174 @@
+
+<!------ Include the above in your HEAD tag ---------->
+
+<html>
+
+<head>
+    
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>User profile form requirement</title>
+ 
+
+   
+
+</head>
+
+<body>
+  
+
+    <form (ngSubmit)="edit()" method="post" class="col-lg-6 offset-lg-4 ">
+        <span *ngIf="isavailable; then condition1 else condition2"></span>
+        <ng-template #condition1>
+   <div class="container">
+<div class="row col-lg-30 offset-lg-3  ">
+<div class="col-lg-12 ">
+<fieldset>
+    <div style="color:black;font-weight: bold"#message></div>
+
+<!-- Form Name -->
+<legend ><b style="color:black ;font-size: 20px">Update your Details here</b></legend>
+
+
+<!-- Text input-->
+
+
+<div class="form-group">
+    <b><label class="col-md-12 control-label" style="color:brown; font-size: 20px"  for="Id">CustomerID</label></b> 
+    <div class="col-md-8">
+  <div class="input-group">
+        
+         <input id="ID" name="ID" [(ngModel)]="customer.customerId" type="text" placeholder="Id" class="form-control input-md" readonly>
+        </div>
+    </div>  
+  </div>
+
+<div class="form-group">
+  <b><label class="col-md-12 control-label"  style="color:brown; font-size: 20px"  for="Name (Full name)">Name (Full name)</label></b>  
+  <div class="col-md-8">
+<div class="input-group">
+      
+       <input id="Name (Full name)" name="Name (Full name)" [(ngModel)]="customer.customerName" type="text" placeholder="Name (Full name)" class="form-control input-md">
+      </div>
+  </div>  
+</div>
+
+<div class="form-group">
+  <b><label class="col-md-12 control-label"  style="color:brown; font-size: 20px"  for="Age ">Age </label></b>  
+    <div class="col-md-8">
+    <div class="input-group">
+         
+      <input id="Age " name="Age " type="text" [(ngModel)]="customer.age" placeholder=" Age " class="form-control input-md">
+      
+        </div>
+      
+    
+    </div>
+  </div>
+
+<!-- Multiple Radios (inline) -->
+<div class="form-group">
+  <b><label class="col-md-12 control-label"  style="color:brown; font-size: 20px"  for="Gender">Gender</label></b>
+  <div class="col-md-8"> 
+    <label class="radio-inline" for="Gender-0">
+      <input type="radio" name="Gender1" [(ngModel)]="customer.gender" id="Gender-0" value="M">
+      Male
+    </label> 
+    &nbsp;&nbsp;&nbsp;
+    <label class="radio-inline" for="Gender-1">
+      <input type="radio" name="Gender2" [(ngModel)]="customer.gender" id="Gender-1" value="F">
+      Female
+    </label> 
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <b><label class="col-md-12 control-label"  style="color:brown; font-size: 20px"  for="Email Address">Email Address</label></b>  
+    <div class="col-md-8">
+    <div class="input-group">
+        
+      <input id="Email Address" name="Email Address" [(ngModel)]="customer.mailId" type="text" placeholder="Email Address" class="form-control input-md">
+      
+        </div>
+    
+    </div>
+  </div>
+
+  <!-- Text input-->
+<div class="form-group">
+  <b><label class="col-md-12 control-label"  style="color:brown; font-size: 20px"  for="Password">Password</label></b>  
+    <div class="col-md-8">
+    <div class="input-group">
+         
+      <input id="Password" name="Password" type="text" [(ngModel)]="customer.password" placeholder="Password" class="form-control input-md">
+      
+        </div>
+    
+    </div>
+  </div>
+
+  
+  
+<!-- Text input-->
+<div class="form-group">
+  <b><label class="col-md-12 control-label"  style="color:brown; font-size: 20px"  for="Phone number ">Phone number </label></b>  
+  <div class="col-md-8">
+  <div class="input-group">
+    
+    <input id="Phone number " name="Phone number " [(ngModel)]="customer.mobileNumber" type="text" placeholder=" Phone number " class="form-control input-md">
+    
+      </div>
+       
+  </div>
+</div>
+
+    
+      <!-- Text input-->
+<div class="form-group">
+  <b><label class="col-md-12 control-label"  style="color:brown; font-size: 20px"  for="Nationality ">Nationality </label></b>  
+    <div class="col-md-8">
+    <div class="input-group">
+        
+      <input id="nationality " name="nationality" [(ngModel)]="customer.nationality" type="text" placeholder="Nationality " class="form-control input-md">
+      
+        </div>
+     
+  
+  </div>
+</div>
+
+
+
+
+<div class="form-group">
+  <label class="col-md-12 control-label" ></label>  
+  <div class="col-md-8">
+    <button type="submit" class="btn btn-success">Submit</button>&nbsp;&nbsp;
+  <a href="#" class="btn btn-danger" value=""><span class="glyphicon glyphicon-remove-sign"></span> Clear</a>
+    
+  </div>
+</div>
+
+</fieldset>
+</div>
+</div>
+</div>
+</ng-template>
+<ng-template #condition2>
+ &nbsp;&nbsp;&nbsp; <h3>Please Register or Login to show Profile Details </h3>
+</ng-template>
+</form>
+
+</body>
+
+</html>

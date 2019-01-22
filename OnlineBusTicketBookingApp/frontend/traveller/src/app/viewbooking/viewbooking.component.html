@@ -1,0 +1,50 @@
+
+<html>
+    <head>
+
+    </head>
+    <body>
+    <div class="wrapper">
+     <h2 align="center"><font color="white"><b>
+     Your Bookings!</b></font></h2>
+     
+<span *ngIf="isavailable; then condition1 else condition2"></span>
+<ng-template #condition1>
+    
+    <h2 Style="color:violet">No bookings available, please login and book your seat</h2>
+
+
+
+</ng-template> 
+<ng-template #condition2>
+
+            <table id="acrylic">
+                <thead>
+                    <tr>
+                        <th>Ticket Number</th>
+                        <th>Mail Id</th>
+                        <th>Date of Journey</th>
+                        <th>Bus Number</th>
+                        <th>Seat Number</th>
+                        <th>Total Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor ="let book of bookings">
+                        <td>{{book.ticketNumber}}</td>
+                        <td>{{book.mailId}}</td>
+                        <td>{{book.dateOfJourney}}</td>
+                        <td>{{book.busNumber}}</td>
+                        <td>{{book.seatNumber}}</td>
+                        <td>{{book.totalPrice}}</td>
+                        <button (click)="deleteBooking(book.ticketNumber)" style="color:red">Delete Booking</button>
+                    </tr>
+                </tbody>
+            </table>
+          </ng-template>  
+        </div>
+        <br><br><br><br><br>
+      </body>
+      </html>
+  
