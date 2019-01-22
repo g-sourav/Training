@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PETSTERs</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'> 
+
+</head>
+<body>
+    
+        <div class="container-fluid" style="padding-right:0px;height:60%;">
+          <div class="row py-row" style="height:100%;">
+        
+              <div class="col-sm-12 col-lg-1">
+      
+                </div>
+        
+        
+            <div class="col-sm-12 col-lg-10 "  style="padding-right:0px;">
+            
+              <h1>Dogs</h1>
+              
+                  <div id="doglist" class="row py-row  " >
+                      <div style="overflow-x:hidden; overflow-y:visible; height:500px; width:1200px; ">
+                          <div class="jumbotron" id="petjum" style="display:block;margin: auto; background-color: transparent; width:1000px"> 
+                     
+                 
+                 
+                  <div class="card shadow-lg p-3 m-3 bg-white rounded " style="padding-left:20px" *ngFor="let dog of dogs">
+                   
+                      <div class="wrapper" *ngIf="dog.category=='dog';else nocontent">
+                      
+                      <div class="card " style="width:100%">
+                          <div class="mx-auto d-block" style="height:400px; width:400px;" >
+                              <img src="data:image/jpeg;base64,{{dog.image}}" class="rounded" alt="dog" style="width:100%"></div>
+                              <div class="card-header"  >  
+                               
+                                    <div class="ifblock" *ngIf="dog.sold; else sale"><a class="card-subtitle py-card-subtitle">
+                                    
+                                        this pet is sold
+                                      
+                                  
+                                  </a>
+                                  </div>
+                                  <ng-template #sale>
+                                    <button type="button" class="btn btn-primary" (click)="customerregister(dog)">Register & Buy</button>
+                                  </ng-template>
+                                  </div>
+                          <div class="card-body">
+                            <h4 class="card-title">{{dog.pet_name}} <br> <i class="fa fa-inr" aria-hidden="true"></i> {{dog.price}}</h4>
+                            <br>
+                            
+                            <div class="wrapper"style="float: left;">
+                                <div class="details-text"><i class="fas fa-mars"></i>{{dog.gender}}<i class="fas fa-venus"></i></div>
+                                <br>
+                                <div class="details-text"> <i class="fas fa-dog"></i>  {{dog.breed}}</div>
+                            </div>
+                            <div class="wrapper"style="float: right;">
+                                <div class="details-text"><i class="fas fa-birthday-cake"></i> celebrated {{dog.age}} birthday(s)</div>
+                                <br>
+                               <div class="details-text">
+                                 <i class="fas fa-map-marker-alt"></i>
+                                 {{dog.location}}
+                               </div>
+                            </div>
+                           
+                               
+                            </div>
+                            <div class="card-footer"  >  
+                                <div  style="font-size:25px;font-weight:bold;color:navy;"></div>
+                                  <div><a class="card-subtitle py-card-subtitle">
+                                 bio: {{dog.bio}}
+                                </a>
+                                </div>
+                                </div>
+
+                        
+                          
+                          </div>
+              
+                        
+                  
+                          
+                    </div>
+                   
+                   
+                    </div>
+                    <ng-template #nocontent><h5>No dogs available</h5></ng-template>
+                  
+            </div>
+            
+          </div>
+          </div>
+          </div>
+          
+          </div>
+          </div>
+        </body>
+</html>
+
+
+

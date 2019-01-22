@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+        
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+    
+</head>
+<body >
+    
+<div class="container-fluid">
+            <nav class="navbar" style="height:100%;" >  
+                <div class="container-fluid" style="width:100%;">
+                  
+                      <div class="logo" style="text-align:left;">
+                    <a href="http://localhost:4200/"><img class="image" src="assets/logo final.png"></a>
+                    <span style="font-family: cursive; font-size: 45px;">PETSTERS</span>
+                  </div>
+                   
+                  <ul class="list-inline" style="text-align:right;">
+                       <li style=" padding-right: 20px; padding-left: 50px; font-size: 30px" ><a href="http://10.223.99.44:8080/petscare/"><div style="color:black;">HOME</div></a></li>
+                        <li style=" padding-right: 20px; padding-left: 50px; font-size: 30px"><button class=" btn btn-success" (click)="about()" style="font-size: 30px; background: transparent;"><div style="color:black;">ABOUT</div></button></li>
+                        <li style=" padding-right: 20px; padding-left: 50px; font-size: 30px" ><button class=" btn btn-success" (click)="contact()" style="font-size:30px; background: transparent;"><div style="color:black;">CONTACT </div></button></li>
+                         <li>  <button type="button" class="btn btn-warning btn-lg far fa-user" style="color:black; margin-top: -2%; background-color:rgba(17, 182, 42, 0.918); border-color:black" data-toggle="modal" data-target="#myModal" [ngStyle]="{'display':show3 ? 'block' : 'none' }"> Admin Login</button></li>
+                       <form  #admin="ngForm">
+
+                              <div class="modal fade" id="myModal" role="dialog" >
+                                  <div class="modal-dialog" style="top:25%; outline-style: double; outline-color: black; opacity: .8; background-color: black;">
+    
+  
+                                   <div class="modal-content" style="background-color:darkcyan">
+                                      <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                              </div>
+                                        <div class="modal-body">
+                                          <p style="font-size:25px;font-family: cursive">
+                                          Admin Name: <input type="text" placeholder="Enter Admin name" name="uname" style="margin-left: 30px; margin: 10px; font-size: 25px;" ngModel>
+                                          <br>
+                                          Password: <input type="password" placeholder="Enter Password" name="psw" style="margin-left: 30px; margin: 10px; font-size: 25px; " ngModel>
+                                          </p>
+                                      </div>
+                                     
+                                      <div class="modal-footer" >
+                                          <button   class="btn btn-success" (click)="adminlogin(admin.value)" data-dismiss="modal" style="margin:auto; font-family:cursive">Log In</button>
+        </div>
+      </div>
+      
+    </div>
+                                     </div>
+                                     </form>
+                                     
+              
+                  </ul>
+                </div>
+                
+            </nav>
+       </div> 
+       
+
+       <div class="vv" >
+          <video class="video" src="assets/Pexels Videos 1182756.mp4" autoplay="true" loop="true" width="1690" >
+            
+          </video>
+          <div class="container" style="float:left" >
+            
+              <div class="container">
+              <div class="position-absolute-wrapper" style="position: absolute; top: 5%; ">
+                
+                  <router-outlet></router-outlet>
+              </div>
+            </div>
+              <div class="container" [ngStyle]="{'display':show4 ? 'block' : 'none' }" >
+                  <div class="position-absolute-wrapper" style="position: absolute; top: 80%; left: 10%; margin-right: 100px;" [ngStyle]="{'display':show ? 'block' : 'none' }" >
+                      <div class="btn-group btn-group-justified">
+                  <a routerLink="dogs" class="btn btn-primary " style="font-size:43px; opacity: .6; color:black ;font-family:cursive; padding: 30px; background-color:aquamarine;border-color:green ;height: 100%;" > FIND A DOG
+                      <div class="fas fa-dog" style="font-size:45px"></div></a>
+                      
+                      <a routerLink="cats" class="btn btn-primary " style="font-size:43px; opacity: .6; color:black ;font-family:cursive; padding: 30px; background-color:aquamarine;border-color:green ;height: 100%;"> FIND A CAT
+                        <div class="fas fa-cat" style="font-size:45px"></div></a>
+                        <div class=" btn-group dropup">
+                      
+                        <button class="btn btn-primary" style="font-size:41px; opacity: .6; color:black ;font-family:cursive; padding: 30px; background-color:aquamarine;border-color:green ;height: 100%;" data-toggle="dropdown">FIND OTHERS
+                            <div class="fas fa-angle-double-up" style="font-size:45px"></div>
+                        </button>
+                        
+                        <ul class="dropdown-menu">
+                          <li><a routerLink="birds" class="btn  "  style="font-size:37px;opacity: .6;  font-family:cursive; border-color:green;  padding: 25px; background-color: aquamarine; height: 100%;" > FIND A BIRD
+                          <div class="fas fa-dove" style="font-size:40px"></div></a></li>
+                          <li><a routerLink="horses" class="btn " style="font-size:37px; opacity: .6;  font-family:cursive; padding: 25px ;border-color:green; background-color: aquamarine; height: 100%;" > FIND A HORSE
+                          <div class="fas fa-horse" style="font-size:40px"></div></a></li>
+                          <li><a routerLink="fishes" class="btn  "  style="font-size:37px; opacity: .6;  font-family:cursive; padding: 25px;border-color:green; background-color: aquamarine; height: 100%;" > FIND A FISH
+                          <div class="fas fa-fish" style="font-size:40px"></div></a></li>
+                        </ul>
+                      </div>
+                     
+           </div>
+              </div>
+            </div>
+            </div>
+            
+
+          
+         </div>
+        
+        
+
+        
+       
+      
+         <footer class="page-footer font-small blue">
+
+          <br>
+          <span style="float: left; font-size: 20px"> ©2018 Petsters.com
+          All trademarks are owned by PETSTERS or used with permission</span>
+          <span style="float: right;">
+            <a href="https://www.facebook.com/"><i class='fab fa-facebook' style='font-size:40px; color: black'></i></a>
+            <a href="https://www.instagram.com/accounts/login/?hl=en"><i class='fab fa-instagram' style='font-size:40px; color: #000;'></i></a>
+            <a href="https://twitter.com/login?lang=en"><i class='fab fa-twitter' style='font-size:40px; color: #000;'></i></a>
+            <a href="https://www.youtube.com/"><i class='fab fa-youtube' style='font-size:40px; color: #000;'></i></a>
+            <a href="https://in.pinterest.com/"><i class='fab fa-pinterest-p' style='font-size:40px; color: #000;'></i></a>
+      </span>
+       </footer>  
+          
+	
+	
+
+ 
+    
+    
+  
+
+
+
+    </body>
+
+</html>

@@ -1,0 +1,15 @@
+hr {border-top: 1px solid #000; width:50%;}
+
+a {color: #000;}
+
+a:link{text-decoration:none;}
+
+.box1{background: rgba(212, 117, 205, 0.6);}
+.box2{background: rgba(103, 103, 245, 0.6);}
+.box3{background: rgb(255, 0, 0, 0.6);;}
+
+#author a{
+  color: #fff;
+  text-decoration: none;
+    
+}

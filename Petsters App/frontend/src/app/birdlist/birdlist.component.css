@@ -1,0 +1,39 @@
+.card-header
+{
+    font-family: cursive;
+    display: block;
+    margin: auto;
+}
+
+.card-title
+{
+    font-family: cursive;
+    font-size: 30px;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+.details-text
+{
+    font-family: cursive;
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+}
+.card-footer
+{
+    font-family: cursive;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+::-webkit-scrollbar {
+    width: 0px; 
+    background-color: transparent;
+     
+}
+    /* optional: show position indicator in red */
+    ::-webkit-scrollbar-thumb {
+    background: #FF0000;
+    } 

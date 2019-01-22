@@ -1,0 +1,32 @@
+<table class="table table-hover">
+  <thead class="thead-dark">
+ 
+    <tr style="font-family:cursive; font-size:25px; color:rgb(118, 255, 105)">
+ 
+      <th>Customer Id</th>
+ 
+      <th>Customer Name</th>
+ 
+      <th>Gender</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>City</th>
+      <th>Address</th>
+ 
+    </tr>
+ 
+  </thead>
+ 
+  <tbody style="background-color:ivory;font-size:25px; font-family:cursive">
+ 
+  <tr *ngFor="let cust of customer ">
+      <td style=' border: 10px'>{{cust.id}}
+        <td style=' border: 10px'> {{cust.name}}
+          <td style=' border: 10px'>{{cust.gender}}
+            <td style=' border: 10px'>{{cust.phone}}
+              <td style=' border: 10px'>{{cust.email}}
+                <td style=' border: 10px'>{{cust.city}}
+                  <td style=' border: 10px'>{{cust.address}}</td>
+  </tr>
+  </tbody>
+</table>

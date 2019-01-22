@@ -1,0 +1,72 @@
+body{
+    background-color:rgba(17, 182, 42, 0.918); 
+}
+.navbar{
+    
+    height:100%;
+}
+div.container-fluid
+{
+    background-color:rgba(17, 182, 42, 0.918); 
+}
+.container
+{    
+
+    background-blend-mode: lighten;
+}
+.vv{
+    position: relative;
+}
+
+ul.list-inline{
+    margin-top: 25px;
+    display: block;
+}
+ul{
+    background-color: transparent;
+}
+li{
+     background-color: transparent;
+   
+     float: center;
+     font-family: cursive;
+    }
+
+.jumbotron
+{       background-color:rgba(17, 182, 42, 0.918);
+        background-size: cover;
+        margin-block-end: 0%;
+        width: 100%;
+        height: 120px;
+       
+}
+   .video
+{
+    
+        height: 100%;
+        width: 100%;
+       
+    
+}
+.jumbotron .container {
+    padding: 0%;
+    position: relative;
+    height: 50%;
+    width: 100%;
+  }
+  .image
+  {
+      height:130px;
+      width: 120px;
+  }
+  
+p{
+    text-align: center; font-family:cursive; font-weight: bold
+}
+
+  .page-footer{
+      height: 70px;
+      width:100%;
+         
+  }
+ 
