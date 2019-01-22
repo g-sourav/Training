@@ -1,0 +1,75 @@
+<div  style="height:'100%'; width:'70%';"  [ngStyle]="{ 'display':visible?'none':'block'}">
+
+  <div>
+    <app-scrolling></app-scrolling>
+  </div>
+
+  <div style="background-color: #262626  ; color:#e6e6e6  ; box-shadow: 0 0 10px 0;">
+
+      <h5 style="text-align: center; padding: 8px;">  Now Showing Movies </h5>
+  
+    </div>
+  
+<div class="card-deck"  style="margin:30px 10px 10px 10px">
+  <div class="card" style=" border-radius: 25px; object-fit: cover; overflow: hidden;">
+    <a class="movieCards" (click)="navigate('taxiwala','assets/TaxiWala.jpg')" role="button" ><img class="card-img-top" src="assets/TaxiWala.jpg" style="object-fit: cover; overflow: hidden;" width="40" height="600" alt="TaxiWala"></a>
+    <div class="card-body">
+      <h5 class="card-title">TaxiWala</h5>
+      <p class="card-text">Shiva, a job monger ends up as a taxiwaala only to realise his ride is a beyond what anyone can expect.</p>
+    </div>
+  </div>
+  <div class="card"  style=" border-radius: 25px; object-fit: cover; overflow: hidden;">
+    <a class="movieCards" (click)="navigate('Badhaai Ho','assets/badhaai-ho.jpg')" role="button" > <img class="card-img-top" src="assets/badhaai-ho.jpg" style="object-fit: cover; overflow: hidden;" width="40" height="600" alt="Badhai Ho"> </a>
+    <div class="card-body">
+      <h5 class="card-title">Badhaai Ho</h5>
+      <p class="card-text">A 25-year-old man tries to suppress his embarrassment when his mother announces that she is pregnant.</p>
+    </div>
+  
+  </div>
+  <div class="card"  style=" border-radius: 25px; object-fit: cover; overflow: hidden;">
+    <a class="movieCards" (click)="navigate('Zero','assets/zero.jpg')" role="button" > <img class="card-img-top" src="assets/zero.jpg" width="40" height="600" alt="Zero"> </a>
+    <div class="card-body">
+      <h5 class="card-title">Zero</h5>
+      <p class="card-text">Short in stature but big on love, a bachelor meets two very different women who broaden his horizons and help him find purpose in life.</p>
+    </div>
+    
+  </div>
+</div>
+
+<div class="card-deck" style="margin:30px 10px 10px 10px">
+  <div class="card" (click)="navigate('Kedarnath','assets/kedarnath.jpg')" style=" border-radius: 25px; object-fit: cover; overflow: hidden;">
+    <a><img class="card-img-top" src="assets/kedarnath.jpg" width="40" height="600" alt="kedarnath"> </a>
+    <div class="card-body">
+      <h5 class="card-title">Kedarnath</h5>
+      <p class="card-text"> The story of a wealthy Hindu girl who takes a pilgrimage to the historic Kedarnath Temple in the Uttarakhand mountains, where she meets and falls in love with a humble Muslim boy who becomes her guide.</p>
+    </div>
+    </div>
+  <div class="card" style=" border-radius: 25px; object-fit: cover; overflow: hidden;">
+    <a class="movieCards" (click)="navigate('LoveYatri','assets/LoveYatri.jpg')" role="button" ><img class="card-img-top" 
+      src="assets/LoveYatri.jpg" width="40" height="600" alt="loveyatri-a-journey-of-love"></a>
+    <div class="card-body">
+      <h5 class="card-title">LoveYatri</h5>
+      <p class="card-text">Romance blossoms between young Sushrut and Michelle when they meet during the festival of Navratri. When Michelle returns home to the United Kingdom, Sushrut embarks on an adventurous journey through a strange land to win back the woman he loves.</p>
+    </div>
+ 
+  </div>
+  <div class="card" style=" border-radius: 25px; object-fit: cover; overflow: hidden;">
+    <a class="movieCards"  (click)="navigate('Thugs of Hindostan','assets/thugs-of-hindostan.jpg')" role="button" ><img class="card-img-top" 
+      src="assets/thugs-of-hindostan.jpg"  width="40" height="600" alt="thugs-of-hindstan"></a>
+    <div class="card-body">
+      <h5 class="card-title">Thugs of Hindostan</h5>
+      <p class="card-text">Based on Philip Meadows Taylor's 1839 novel Confessions of a Thug, the movie tells us about a thug named Ameer Ali and his gang, whose nefarious ways posed a serious challenge to the British Empire in India between 1790 and 1805.</p>
+    </div>
+  
+  </div>
+</div>
+
+</div>
+<!-- <div *ngIf="visible; then Login_page1"></div>
+<ng-template #Login_page1>  <app-movie-description> </app-movie-description>  </ng-template> -->
+  
+
+  <!-- <div *ngIf="Sign">
+    <app-signup> </app-signup></div> -->
+    <!-- <router-outlet></router-outlet> -->
+  

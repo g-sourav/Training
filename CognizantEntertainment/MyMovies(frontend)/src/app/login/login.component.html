@@ -1,0 +1,28 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+</head>
+<body style="height:500px;" [ngStyle]="{'display':visible?'none':'block'}">
+<br>
+<div id="wrapper" style="padding:40px;">
+
+<div class="form_div" style="opacity: 0.8;background-color: black;">
+    <h3 style="color: white;">Login</h3>
+<form #userLogin="ngForm" (ngSubmit)="saveUserLogin(userLogin)">
+<p><input type="text" name="Em" [(ngModel)]="user.email" placeholder="Enter Email" required></p>
+<p><input type="password" name="Pwd" [(ngModel)]="user.password" placeholder="**********" required></p>
+<button class="btn btn-outline-success my-2 my-sm-1" id="log"  type="submit">Log-in</button>
+<p style="text-align: center; color:white;" > Don't have an account? </p> 
+<button class="btn btn-outline-primary my-2 my-sm-1" style="margin:0 0 0 0;" id="sign" type="button" (click)="btnClick1()">Sign-up</button>
+</form>
+</div>
+<br>
+
+</div>
+ 
+</body>
+<!-- 
+<div *ngIf="visible;then ad"></div>
+
+<ng-template #ad> <app-dashboard></app-dashboard>  </ng-template> -->
+</html>

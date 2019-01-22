@@ -1,0 +1,130 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+
+<div class="container">    
+   
+            
+    <div id="signupbox" style=" margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <div class="panel-title">Admin</div>
+               
+            </div>  
+            <div class="panel-body" >
+            
+                   
+                            
+
+                    <form  class="form-horizontal" [formGroup]="form" enctype="multipart/form-data" (ngSubmit)="onSubmit()" routerLink="/movies">
+                      
+                        
+                        <div class="form-group">
+                            <label for="id_username" class="control-label col-md-4">Title<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 ">
+                                <input class="input-md  textinput textInput form-control" formControlName="title" [(ngModel)]="use.title" id="id_username"  name="username" style="margin-bottom: 10px" type="text" />
+                            </div>
+                        </div>
+
+                        <div id="div_id_email" class="form-group">
+                            <label for="id_email" class="control-label col-md-4  requiredField">Theater<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 ">
+                                <input class="input-md emailinput form-control" formControlName="theater" [(ngModel)]="use.theater"id="id_theater" name="theater"  style="margin-bottom: 10px" type="text" />
+                            </div>     
+                        </div>
+                        
+                        
+                        <div id="div_id_email" class="form-group ">
+                            <label for="id_email" class="control-label col-md-4  requiredField">Rate(per ticket)<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 ">
+                                <input class="input-md emailinput form-control" formControlName="rate" [(ngModel)]="use.rate"id="id_theater" name="theater"  style="margin-bottom: 10px" type="number" />
+                            </div>     
+                        </div>
+                        <!-- <div id="div_id_name" class="form-group"> 
+                            <label for="id_name" class="control-label col-md-4  requiredField"> Show<span class="asteriskField">*</span> </label> 
+                            <div class="controls col-md-8 "> 
+                              <input type="checkbox"formControlName="show" [(ngModel)]="use.show" name="show" value="show1"> 10:30AM
+                              
+
+                            </div>
+                        </div>
+
+ -->
+                <div id="div_id_name" class="form-group"> 
+                        <label for="time" class="control-label col-md-4  requiredField">Timing</label>
+                        <div class="controls col-md-8 "> 
+                        <select [(ngModel)]="use.time" formControlName="time" id="time">
+                            <option></option>
+                                <option *ngFor="let page of pages">
+                                            {{ page }}
+                                    </option>
+                        </select>
+                                </div>
+                </div>
+                        <div id="div_id_company" class="form-group"> 
+                            <label for="id_company" class="control-label col-md-4  requiredField"> Cover Image<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 "> 
+                              <input type="text" name="Cover" formControlName="coverimagetitle" [(ngModel)]="use.coverimagetitle">
+                              <!-- <input type="file" name="pic"  (change)="onFileChange($event)" #fileInput formControlName="coverimage" [(ngModel)]="use.coverimage"accept="image/*"> -->
+                            </div>
+                        </div> 
+                        <div id="div_id_email" class="form-group ">
+                                <label for="id_seats" class="control-label col-md-4  requiredField">No Of Seats(per show)<span class="asteriskField">*</span> </label>
+                                <div class="controls col-md-8 ">
+                                    <input class="input-md emailinput form-control" formControlName="seats" [(ngModel)]="use.seats" id="id_seats"   style="margin-bottom: 10px" type="number" />
+                                </div>     
+                            </div>
+                        <div class="form-group">
+                            <label for="usr"class="control-label col-md-4  requiredField">Description</label>
+                            <div class="controls col-md-8 ">
+                            <input type="textarea" class="form-control" formControlName="description" [(ngModel)]="use.description" id="usr">
+                          </div>
+                        </div>
+                        <div id="div_id_company" class="form-group"> 
+                            <label for="id_company" class="control-label col-md-4  requiredField"> Cast 1<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 "> 
+                              <input type="text" name="cast1" formControlName="cast1name" [(ngModel)]="use.cast1name">
+                              <!-- <input type="file" name="pic"  (change)="onFileChange($event)" #fileInput1 formControlName="cast1image" [(ngModel)]="use.cast1image" > -->
+                            </div>
+                        </div> 
+                        <div id="div_id_catagory" class="form-group">
+                            <label for="id_catagory" class="control-label col-md-4  requiredField"> Cast 2<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 "> 
+                                <input type="text" name="cast2"formControlName="cast2name" [(ngModel)]="use.cast2name">
+                                <!-- <input type="file" name="pic"  (change)="onFileChange($event)" #fileInput2 accept="image/*"formControlName="cast2image" [(ngModel)]="use.cast2image"> -->
+                            </div>
+                        </div> 
+                        <div id="div_id_number" class="form-group ">
+                             <label for="id_number" class="control-label col-md-4  requiredField">Cast 3<span class="asteriskField">*</span> </label>
+                             <div class="controls col-md-8 ">
+                                <input type="text" name="cast3"formControlName="cast3name" [(ngModel)]="use.cast3name">
+                                <!-- <input type="file" name="pic"  (change)="onFileChange($event)" #fileInput3 formControlName="cast3image" [(ngModel)]="use.cast3image"> -->
+                            </div> 
+                        </div> 
+                        <div id="div_id_location" class="form-group">
+                            <label for="id_location" class="control-label col-md-4  requiredField">Cast 4<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 ">
+                                <input type="text" name="cast2" formControlName="cast4name" [(ngModel)]="use.cast4name">
+                                <!-- <input type="file" name="pic"   (change)="onFileChange($event)" #fileInput4 formControlName="cast4image" [(ngModel)]="use.cast4image"> -->
+                            </div> 
+                        </div>
+                        
+                        <div class="form-group"> 
+                            <div class="aab controls col-md-4 "></div>
+                            <div class="controls col-md-8 ">
+                                <input type="submit" name="Submit" value="Submit" class="btn btn-primary btn btn-info" id="submit-id-signup" />
+                                
+                            </div>
+                        </div> 
+                            
+                    </form>
+
+               
+            </div>
+        </div>
+    </div> 
+</div>
+<router-outlet></router-outlet>

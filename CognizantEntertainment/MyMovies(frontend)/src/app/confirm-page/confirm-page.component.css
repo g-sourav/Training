@@ -1,0 +1,21 @@
+#im{
+    height:400px; 
+    width:100%; 
+    margin-right: 5%; 
+    background-repeat: no-repeat;  
+    background-position: center;  
+    object-fit: cover;
+}
+#tb{
+    display: none;
+}
+@media screen and (max-width:1355px),
+all and (max-width:1355px){
+    #im{
+        display: none;
+    }
+    #tb{
+        display: block;
+    }
+   
+}

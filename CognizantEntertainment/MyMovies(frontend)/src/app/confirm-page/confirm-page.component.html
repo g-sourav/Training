@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
+<script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+<div style="height:'100%'; margin-top: 20px; width:'100%'; padding: 20px;" >
+  <!-- <h1 style="text-align: center; margin-top: -25px;"> Ticket Booking Confirmed </h1> -->
+
+<div id="im" style="background-image: url('assets/tick1.jpg');">
+        
+    <div id="details" style="float:left; margin:100px 390px 0 700px;" >
+
+        <h2 style="margin-bottom: 15px;">  {{tickets.show.movie.title}} </h2>
+        
+        <p style="line-height: 60%"> Theatre: <b>{{tickets.show.movie.theater}}</b></p> 
+        <p style="line-height: 60%"> Show date: <b> {{tickets.show.date}} </b></p> 
+        <p style="line-height: 60%"> Show Timings: <b>{{tickets.show.time}}</b></p>
+        <div *ngFor="let seat of arr">
+        <p style="line-height: 60%" *ngIf="seat.isBooked?true:false"> Seat number: <b>{{seat.seatNo}}</b></p>
+       </div>
+     <p style="line-height: 60%"> Price: <b>{{(tickets.show.movie.rate*count)|currency: 'INR':true}}</b></p>
+    </div>
+    <button (click)="done()" id="done" class="btn btn-success" style="float:right;margin-right:10%;
+    margin-top:5%;">Done</button>
+      </div>
+      <div id="tb">
+     <table class="table table-dark table-sm" id="mytb">
+       <thead>
+         <tr>
+           <td>Movie</td>
+           <td>Theatre</td>
+           <td>Show date</td>
+           <td>Show Timings</td>
+           <td>Seat Number</td>
+           <td>Price</td>
+         </tr>
+       </thead>
+       <tbody *ngFor="let seat of arr">
+         <tr *ngIf="seat.isBooked?true:false">
+           <td> {{tickets.show.movie.title}}</td>
+           <td>{{tickets.show.movie.theater}}</td>
+           <td>{{tickets.show.date}} </td>
+           <td>{{tickets.show.time}} </td>
+           <td>
+            {{seat.seatNo}}
+           </td>
+           <td>{{(tickets.show.movie.rate)|currency: 'INR':true}}</td>
+         </tr>
+       </tbody>
+     </table>
+     <button class="btn btn-success" (click)="done()">Done</button>
+     </div>
+  </div>
+  <script>
+      $(document).ready(function(){
+          $('#mytb').dataTable();
+      });
+      </script>
+  

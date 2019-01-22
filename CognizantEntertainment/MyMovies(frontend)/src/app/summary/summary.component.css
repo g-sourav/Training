@@ -1,0 +1,24 @@
+.summ{
+    
+    font-size: 14px;
+    margin-left: 305px;
+    margin-right: 200px;
+}
+.syn{
+    margin-left: 305px;
+}
+@media screen and (max-width:468px){
+    .syn{
+        text-align: center;
+        margin:0;
+        width:100%;
+        position: relative;
+    }
+    .summ{
+        text-align: justify;
+        margin:0;
+        width:100%;
+        padding: 3%;
+        position: relative;
+    }
+}
