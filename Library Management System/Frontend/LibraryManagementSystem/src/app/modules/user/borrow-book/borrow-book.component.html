@@ -1,0 +1,62 @@
+<body>
+    <div class="nav">
+        <ul class="nav nav-pills">
+          <li role="presentation" routerLinkActive="active" routerLinkActiveOptions={exact:True}><a routerLink="/app-home">Home</a></li>
+          <li role="presentation" routerLinkActive="active"><a routerLink="/app-edit">Edit Details</a></li>
+          <li role="presentation" routerLinkActive="active"><a routerLink="/app-borrow-book">Borrow Book</a></li>
+          <li role="presentation" routerLinkActive="active"><a routerLink="/app-book-borrowed">Return Book</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right ml-auto">
+            <li role="presentation" routerLinkActive="active"><a id="logout" routerLink="/app-user-logout"><span><i class="fa fa-sign-out"
+                    aria-hidden="true"></i></span>Logout</a></li>
+          </ul>
+      </div>
+
+  <div class="container">
+    <br />
+    <div class="row justify-content-center">
+      <div class="col-md-12">
+        <form class="card card-md" (ngSubmit)="searchBooks(searchBox.value)" style="background: transparent; border: 0;">
+          <div class="card-body row no-gutters align-items-center">
+            <div class="col-auto">
+              <i class="fa fa-search" style="width: 21px; height: 19px;"></i>
+            </div>
+            <!--end of col-->
+            <div class="col">
+              <input #searchBox class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search books..">
+            </div>
+            &nbsp;&nbsp;
+            <!--end of col-->
+            <div class="col-auto">
+              <button class="btn btn-lg btn-success" type="submit">Search</button>
+            </div>
+            <!--end of col-->
+          </div>
+        </form>
+      </div>
+      <!--end of col-->
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="jumbotron" style="background:transparent;">
+      <table class="table table-striped table-light" style="border-radius:6px;">
+        <thead class="thead-dark">
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Publishing Date</th>
+            <th> </th>
+          </tr>
+        </thead>
+
+        <tr *ngFor="let book of list">
+          <td> {{book.bookTitle}}</td>
+          <td> {{book.bookAuthor}}</td>
+          <td> {{book.bookPublishDate}}</td>
+          <td><input type="button" class="btn btn-danger" value="Borrow Book" (click)="borrowABook(this.book)"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>

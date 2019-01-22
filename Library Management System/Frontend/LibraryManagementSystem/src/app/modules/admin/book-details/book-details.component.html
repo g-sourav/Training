@@ -1,0 +1,26 @@
+<body>
+<app-admin-home></app-admin-home>
+<div class="jumbotron" style="background:transparent; border-radius: 7px;">
+  <table class="table table-striped table-light table-hover" style="border-radius:6px;">
+    <thead class="thead-dark">
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Publishing Date</th>
+        <th>Edit?</th>
+        <th>Delete?</th>
+      </tr>
+    </thead>
+
+    <tr *ngFor="let book of list">
+      <td>{{book.bookId}}</td>
+      <td> {{book.bookTitle}}</td>
+      <td> {{book.bookAuthor}}</td>
+      <td> {{book.bookPublishDate}}</td>
+      <td><input type="button" class="btn btn-warning" value="Edit Book" (click)="editBook(this.book)"></td>
+      <td><input type="button" class="btn btn-danger" value="Delete Book" (click)="deletebook(this.book)"></td>
+    </tr>
+  </table>
+</div>
+</body>

@@ -1,0 +1,70 @@
+<div class="modal-header">
+    <h4 class="modal-title">Edit Book Details</h4>
+  </div>
+  <div class="modal-body">
+    <div class="jumbotron">
+      <form #frm="ngForm" (ngSubmit)="saveAfterEdit()">
+  
+        <div class="form-group">
+          <label for="bookId">ID:</label>
+          <input type="text" placeholder="Enter book ID.." class="form-control" name="bookId" [(ngModel)]="book.bookId"
+            ngModel #bookId="ngModel" required>
+        </div>
+        <div *ngIf="bookId?.touched">
+          <div *ngIf="bookId.errors?.required" class="alert alert-danger">
+            Name Is Required
+          </div>
+          <div *ngIf="bookId.errors?.pattern" class="alert alert-danger">
+            Invalid Name
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="bookTitle">Title:</label>
+          <input type="text" placeholder="Enter book title.." class="form-control" name="bookTitle" [(ngModel)]="book.bookTitle"
+            #bookTitle="ngModel" required>
+        </div>
+        <div *ngIf="bookTitle?.touched">
+          <div *ngIf="bookTitle.errors?.required" class="alert alert-danger">
+            Name Is Required
+          </div>
+          <div *ngIf="bookTitle.errors?.pattern" class="alert alert-danger">
+            Invalid Name
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="bookAuthor">Author:</label>
+          <input type="text" placeholder="Enter book author name.." class="form-control" name="bookAuthor" [(ngModel)]="book.bookAuthor"
+            ngModel #bookAuthor="ngModel" required>
+        </div>
+        <div *ngIf="bookAuthor?.touched">
+          <div *ngIf="bookAuthor.errors?.required" class="alert alert-danger">
+            Name Is Required
+          </div>
+          <div *ngIf="bookAuthor.errors?.pattern" class="alert alert-danger">
+            Invalid Name
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="bookPublishDate">Publish Date:</label>
+          <input type="text" placeholder="Enter book publish date.." class="form-control" name="bookPublishDate"
+            [(ngModel)]="book.bookPublishDate" ngModel #bookPublishDate="ngModel" required>
+        </div>
+        <div *ngIf="bookPublishDate?.touched">
+          <div *ngIf="bookPublishDate.errors?.required" class="alert alert-danger">
+            Name Is Required
+          </div>
+          <div *ngIf="bookPublishDate.errors?.pattern" class="alert alert-danger">
+            Invalid Name
+          </div>
+        </div>
+  
+        <input type="submit" value="Update Book" name="button" class="btn btn-success" [disabled]="frm.invalid">
+        &nbsp; &nbsp; &nbsp;
+        <button type="button" (click)="closeForm()" class="btn btn-danger">Close</button>
+  
+      </form>
+    </div>
+  </div>

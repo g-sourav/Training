@@ -1,0 +1,25 @@
+
+<body>
+<img src="assets/admin-login.jpg" class="img-thumbnail" alt="Admin Login">
+
+<!-- Default form login -->
+<form #frm="ngForm" class="text-center border border-light p-5" style="margin-left: 35%;margin-top: 2%; margin-right: 35%; background :whitesmoke;">
+      
+    <p class="h4 mb-4 col-md-12">ADMIN SIGN IN</p>
+
+      <!-- Email -->
+      <input type="email" name="adminUsername" class="form-control mb-4 col-md-12" placeholder="User Name" ngModel>
+
+      <!-- Password -->
+      <input type="password" name="adminPassword" class="form-control mb-3 col-md-12" placeholder="Password" ngModel>
+
+      <!-- Sign in button -->
+      <button class="btn btn-info btn-block mt-4 mb-2 ml-4 col-md-10" type="submit" (click)="adminLogin(frm.value)" >Sign in</button>
+      <a routerLink="/app-root"><button class="btn btn-info btn-block mt-4 mb-2 ml-4 col-md-10" type="button" >Back</button></a>
+
+</form>
+<!-- Default form login -->
+
+<router-outlet></router-outlet>
+
+</body>

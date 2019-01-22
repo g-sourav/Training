@@ -1,0 +1,21 @@
+
+img {
+    width: 32%;
+    height: 20%;
+    margin-left: 34%;
+    margin-top: 5%;
+}
+
+
+body {
+    /* The image used */
+    background-image: url("/assets/admin-bg.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
