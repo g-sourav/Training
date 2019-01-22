@@ -1,0 +1,45 @@
+<div style="background-image: url('assets/img/3.jpg');background-repeat:no-repeat;">
+
+               
+    <div class="container-fluid" style="margin-top:70px;padding-left: 10rem">  
+           
+          
+                    
+    <p>
+        
+    </p>
+    <div class="bg"style="height:55rem;width:30%;">
+        <h2>Login</h2>
+
+
+    <form [formGroup]="form"  #frm (ngSubmit)="ValidateUser()" >
+            <div class="alert alert-danger" *ngIf="form.errors">Invalid Username or Password</div>
+            Username<span class="req">*</span>
+        <div class="form-group">
+            <input type="text" name="userName" class="form-control" formControlName="userName" [(ngModel)]="user1.userName">
+            <div class="alert alert-danger" *ngIf="form.get('userName').touched&&form.get('userName').invalid">
+              <div *ngIf="form.get('userName').errors.required">Username is required</div>
+              <div *ngIf="form.get('userName').errors.minlength">Minimum length is 3</div>
+            </div>
+        </div>
+        Password<span class="req">*</span>
+        <div class="form-group">
+            <input type="password" name="password" class="form-control" formControlName="password"[(ngModel)]="user1.password">
+            <div class="alert alert-danger" *ngIf="form.get('password').touched&&form.get('password').invalid">
+                <div *ngIf="form.get('password').errors.required">Password is required</div>
+                <div *ngIf="form.get('password').errors.minlength">Minimum length is 5</div>
+              </div>
+        </div>
+        <div>
+            forgot password?<button type="button" class="btn btn-link" (click)="setNewPassword()">Click here</button>
+        </div>
+        
+
+        <div class="form-group">
+            <button  class="btn btn-primary">Login</button>
+            <button class="btn btn-primary" style="margin:5px" (click)="registerbtn()">Register</button>
+        </div>
+    </form>
+</div>     
+</div>   
+</div>

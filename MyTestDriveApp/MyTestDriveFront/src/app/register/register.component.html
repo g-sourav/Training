@@ -1,0 +1,46 @@
+<div  class="image" style="background-image:url('assets/img/rev.jpg');">
+
+
+    <div class="container " style="margin-top:5rem" class="font">
+    <div style="position: absolute; right: 150;margin: 20px;max-width: 400px;padding: 16px">
+    <h2>Register</h2>
+
+<form [formGroup]="form"  #frm (ngSubmit)="createUser(frm)">
+        <div class="alert alert-danger" *ngIf="form.errors">Invalid form</div>
+            Username<span class="req">*</span>
+        <div class="form-group">
+            <input type="text" name="userName" class="form-control" formControlName="userName" [(ngModel)]="register.userName">
+            <div class="alert alert-danger" *ngIf="form.get('userName').touched&&form.get('userName').invalid">
+              <div *ngIf="form.get('userName').errors.required">Username is required</div>
+              <div *ngIf="form.get('userName').errors.minlength">Minimum length is 3</div>
+            </div>
+        </div>
+        MobileNumber<span class="req">*</span>
+        <div class="form-group">
+                <input type="text" name="mobileNumber" class="form-control" formControlName="mobileNumber" [(ngModel)]="register.mobileNumber">
+                <div class="alert alert-danger" *ngIf="form.get('mobileNumber').touched&&form.get('mobileNumber').invalid">
+                  <div *ngIf="form.get('mobileNumber').errors.required">MobileNumber is required</div>
+                  <div *ngIf="form.get('mobileNumber').errors.minlength">Minimum length is 10</div>
+                </div>
+            </div>
+            EmailId<span class="req">*</span>
+            <div class="form-group">
+                    <input type="text" name="emailId" class="form-control" formControlName="emailId" [(ngModel)]="register.emailId">
+                    <div class="alert alert-danger" *ngIf="form.get('emailId').touched&&form.get('emailId').invalid">
+                      <div *ngIf="form.get('emailId').errors.required">EmailId is required</div>
+                      <div *ngIf="form.get('emailId').errors.minlength">Minimum length is 10</div>
+                    </div>
+                </div>
+        Password<span class="req">*</span>
+        <div class="form-group">
+            <input type="password" name="password" class="form-control" formControlName="password"[(ngModel)]="register.password">
+            <div class="alert alert-danger" *ngIf="form.get('password').touched&&form.get('password').invalid">
+                <div *ngIf="form.get('password').errors.required">Password is required</div>
+                <div *ngIf="form.get('password').errors.minlength">Minimum length is 8</div>
+              </div>
+        </div>
+        <div class="form-group">
+                <button class="btn btn-primary" type="submit">Register</button>
+                <a [routerLink]="['/login']" class="btn btn-link" >Cancel</a>
+            </div>
+        </form>

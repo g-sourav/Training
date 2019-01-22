@@ -1,0 +1,55 @@
+<div class="img">
+  <div class="container" style="margin-left: 30rem;padding-top: 10rem" >
+  
+    
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Choose Your Location</button>
+  
+      
+      <div class ="modal fade" id=myModal role="dialog">
+      <div class="modal-dialog modal-lg">
+  
+  
+      <div class="modal-content">
+          <div class="modal-header bg-success text-white" style="padding:35px 50px;" *ngIf="isloc">
+              <h4>{{location.places}}</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button> 
+          </div>
+          <div class="modal-body" style="padding:40px 50px;">
+              <form role="form">
+                <div class="form-group">
+                  <label for="location"> <h5>location</h5></label>
+                  <div class="dropdown">
+                      <button type="button" class=" dropdown-toggle" data-toggle="dropdown">
+                        Select Location
+                      </button>
+          <div class="dropdown-menu">
+
+              <a *ngFor="let i of list" class="dropdown-item" (click)="showLocation(i)">{{i.places}}</a>
+               
+          </div>
+                </div>
+              </div>
+          <div class="form-group">
+              <label for="date"><h5>date</h5></label>
+              <div>
+           <input type="date" name="dt" value="2018-12-15" min="2018-12-15" max="2019-12-31" [(ngModel)]="date">
+          </div>
+           </div>
+           <button type="submit" class="btn btn-success btn-block" (click)="confirm()" data-dismiss="modal"> ConfirmBooking</button>
+          </form>
+        </div>
+    </div>
+  
+  </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+  
+
+  
