@@ -1,0 +1,103 @@
+<app-mainpage></app-mainpage>
+    
+    
+   
+  <div class="bg-img">
+  
+      
+      
+        <div class="col-md-6">
+            <span *ngIf="isavailable; then condition1 else condition2"></span>
+            <ng-template #condition1>
+
+                <br/>
+              <h2 align="center"> <b>My Profile</b></h2>
+             
+              
+      
+      <table class="table table-striped">
+          <tr>
+              <td><font face="Arial" size="4.5px"><b>UserId: </b></font></td>
+              <td><font face="Arial" size="4.5px"><b>{{signup.uid}} </b></font></td></tr>
+      
+      
+        <tr>
+                <td><font face="Arial" size="4.5px"><b>UserName: </b></font></td>
+                <td><font face="Arial" size="4.5px"><b>{{signup.uname}} </b></font></td></tr>
+                <tr>
+                    <td><font face="Arial" size="4.5px"><b>AccounNumber: </b></font></td>
+                    <td><font face="Arial" size="4.5px"><b>{{signup.accnum}} </b></font></td></tr>
+                    <tr>
+                        <td><font face="Arial" size="4.5px"><b>E-MailId: </b></font></td>
+                        <td><font face="Arial" size="4.5px"><b>{{signup.mailid}} </b></font></td></tr>
+                        <tr>
+                            <td><font face="Arial" size="4.5px"><b>PhoneNumber: </b></font></td>
+                            <td><font face="Arial" size="4.5px"><b>{{signup.phonenum}} </b></font></td></tr>
+                  
+                            <tr>
+                                <td><font face="Arial" size="4.5px"><b>CardNumber: </b></font></td>
+                                <td><font face="Arial" size="4.5px"><b>{{signup.cardnum}}</b></font></td></tr>
+                                <tr>
+                                    <td><font face="Arial" size="4.5px"><b>Address: </b></font></td>
+                                    <td><font face="Arial" size="4.5px"><b>{{signup.address}}</b></font></td></tr>
+                                    <tr>
+                                        <td><button class="btn btn-info" (click)="editUser(signup.uid)" style="margin-left: 20px;width:80px;font-size:18px"> Edit</button></td>
+                                        <td><button class="btn btn-info" (click)="back(signup.accnum)" style="margin-left: 20px;width:80px;font-size:18px"> back</button></td>
+                                    </tr>
+                  
+                   </table>
+                
+      
+       
+                </ng-template>
+                <ng-template #condition2>         
+      
+      
+      
+                    <div class="container">
+            
+      <form  (ngSubmit) = "createUser(signup.uid)" >
+        
+          <h2 align="center"> <b>Edit Profile</b> </h2>
+          <label for="address" class="label"><b>UserId:</b></label>
+        <input  class="form-control" type = "text" name = "title"  [(ngModel)]="signup.uid" [readonly]="isReadOnly">
+        <br/>
+        <label for="address" class="label"><b> UserName: </b></label>
+      <input class="form-control" type = "text" name = "Uname" [(ngModel)]="signup.uname">
+        <br/>
+        <label for="address" class="label"><b> AccountNumber: </b></label>
+       <input class="form-control" type = "text" name = "Accno" [(ngModel)]="signup.accnum" [readonly]="isReadOnly">
+        <br/>
+        <label for="address" class="label"><b>Card Number:</b></label>
+         <input class="form-control" type = "text" name = "cardno"  [(ngModel)]="signup.cardnum" [readonly]="isReadOnly">
+        <br/>
+        <label for="address" class="label"><b>Phone Number:</b></label>
+         <input class="form-control" type = "text" name = "phno" [(ngModel)]="signup.phonenum">
+        <br/>
+        <label for="address" class="label"><b>E-Mail: </b></label>
+        <input class="form-control" type = "text" name = "mail"  [(ngModel)]="signup.mailid">
+        <br/>
+        <label for="address" class="label"><b>Address:</b></label>
+         <input class="form-control" type = "text" name = "add"  [(ngModel)]="signup.address">
+        <br/><label for="address" class="label"><b>Pin:</b></label>
+         <input class="form-control" type = "text" name = "pin"  [(ngModel)]="signup.pin">
+        <br/>
+        <label for="address" class="label"><b>Password:</b></label>
+         <input class="form-control" type = "text" name = "password"  [(ngModel)]="signup.password">
+        <br/>
+      
+        <input type = "submit" class="button1" value = "Update"><br/>
+      </form>
+      </div>
+      </ng-template>
+      
+      
+      </div> 
+      
+      </div>
+  
+      
+  <div>
+      <router-outlet></router-outlet>
+    </div>
+    

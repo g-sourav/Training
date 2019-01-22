@@ -1,0 +1,44 @@
+
+<app-mainpage></app-mainpage>
+<div class="bg-img">
+   
+    <div class="container-fluid">
+        <div class="container1">
+      
+        <p class="p"><b><i>{{statusCreation}}</i> </b></p>
+
+<form  (ngSubmit) = "transferclicked(account)" >
+    <div class="form-group">
+    <label for="UserId" class="label"><b>Account Number:</b></label>
+    <input  type = "text" class="form-control" name = "acc1"  [(ngModel)]="account.accno" [readonly]="isReadOnly">
+    </div>
+    <div class="form-group">
+  <label for="UserId" class="label"><b>Available Balance:</b></label>
+  <input class="form-control" type = "text" name = "availbal" [(ngModel)]="account.balance" [readonly]="isReadOnly">
+</div>
+<div class="form-group">
+<label for="UserId" class="label" ><b>Recepient Account</b></label>
+
+<div class="dropdown">
+<select (change)="getOption($event.target.value)"  class="form-control" ><option *ngFor="let a of addrecepient1" name ="acc2" [value]="a.name+' '+a.accno+' '+a.ifsccode">
+  {{a.accno}}
+</option></select>
+</div>
+ </div>
+
+
+ <div class="dropdown">
+ <label for="UserId" class="label"><b>Enter Amount</b></label>
+ <input class="form-control" type = "text" name = "Uname" [(ngModel)]="transAmt">
+ </div>
+ <div class="form-group">
+  <input type = "submit" value = "Transfer" class="btn">
+ </div>
+</form>
+
+</div>
+</div>
+</div>
+
+
+

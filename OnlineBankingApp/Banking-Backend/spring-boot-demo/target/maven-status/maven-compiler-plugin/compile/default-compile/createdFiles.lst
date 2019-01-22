@@ -1,0 +1,16 @@
+com\concretepage\repository\BalanceRepository.class
+com\concretepage\repository\AddrecepRepository.class
+com\concretepage\MyApplication.class
+com\concretepage\service\bankservice.class
+com\concretepage\entity\Status.class
+com\concretepage\repository\BankRepository.class
+com\concretepage\repository\TransactionsRepository.class
+com\concretepage\entity\Signup.class
+com\concretepage\config\WebDemoConfig$1.class
+com\concretepage\config\WebDemoConfig.class
+com\concretepage\controller\bankController.class
+com\concretepage\entity\Addrecepient.class
+com\concretepage\service\Ibankservice.class
+com\concretepage\entity\account.class
+com\concretepage\entity\Transactions.class
+com\concretepage\repository\AccountantRepository.class

@@ -1,0 +1,117 @@
+    .label{
+      font-family:Arial ;
+      font-size:18px;
+      
+        font-style:italic;
+        color:black;
+        font-focus:20px;
+      }
+    
+    .button1{
+      background-color: green;
+      font-size: 17px;
+    }
+  
+
+    .div {
+      position: relative;
+  right: 0;
+  margin: 20px;
+  margin-top: 2%;
+  margin-left: 8%;
+  max-width: 60%;
+  padding: 30px;
+  overflow: auto;
+    }
+    .label{
+      font-family:Arial ;
+        font-style:italic;
+        color:black;
+        font-size:18px;
+        font-focus:20px;
+      }
+      .div {
+        position: relative;
+    right: 0;
+    margin: 20px;
+    margin-top: 2%;
+    margin-left: 8%;
+    max-width: 60%;
+    padding: 30px;
+    overflow: auto;
+      }
+
+      
+     
+      input[type=text] {
+        width: 100%;
+        padding: 15px;
+        margin: 15px 0 2px 0;
+        font-size:18px;
+        border: solid;
+        background: #f1f1f1;
+      }
+      
+      input[type=text]:focus {
+        background-color: #ddd;
+        outline: solid;
+      }
+      .bg-img {
+  
+        /* background-image: url("src/assets/images/gif5.gif"); */
+     
+        min-height: 700px;
+        min-width: 100%;
+       
+  
+     
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      
+        position: absolute;
+      
+      }
+    
+      
+   
+      .btn {
+        padding: 10px 7px;
+        text-decoration: none;
+        font-size: 18px;
+        color: black;
+        margin: 15px 0 2px 0;
+  
+        display: block;
+        font-style:italic;
+        font-family:Arial;
+        font-focus:20px;
+       
+    
+    }
+    
+    .btn:hover {
+        color: #f1f1f1;    }
+    
+    .btn:focus
+    {
+        color: orange;
+    }
+    .container {
+      position: relative;
+  right: 0;
+  margin: 20px;
+  margin-top: 2%;
+  margin-left: 8%;
+  max-width: 60%;
+  padding: 30px;
+  
+    }
+  
+      
+  
+    .table-responsive{
+      float:center;
+      align:center;
+    }
+ 

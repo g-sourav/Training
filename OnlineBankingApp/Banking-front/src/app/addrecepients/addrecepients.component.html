@@ -1,0 +1,34 @@
+
+  <app-mainpage></app-mainpage>
+    
+    
+    
+    
+  
+    <div  class="bg-img" style="width:100%;" >
+                <div class="container">
+        <div class="container1">
+
+        
+
+<form  (ngSubmit) = "createRecepient()" >
+        <label for="address" class="label"><b>Recepient Account Number:</b></label>
+<input  type = "text"  class="form-control" name = "title" placeholder="Enter Recepient Account Number"   [(ngModel)]="addrecepient.accno" >
+    <br/>
+    <label for="address" class="label"><b>Recepient IFSC Code:</b></label>
+    <input  type = "text" class="form-control" name = "title" placeholder="Enter Recepient IFSCcode"  [(ngModel)]="addrecepient.ifsccode">
+    <br/>
+    <label for="address" class="label"><b>Recepient Name:</b></label>
+    <input  type = "text" class="form-control" name = "title" placeholder="Enter Recepient Name"  [(ngModel)]="addrecepient.name"><br/>
+
+    <b><input type = "submit"  class="btn1" value = "Create"></b>
+ </form>
+ <p class="p"><b><i>{{statusCreation}}</i> </b></p>
+
+</div> 
+</div> 
+
+
+</div>
+ 
+      

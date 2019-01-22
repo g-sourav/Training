@@ -1,0 +1,149 @@
+
+    
+    input[type=text] {
+        width: 100%;
+        padding: 15px;
+        font-size:14px;
+        font-family:Arial;
+        margin: 15px 0 2px 0;
+        border-style: solid;
+        border-color: black;
+  
+        background: #f1f1f1;
+      }
+      
+      
+      .label{
+        font-family:Arial;
+        font-size:18px;
+        
+          font-style:italic;
+          color:black;
+          font-focus:20px;
+        }
+      
+     
+      
+        .trans
+        {
+         background-image: url("src/assets/images/transbg.jpg");
+       
+            min-height: 700px;
+            min-width: 100%;
+            
+            margin-left:0%;
+       
+         
+            background-position: center;
+            background-repeat: repeat;
+            background-size: cover;
+            position: absolute;
+        
+        }
+        
+  
+      .button1{
+        background-color: green;
+        font-size: 17px;
+      }
+    
+  
+      .div {
+        position: relative;
+        right: 0;
+        margin: 20px;
+        margin-top: 8%;
+        margin-left: 13%;
+        margin-color:silver;
+        max-width: 34%;
+        padding: 20px;
+        border:solid;
+    background-color: #006664;
+    border-color:silver;
+      
+      }
+      .label{
+        font-family:Arial;
+          font-style:italic;
+         
+          font-size:18px;
+          font-focus:20px;
+        }
+        
+    
+        input[type=text] {
+          width: 100%;
+          padding: 15px;
+          margin: 15px 0 2px 0;
+          font-size:18px;
+          border: none;
+          background: #f1f1f1;
+        }
+        
+        input[type=text]:focus {
+          background-color: #ddd;
+          outline: none;
+        }
+    
+      
+        .h2{
+          font-family: Arial;
+          font-size: 20px;
+        }
+     
+        .btn {
+          padding: 10px 7px;
+          text-decoration: none;
+          font-size: 18px;
+          color: black;
+          margin: 15px 0 2px 0;
+    
+          display: block;
+          font-style:italic;
+          font-family:Arial;
+          font-focus:20px;
+         
+      
+      }
+      .trans
+      {
+          background-image: url("src/assets/images/silver.jpg");
+     
+          min-height: 700px;
+          min-width: 100%;
+         
+     
+       
+          background-position: center;
+          background-repeat: repeat;
+          background-size: cover;
+          position: absolute;
+      
+      }
+      
+      
+      .container1 {
+       position: relative;
+       right: 0;
+       margin: 20px;
+       margin-top: 2%;
+       margin-left: 8%;
+       max-width: 60%;
+       padding: 30px;
+       overflow: auto;
+       
+     
+     }
+      
+      .btn:hover {
+          color: #f1f1f1;    }
+      
+      .btn:focus
+      {
+          color: orange;
+      }
+ 
+    
+        
+    
+      

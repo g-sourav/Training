@@ -1,0 +1,116 @@
+
+
+
+
+<div  class="bg-img">
+  <div class="conta">
+    
+    <div  class="container"> 
+
+        <button (click)="home()" class="btn btn-link"><span class="fa fa-home"></span>Home</button> 
+      </div>
+
+
+    </div>
+
+
+
+    <div  class="container"> 
+  
+     
+    <form  (ngSubmit) = "createUser()"  >
+       <br>
+       <h1 align="center"><b>SignUp</b> </h1>
+       <br>
+    
+       <div class="row">
+        <div class="col-md-5">
+          <div class="form-group">
+       <!-- <label for="UserId" class="label"><b>UserId:</b></label> -->
+    
+     <input type="text"    placeholder="Enter UserId" name="uid" [(ngModel)]="signup.uid"required>
+        <!-- <br/> -->
+        </div>
+        </div>
+        <!-- <label for="UserName" class="label"><b>UserName:</b></label> -->
+        <div class="col-xs-6 col-sm-6 col-md-6">
+          <div class="form-group">
+          <input type="text"  placeholder="Enter UserName" name="Uname" [(ngModel)]="signup.uname"required>
+        <!-- <br/> -->
+        </div>
+        </div>
+        </div>
+    
+        <div class="row">
+          <div class="col-md-5">
+            <div class="form-group">
+        <!-- <label for="AccountNumber" class="label"><b>AccountNumber:</b></label> -->
+      <input type="text"  placeholder="Enter AccountNumber" name="uid" [(ngModel)]="signup.accnum"required>
+      </div>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6">
+          <div class="form-group">
+        
+          <input type="text" placeholder="Enter CardNumber" name="uid" [(ngModel)]="signup.cardnum"required>
+        </div>
+        </div>
+        </div>
+        <div class="row">
+          <div class="col-md-5">
+            <div class="form-group">
+       
+        <!-- <label for="pin" class="label"><b>Pin Number:</b></label> -->
+          <input type="text"  placeholder="Enter Pin" name="uid" [(ngModel)]="signup.pin"required>
+        </div>
+        </div>
+        <!-- <label for="phonenum" class="label"><b>PhoneNumber:</b></label> -->
+        <div class="col-xs-6 col-sm-6 col-md-6">
+          <div class="form-group">
+        
+          <input type="text" placeholder="Enter PhoneNumber" name="uid" [(ngModel)]="signup.phonenum"required>
+        </div>
+        </div>
+        </div>
+        <!-- <label for="mailid" class="label"><b>E-mailId:</b></label> -->
+        
+        <div class="row">
+          <div class="col-md-5">
+            <div class="form-group">
+          <input type="text"  placeholder="Enter E-mail" name="uid" [(ngModel)]="signup.mailid"required>
+        </div>
+        </div>
+        <!-- <label for="address" class="label"><b>Address:</b></label> -->
+        <div class="col-xs-6 col-sm-6 col-md-6">
+          <div class="form-group">
+        
+          <input type="text" placeholder="Enter Address" name="uid" [(ngModel)]="signup.address"required>
+        </div>
+        </div>
+        </div>
+        
+        <!-- <label for="password" class="label"><b>Password:</b></label> -->
+        <div class="row">
+          <div class="col-md-5">
+            <div class="form-group">
+        
+        <input type="password"  placeholder="Enter Password" name="uid" [(ngModel)]="signup.password"required>
+      </div>
+      </div>
+    
+      <div class="col-xs-6 col-sm-6 col-md-6">
+        <div class="form-group">
+     
+    
+        <input type = "submit" class="btn1" value = "Register">
+        </div>
+      </div></div>
+        
+    
+     </form>
+    
+    
+    </div> 
+    </div>
+    
+    
+    

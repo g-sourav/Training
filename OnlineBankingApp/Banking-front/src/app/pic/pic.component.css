@@ -1,0 +1,13 @@
+.bg-img {
+ 
+    background-image: url("src/assets/images/bb1.jpg");
+  
+    min-height: 600px;
+    min-width: 100%;
+  
+  
+  
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+  } 

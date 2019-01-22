@@ -1,0 +1,55 @@
+
+    
+  
+  
+ <app-mainpage></app-mainpage>
+<div class="trans"> 
+   <!-- <div class="col-md-6"> -->
+    <div class="container">
+    
+       <h2 class="heading" align="center"><b>My Transactions</b></h2><br/>
+       <div class="table-responsive">
+       <table class="table">
+          <thead class="thead-light">
+         <tr>
+          
+           <th><font face="Comic" size="4px"><b>TransactionId</b></font></th>
+           <th><font face="Comic" size="4px"><b>Date of Transaction</b></font></th>
+           <th><font face="Comic" size="4px"><b>From Account No.</b></font></th>
+           <th><font face="Comic" size="4px"><b>To Account No.</b></font></th>
+           <th><font face="Comic" size="4px"><b>Amount Transferred</b></font></th>
+           <th><font face="Comic" size="4px"><b>Available balance</b></font></th>
+
+
+         </tr>
+         </thead>
+         <tbody>
+         <tr *ngFor="let transaction of transactions">
+           <td><font face="Comic" size="4px"><b>{{transaction.id}}</b></font></td>
+           <td><font face="Comic" size="4px"><b>{{transaction.date_of_transaction}}</b></font></td>
+           <td><font face="Comic" size="4px"><b>{{transaction.accountNo.accno}}</b></font></td>
+           <td><font face="Comic" size="4px"><b>{{transaction.addrecepient.accno}}</b></font></td>
+           
+           
+           <td><font face="Comic" size="4px"><b>{{transaction.transferred_amount}}</b></font></td>
+           <td><font face="Comic" size="4px"><b>{{transaction.remaining_bal}}</b></font></td>
+
+
+          
+         </tbody>
+         
+       </table>
+    
+  <!-- </div> -->
+  </div> 
+
+</div>
+</div>
+
+<router-outlet name="route1"></router-outlet> 
+
+
+
+
+
+

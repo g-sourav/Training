@@ -1,0 +1,158 @@
+
+  .container1 {
+    
+
+
+    right: 0;
+    margin: 2px;
+    margin-top: 7%;
+    margin-color:silver;
+    padding: 20px;
+    width:35%;
+    border:solid;
+    background-color: #ccA07A;
+    border-color:lightblue;
+
+
+
+  
+   
+  }
+
+  @media screen and (max-width: 600px) {
+    .container1{
+      position: none;
+      padding: 0;
+      margin: 0;
+      width: 300px;
+      padding:10px;
+      margin-top:4%;
+    }
+
+   
+    
+  }
+  .btn1 {
+    padding: 6px 6px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: block;
+    font-style:italic;
+    font-family:Arial ;
+    font-focus:20px;
+    margin: 15px 0 2px 0;
+
+   
+
+}
+.p{
+  font-size: 18px;
+    color: orange;
+   
+
+    display: block;
+    font-style:italic;
+    font-family:Arial ;
+
+}
+  * {
+    box-sizing: border-box;
+  }
+  
+
+    
+    
+        
+    
+      
+   
+    .conta{
+      background-image: url("/src/assets/images/bank3.jpg");
+
+         }
+
+
+
+
+
+
+
+
+   
+
+  .label{
+    
+      font-family:Arial ;
+      font-style:italic;
+      color:black;
+      font-size:18px;
+      font-focus:20px;
+
+    }
+    
+
+    
+  
+   
+    input[type=text] {
+      width: 100%;
+      padding: 15px;
+      margin: 15px 0 2px 0;
+      font-size:18px;
+      border: none;
+      background: #f1f1f1;
+    }
+    
+    input[type=text]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+    .bg-img {
+
+      background-image: url("src/assets/images/add2.jpg");
+   
+      float: right;
+      min-height: 700px;
+      min-width:100%;
+      /* margin-top:6%;
+      margin-left:13%; */
+
+   
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position:relative;
+    
+    }
+  
+    
+ 
+    .btn {
+      padding: 10px 7px;
+      text-decoration: none;
+      font-size: 18px;
+      color: black;
+      margin: 15px 0 2px 0;
+      font-family:Arial ;
+
+      display: block;
+      font-style:italic;
+      font-family:Arial ;
+      font-focus:20px;
+     
+  
+  }
+  
+  .btn:hover {
+      color: #f1f1f1;    }
+  
+  .btn:focus
+  {
+      color: orange;
+  }
+ 
+
+    
+
+  

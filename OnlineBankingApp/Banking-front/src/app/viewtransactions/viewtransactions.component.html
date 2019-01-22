@@ -1,0 +1,42 @@
+<app-admin></app-admin>
+
+<div class="trans">
+<div class="container">
+    <br/>
+    <h2 class="heading" align="center"><b> Transactions</b></h2><br/>
+    <div class="table-responsive">
+    <table class="table">
+       <thead class="thead-light">
+             <tr>
+              
+               <th><font face="Comic" size="4px">TransactionId</font></th>
+               <th><font face="Comic" size="4px">Date of Transaction</font></th>
+               <th><font face="Comic" size="4px">From Account No.</font></th>
+               <th><font face="Comic" size="4px">To Account No.</font></th>
+               <th><font face="Comic" size="4px">Amount Transferred</font></th>
+               <th><font face="Comic" size="4px">Available balance</font></th>
+    
+    
+             </tr>
+             </thead>
+             <tbody>
+             <tr *ngFor="let transaction of transactions">
+               <td><font face="Comic" size="4px">{{transaction.id}}</font></td>
+               <td><font face="Comic" size="4px">{{transaction.date_of_transaction}}</font></td>
+               <td><font face="Comic" size="4px">{{transaction.accountNo.accno}}</font></td>
+               <td><font face="Comic" size="4px">{{transaction.addrecepient.accno}}</font></td>
+                             
+               <td><font face="Comic" size="4px">{{transaction.transferred_amount}}</font></td>
+               <td><font face="Comic" size="4px">{{transaction.remaining_bal}}</font></td>
+    
+    
+              
+             </tbody>
+             
+           </table>
+        
+      
+    </div>
+    </div>
+  </div>
+    <router-outlet></router-outlet> 
