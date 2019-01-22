@@ -1,0 +1,58 @@
+button
+{
+    background-color: goldenrod;
+    font: bolder;
+}
+a
+{
+    font-size: 25px;
+    text-decoration: none;
+    display: block;
+    color:white;
+}
+.nav
+{
+background-color: seagreen;
+padding: 10px;
+}
+
+li
+{
+    padding: 20px;
+}
+body
+{
+	margin:0;
+    padding:0;
+    width:100%;
+    height: 100%;
+    background: url('/assets/borrowBook-bg.jpg');
+    background-position: center;
+    background-repeat:repeat-y;
+    background-size:auto;
+}
+a:hover {
+    color:black;
+    background: white;
+    border-radius: 5px;
+    width: 105%;
+    height: 120%;
+    margin-top: -3%;
+}
+
+
+.form-control-borderless {
+    border: none;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+.btn-danger:hover {
+    background-color: chocolate;
+}
+.btn-danger:single-button {
+    background-color: darkgrey;
+}

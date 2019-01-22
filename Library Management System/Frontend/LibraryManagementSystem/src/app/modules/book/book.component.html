@@ -1,0 +1,30 @@
+<body>
+
+  <div class="nav">
+    <ul class="nav nav-pills navbar-left">
+      <li role="presentation" routerLinkActive="active" routerLinkActiveOptions={exact:True}><a routerLink="/app-login">Login</a></li>
+      <li role="presentation" routerLinkActive="active"><a routerLink="/app-signup">SignUp</a></li>
+      <li role="presentation" routerLinkActive="active"><a routerLink="/app-book">Books Available</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right ml-auto">
+        <li role="presentation" routerLinkActive="active"><a id="logout" routerLink="/app-root"><span><i class="fa fa-arrow-circle-left"></i></span>&nbsp;Back</a></li>
+    </ul>
+  </div>
+
+  <table class="table table-dark table-striped table-hover">
+    <thead class="thead-light">
+      <tr>
+        <th>Title</th>
+        <th>Author Name</th>
+        <th>Publish Date</th>
+      </tr>
+    </thead>
+
+    <tr *ngFor="let book of list">
+      <td>{{book.bookTitle}}</td>
+      <td>{{book.bookAuthor}}</td>
+      <td>{{book.bookPublishDate}}</td>
+    </tr>
+
+  </table>
+</body>

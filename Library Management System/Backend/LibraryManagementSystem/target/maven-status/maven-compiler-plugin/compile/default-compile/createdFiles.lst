@@ -1,0 +1,16 @@
+com\management\repository\BookBorrowRepo.class
+com\management\repository\BorrowerRepo.class
+com\management\controller\BookBorrowController.class
+com\management\Entity\BorrowerDetails.class
+com\management\Entity\BooksBorrowed.class
+com\management\controller\BookController.class
+com\management\service\BookBorrow\BookBorrowService.class
+com\management\service\Borrower\BorrowerService.class
+com\management\service\BookBorrow\BookBorrowServiceInterface.class
+com\management\controller\BorrowerController.class
+com\management\service\Book\BookServiceInterface.class
+com\management\service\Borrower\BorrowerServiceInterface.class
+com\management\Entity\BookDetails.class
+com\MyApplication.class
+com\management\repository\BookRepo.class
+com\management\service\Book\BookService.class

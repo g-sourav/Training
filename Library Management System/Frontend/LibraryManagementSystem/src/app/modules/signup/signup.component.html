@@ -1,0 +1,134 @@
+<body>
+    <div class="nav">
+        <ul class="nav nav-pills navbar-left" >
+          <li role="presentation" routerLinkActive="active" routerLinkActiveOptions={exact:True}><a routerLink="/app-login">Login</a></li>
+          <li role="presentation" routerLinkActive="active"><a routerLink="/app-signup">SignUp</a></li>
+          <li role="presentation" routerLinkActive="active"><a routerLink="/app-book">Books Available</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right ml-auto">
+            <li role="presentation" routerLinkActive="active"><a id="logout" routerLink="/app-root"><span><i class="fa fa-arrow-circle-left"></i></span>&nbsp;Back</a></li>
+          </ul>
+      </div>
+
+<div class="container col-md-5"style="margin-top:3%;" >
+  <div id="behindSignup" class="jumbotron">
+
+      <form #frm="ngForm" >
+        <div class="form-group">
+          
+          <label for="Name">
+            Name :
+          </label>
+           <input
+            type="text" 
+            placeholder="Enter Your Name" 
+            name="borrowerName"
+            class="form-control"
+            ngModel
+            #nameUser="ngModel"
+            required
+            pattern="[a-zA-Z][a-zA-Z ]+"
+           >
+          
+          </div>
+       <div *ngIf="nameUser?.touched">
+          <div *ngIf="nameUser.errors?.required"  class="alert alert-danger">
+            Name Is Required
+          </div>
+          <div *ngIf="nameUser.errors?.pattern"  class="alert alert-danger">
+            Invalid Name
+          </div>
+       </div>
+          
+          <div class="form-group">
+          
+          <label for="email">
+            Email:
+          </label>
+           <input
+            type="text" 
+            placeholder="Enter Your UserId" 
+            name="borrowerEmail"
+            class="form-control"
+            ngModel
+            #emailUser="ngModel"
+            required
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+          
+           >
+          
+          </div>
+          
+          <div *ngIf="emailUser?.touched" >
+            <div *ngIf="emailUser.errors?.required" class="alert alert-danger">
+              Email Is Required
+            </div>
+            <div *ngIf="emailUser.errors?.pattern"  class="alert alert-danger">
+              Invalid Email
+            </div>
+         </div>
+
+          <div class="form-group">
+          
+          <label for="Contact">
+            Contact:
+          </label>
+           <input
+            type="text" 
+            placeholder="Enter Your Contact Number" 
+            name="borrowerContact"
+            class="form-control"
+            ngModel
+            #contactUser="ngModel"
+            required
+            pattern="[0-9]*"
+            maxlength="10"
+            minlength="10"
+           >
+          
+          </div>
+          <div *ngIf="contactUser?.touched" >
+            <div *ngIf="contactUser.errors?.required"  class="alert alert-danger">
+             PhoneNumber Is Required
+            </div>
+            <div *ngIf="contactUser.errors?.pattern || contactUser.errors?.minlength"  class="alert alert-danger">
+              Invalid Contact
+            </div>
+         </div>
+
+          <div class="form-group">
+          
+            <label for="password">
+              Password:
+            </label>
+             <input
+              type="password" 
+              placeholder="Enter Your Password" 
+              name="borrowerPassword"
+              class="form-control mb-4"
+              ngModel
+              #passUser="ngModel"
+              required
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+             >
+            
+            </div>
+
+            <div *ngIf="passUser?.touched" >
+              <div *ngIf="passUser.errors?.required"  class="alert alert-danger">
+                Password Is Required
+              </div>
+              <div *ngIf="passUser.errors?.pattern"  class="alert alert-danger">
+                Password Must be 8 character & Contain atleast One UpperCase and a number 
+              </div>
+           </div>
+
+          <button type="reset" name="button" class="btn btn-sucess">Reset</button>&nbsp;&nbsp;&nbsp;&nbsp;
+          <button type="button" name="button" class="btn btn-sucess" (click)="addUser(frm.value)" [disabled]="frm.invalid">SignUp</button>
+          </form>
+        
+
+  </div>
+
+</div>
+</body>

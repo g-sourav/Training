@@ -1,0 +1,52 @@
+
+
+<body *ngIf="isVisible" (click)="gotoSamepage()">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+  <div class="container">
+    <div class="row row-buffer row-even">
+      <div class="col-md-12">
+
+        <div style="text-align:center;">
+          <h1 style="width:100%; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-weight:700; font-stretch: ultra-expanded; font-size: 650%; color:whitesmoke;">
+            THE Erstwhile LIBRARY
+          </h1>
+        </div>
+      </div>
+    </div>
+
+
+
+    <br><br>
+    <div class="row">
+
+      <div class="col-md-5">
+        <div class="hovereffect">
+          <div class="thumbnail" (click)="gotoLogin();toggle()" *ngIf="isVisible" style="cursor:pointer;">
+            <img class="img-responsive" src="assets/user2.jpg" alt="User Login" style="height:300px;width:800px">
+            <div id="user" class="caption">
+              <h1>User Login</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-2"></div>
+
+      <div class="col-md-5">
+        <div class="hovereffect">
+          <div class="thumbnail" (click)="gotoAdminLogin();toggle()" *ngIf="isVisible" style="cursor:pointer;">
+            <img class="img-responsive" src="assets/admin.png" alt="Admin Login" style="height:300px;width:800px">
+            <div id="admin" class="caption">
+              <h1>Admin Login</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+<router-outlet></router-outlet>

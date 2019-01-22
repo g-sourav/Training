@@ -1,0 +1,99 @@
+<body>
+    <div class="nav">
+        <ul class="nav nav-pills">
+          <li role="presentation" routerLinkActive="active" routerLinkActiveOptions={exact:True}><a routerLink="/app-home">Home</a></li>
+          <li role="presentation" routerLinkActive="active"><a routerLink="/app-edit">Edit Details</a></li>
+          <li role="presentation" routerLinkActive="active"><a routerLink="/app-borrow-book">Borrow Book</a></li>
+          <li role="presentation" routerLinkActive="active"><a routerLink="/app-book-borrowed">Return Book</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right ml-auto">
+            <li role="presentation" routerLinkActive="active"><a id="logout" routerLink="/app-user-logout"><span><i class="fa fa-sign-out"
+                    aria-hidden="true"></i></span>Logout</a></li>
+          </ul>
+      </div>
+
+  <div class="container col-md-5" style="margin-top:3%;">
+    <div class="jumbotron" id="behindEdit">
+
+      <form #frm="ngForm" (ngSubmit)="editUser()">
+        <div class="form-group">
+
+          <label for="Name">
+            Name :
+          </label>
+          <input type="text" placeholder="Enter Your Name" name="borrowerName" class="form-control" [(ngModel)]="borrower.borrowerName"
+            #nameUser="ngModel" required pattern="[a-zA-Z][a-zA-Z ]+">
+
+        </div>
+        <div *ngIf="nameUser?.touched">
+          <div *ngIf="nameUser.errors?.required" class="alert alert-danger">
+            Name Is Required
+          </div>
+          <div *ngIf="nameUser.errors?.pattern" class="alert alert-danger">
+            Invalid Name
+          </div>
+        </div>
+
+        <div class="form-group">
+
+          <label for="email">
+            Email:
+          </label>
+          <input type="text" placeholder="Enter Your UserId" name="borrowerEmail" class="form-control" [(ngModel)]="borrower.borrowerEmail"
+            #emailUser="ngModel" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" disabled>
+
+        </div>
+
+        <div *ngIf="emailUser?.touched">
+          <div *ngIf="emailUser.errors?.required" class="alert alert-danger">
+            Email Is Required
+          </div>
+          <div *ngIf="emailUser.errors?.pattern" class="alert alert-danger">
+            Invalid Email
+          </div>
+        </div>
+
+        <div class="form-group">
+
+          <label for="Contact">
+            Contact:
+          </label>
+          <input type="text" placeholder="Enter Your Contact Number" name="BorrowerContact" class="form-control"
+            [(ngModel)]="borrower.borrowerContact" #contactUser="ngModel" required pattern="[0-9]*" maxlength="10"
+            minlength="10">
+
+        </div>
+        <div *ngIf="contactUser?.touched">
+          <div *ngIf="contactUser.errors?.required" class="alert alert-danger">
+            PhoneNumber Is Required
+          </div>
+          <div *ngIf="contactUser.errors?.pattern || contactUser.errors?.minlength" class="alert alert-danger">
+            Invalid Contact
+          </div>
+        </div>
+
+        <div class="form-group">
+
+          <label for="password">
+            Password:
+          </label>
+          <input type="text" placeholder="Enter Near Password" name="borrowerPassword" class="form-control" [(ngModel)]="borrower.borrowerPassword"
+            #passUser="ngModel" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+
+        </div>
+
+        <div *ngIf="passUser?.touched">
+          <div *ngIf="passUser.errors?.required" class="alert alert-danger">
+            Password Is Required
+          </div>
+          <div *ngIf="passUser.errors?.pattern" class="alert alert-danger">
+            Password Must be 8 character & Contain atleast One UpperCase and a number
+          </div>
+        </div>
+
+        <button type="reset" name="button" class="btn btn-sucess">Reset</button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="submit" value="Update" name="button" class="btn btn-sucess" [disabled]="frm.invalid">
+      </form>
+    </div>
+  </div>
+</body>

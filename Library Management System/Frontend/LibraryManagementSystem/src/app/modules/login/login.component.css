@@ -1,0 +1,51 @@
+button
+{
+    background-color: goldenrod;
+    font: bolder;
+}
+
+a
+{
+    font-size: 25px;
+    text-decoration: none;
+    color:white;
+}
+.nav
+{
+background-color: rgb(53, 93, 223);
+padding: 10px;
+}
+li
+{
+    padding: 20px;
+}
+body
+{
+	margin:0; 
+	padding:0;
+}
+section#particles-js
+{
+	width:100%;
+	height:100vh;
+	background-image: url('/assets/login-bg.png');
+	
+}
+#behindLogin {
+    background-image: url('/assets/loginBG.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+label {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 230%;
+}
+a:hover {
+    color:black;
+    background: white;
+    border-radius: 5px;
+    width: 108%;
+    height: 118%;
+    margin-top: -3%;
+}

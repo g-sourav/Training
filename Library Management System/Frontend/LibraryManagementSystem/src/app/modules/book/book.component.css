@@ -1,0 +1,28 @@
+button
+{
+    background-color: goldenrod;
+    font: bolder;
+}
+a
+{
+    font-size: 25px;
+    text-decoration: none;
+    color:white;
+}
+.nav
+{
+background-color: darkslateblue;
+padding: 10px;
+}
+li
+{
+    padding: 20px;
+}
+a:hover {
+    color:black;
+    background: white;
+    border-radius: 5px;
+    width: 108%;
+    height: 118%;
+    margin-top: -3%;
+}

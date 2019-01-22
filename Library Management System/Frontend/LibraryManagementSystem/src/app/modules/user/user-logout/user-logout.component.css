@@ -1,0 +1,21 @@
+button
+{
+    background-color: goldenrod;
+    font: bolder;
+}
+
+a
+{
+    font-size: 25px;
+    text-decoration: none;
+    color:blue;
+}
+.nav
+{
+background-color: darkcyan;
+padding: 10px;
+}
+li
+{
+    padding: 20px;
+}
