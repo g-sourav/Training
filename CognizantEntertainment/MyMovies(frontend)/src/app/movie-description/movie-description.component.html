@@ -1,0 +1,56 @@
+
+
+
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<html>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div style="background-size: cover; ">
+    <div >
+        <img class="fb-image-lg"  style="background-size: cover; " src="assets/a2.jpg" alt="Profile image example"/>
+        <div class="fb-image-profile thumbnail">
+        <img  style="height:200px; width:130px; " src="{{imagesrc}}" alt="Profile image example"/>
+        <h2 class="display-3">
+        {{user.title}}</h2>
+        </div>
+        <button id="book" class="btn btn-primary" (click)="redirect()">Book Ticket</button>
+   
+      </div>
+
+      <nav>
+        <ul>
+          <li>
+            <a class="active" (click)="ask('summary')">Summary</a>
+          </li>
+          <li>
+            <a (click)="ask('reviews')">User Reviews</a>
+          </li>
+          <li>
+            <a (click)="ask('critic')">Critic Reviews</a>
+          </li>
+         
+        </ul>
+      </nav>
+        <div class="fb-profile-text">
+           
+       
+    </div>
+  </div> 
+
+  <!-- <div>    <router-outlet></router-outlet> </div> -->
+
+  <div *ngIf="ch===1;then sum">  </div>
+
+  <ng-template #sum> <app-summary></app-summary>  </ng-template>
+
+  <div *ngIf="ch===3;then cri">  </div>
+
+  <ng-template #cri> <app-critic-reviews></app-critic-reviews>  </ng-template>
+
+
+  <div *ngIf="ch===2;then rev">  </div>
+
+  <ng-template #rev> <app-user-reviews></app-user-reviews>  </ng-template>
+  

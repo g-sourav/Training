@@ -1,0 +1,42 @@
+
+    
+.context-dark, .bg-gray-dark, .bg-primary {
+color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-classic a, .footer-classic a:focus, .footer-classic a:active {
+color: #ffffff;
+}
+.nav-list li {
+padding-top: 5px;
+padding-bottom: 5px;
+}
+
+.nav-list li a:hover:before {
+margin-left: 0;
+opacity: 1;
+visibility: visible;
+}
+
+ul, ol {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+
+
+.nav-list li a:before {
+content: "\f14f";
+font: 400 21px/1 "Material Design Icons";
+color: #4d6de6;
+display: inline-block;
+vertical-align: baseline;
+margin-left: 0px;
+margin-right: 0px;
+opacity: 0;
+visibility: hidden;
+transition: .22s ease;
+}
+
+

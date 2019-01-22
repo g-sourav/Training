@@ -1,0 +1,230 @@
+
+
+
+   body
+   {
+       font-family: 'Open Sans', sans-serif;
+   }
+   * {
+    margin: 0px;
+  }
+  .container {
+    width: 100%;
+    overflow: hidden;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    padding: 0 0 0 0;
+  }
+  #content {
+    overflow: auto;
+    background-color: #FFFFFF;
+    margin-left: 0;
+    margin-right: 0;
+  }
+   .title{
+    font-family: 'Open Sans', sans-serif;
+    font-style: bold;
+    font-size: 500%;
+    margin-left: 300px;
+   }
+   #button {
+    line-height: 20px;
+ 
+    font-size: 20px;
+    font-family: tahoma;
+
+    margin-right: 40px;
+    position:absolute;
+    
+    right:0;
+}
+   
+.fb-image-lg{
+      
+       width: 100%;
+       height:350px;
+       left:0;
+       padding: 0px;
+       border: none;
+       
+      
+   }
+   
+   .fb-image-profile
+   {
+       margin: -90px 0px 0px 50px;
+        border: none;
+       width: 70%;
+       padding: 0px;
+       border: none;
+       
+       
+   }
+ 
+
+   html {
+     height:100%;
+     background-image: linear-gradient(to right top, #ffffff 0%,#ffffff 100%);
+   }
+   
+   nav {
+     max-width: 960px;
+     mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
+     margin: 0 auto;
+     padding: 0px 0;
+   }
+   
+   nav ul {
+     text-align: center;
+     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+     box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+   }
+   
+   nav ul li {
+     display: inline-block;
+   }
+   
+   nav ul li a {
+     padding: 18px;
+     font-family: "Open Sans";
+     text-transform:uppercase;
+     color: rgba(0, 35, 122, 0.5);
+     font-size: 18px;
+     text-decoration: none;
+     display: block;
+   }
+   
+   nav ul li a:hover {
+     box-shadow: 0 0 10px rgba(255, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+     background: rgba(255, 0, 0, 0.1);
+     color: rgba(0, 35, 122, 0.7);
+   }
+
+   .sup-action{
+
+    zoom:1;
+    text-align:center;
+    width:100%;
+    background:#404043;
+    color:#fff;
+   }
+   .context-dark, .bg-gray-dark, .bg-primary {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-classic a, .footer-classic a:focus, .footer-classic a:active {
+    color: #ffffff;
+}
+.nav-list li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.nav-list li a:hover:before {
+    margin-left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 23px;
+    font: 900 13px/1 "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+}
+.social-container .col {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.nav-list li a:before {
+    content: "\f14f";
+    font: 400 21px/1 "Material Design Icons";
+    color: #4d6de6;
+    display: inline-block;
+    vertical-align: baseline;
+    margin-left: -28px;
+    margin-right: 7px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .22s ease;
+}
+
+
+.card {
+  display: flex;
+  min-width: 100%;
+  min-height: 200px;
+  overflow-x: auto;
+}
+
+.card::-webkit-scrollbar {
+  display: none;
+}
+.card--content {
+  background-color: #e74c3c;
+  min-width: 300px;
+  margin: 5px;
+  box-shadow: 3px 5px rgba(255,255,255,0.05);
+}
+
+.card--content img {
+  width: 100%;
+  height: 100%;
+}
+.vav-title{
+  padding-top: 40px;
+    padding-right: 33px;
+    padding-bottom: 0px;
+    padding-left: 33px;
+    font-size: 18px;
+    color: #333;
+    text-transform: uppercase;
+    text-align: center;
+}
+#book{
+  float: right;
+  margin-right:5rem; 
+}
+h2{
+  font-weight:400 ; 
+  font-style: italic; 
+  position: relative; 
+  top: -100px; 
+  left: 150px;
+}
+
+@media screen and (max-width: 468px) {
+  nav li a{
+    width:100%;
+    height:auto;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+  }
+  #book{
+    align-content: center;
+    width: 80%;
+    height: auto;
+    display: inline-block;
+    float: none;
+    margin-top:1rem;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  h2{
+    top:0px;
+    left: 0;
+    margin:0;
+    font-weight: 100;
+    font-size: 30px;
+  }
+}

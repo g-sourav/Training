@@ -1,0 +1,32 @@
+<div class="container" >
+<div class="jumbotron text-light" style="background-image:url('assets/bg1.jpg');">
+  <h1 class="display-4">{{tickets.movie.title}}</h1>
+  <p class="lead">{{tickets.movie.theater}}</p>
+  <hr class="my-4">
+  <p>{{tickets.time}}</p>
+  <p>{{tickets.movie.rate|currency: 'INR':true}}</p>
+</div>
+<br>
+<div class="btn-group" *ngFor="let i of arrSeats" style="margin:2.5rem;margin-top: 5px; ">
+  <!-- <button (click)="addSeat(i)" class="btn btn-primary">
+    <i class="fas fa-user-plus"></i>
+  </button> -->
+  <button class="btn" [ngClass]="{
+    'btn-outline-secondary':i.isBooked?true:false,
+    'btn-outline-danger':i.isChecked?true:false,
+    'btn-outline-success':i.isChecked?false:true
+  }" (click)="booking(i)" [disabled]="i.isBooked?true:false">{{i.seatNo}}</button>
+  <!-- <button (click)="removeSeat(i)" class="btn btn-danger">
+    <i class="fas fa-user-minus"></i>
+  </button> -->
+</div>
+<button class="btn btn-success btn-lg" (click)="confirmPage()" 
+style="margin-top:1rem;margin-left: 2rem;clear: both;">Book
+ </button>
+ <span (click)="legends()">Legends</span>
+ <div [ngStyle]="{'display':isDis?true:false}">
+   <button class="btn btn-outline-danger"></button>Selected<br>
+   <button class="btn btn-outline-danger" disabled></button>Already booked<br>
+   <button class="btn btn-outline-success"></button>Available<br>
+ </div>
+</div>

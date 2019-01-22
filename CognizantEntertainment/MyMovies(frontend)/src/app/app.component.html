@@ -1,0 +1,130 @@
+
+
+
+<div style="width:100%;" >
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" routerLink="dashboard">
+      <img src="assets/logo2.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      Cognizant Entertainment
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Movies
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" (click)="navigate('taxiwala','assets/TaxiWala.jpg')">TaxiWala</a>
+                  <a class="dropdown-item" (click)="navigate('LoveYatri','assets/LoveYatri.jpg')">Love Yatri</a>
+                  <a class="dropdown-item" (click)="navigate('Kedarnath','assets/kedarnath.jpg')">Kedarnath</a>
+                  <a class="dropdown-item" (click)="navigate('Zero','assets/zero.jpg')">Zero</a>
+                  <a class="dropdown-item" (click)="navigate('Badhaai Ho','assets/badhaai-ho.jpg')">Badhaai Ho</a>
+                  <a class="dropdown-item" (click)="navigate('Thugs of Hindostan','assets/thugs-of-hindostan.jpg')">Thugs of Hindostan</a>
+                </div>
+              </li>
+  
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Theatres
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" >PVR Cinemas</a>
+                <a class="dropdown-item" >INOX Cinemas</a>
+                <a class="dropdown-item" >Malanna</a>
+                <a class="dropdown-item" >Sensation</a>
+                <a class="dropdown-item" >Rajanna</a>
+              </div>
+            </li>
+  
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              PLACE
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" >Chennai</a>
+              <a class="dropdown-item" >Hyderabad</a>
+              <a class="dropdown-item" >Bangalore</a>
+              <a class="dropdown-item" >Mumbai</a>
+              <a class="dropdown-item" >Pune</a>
+              <a class="dropdown-item" >Delhi</a>
+             </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <div> <input class="form-control mr-sm-2" id="search" type="search" placeholder="Search" aria-label="Search"> </div>
+            <button class="btn btn-outline-primary my-2 my-sm-0" id="s"  type="submit">Search</button> 
+           
+            <div  *ngIf="login; then Login"> </div>
+            <ng-template #Login>  <button class="btn btn-outline-success my-2 my-sm-1" id="log" type="button" (click)="btnClick()">Login</button>   </ng-template>
+       
+            <div  *ngIf="signup; then Signup"> </div>
+            <ng-template #Signup> <button class="btn btn-outline-success my-2 my-sm-1" style="margin:0 0 0 8px;" id="sign" type="button" (click)="btnClick1()">Signup</button>  </ng-template>
+          
+            <div *ngIf="signout; then Signout">  </div>
+            <ng-template #Signout>  <button class="btn btn-outline-danger" id="log" type="button" (click)="SignOut()"> SignOut </button>   </ng-template>
+          
+          </form>
+      
+    </div>
+  </nav>
+  
+</div>
+
+  
+<!-- <div *ngIf="visible; then Landing_page">  </div>
+<ng-template #Landing_page> <app-dashboard></app-dashboard>   </ng-template>
+
+
+ 
+  
+
+
+
+ <div *ngIf="Log; then Login_page"> </div>
+<ng-template #Login_page><app-login></app-login>
+</ng-template>
+
+<div *ngIf="Sign">
+  <app-signup> </app-signup> </div> -->
+<router-outlet></router-outlet>
+
+
+<div >
+    <footer class="section footer-classic context-dark bg-image" style="background: #2d3246;">
+    <div class="container">
+      <div class="row row-100" style="padding-top:10px;">
+        <div class="col-md-4 col-xl-5">
+          <div class="pr-xl-4"><a class="brand"><p>Cognizant Entertainment</p></a>
+            <!-- <i class="fab fa-facebook"></i> -->
+            <p class="rights"><span>©  </span><span class="copyright-year">2018</span><span> </span><span>Cognizant</span><span>. </span><span>All Rights Reserved.</span></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h5>Contacts</h5>
+          <dl class="contact-list">
+            <dt>Email:</dt>
+            <dd><a href="mailto:">ce@Cognizant.com</a></dd>
+          </dl>
+        </div>
+        <div class="col-md-4 col-xl-3">
+          <h5>Links</h5>
+          <ul class="nav-list">
+            <li><a >About</a></li>
+            <li><a >Pricing</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+     
+    
+
+  </footer>
+</div>
+  
+
+
+  

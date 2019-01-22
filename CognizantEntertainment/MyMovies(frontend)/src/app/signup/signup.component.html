@@ -1,0 +1,61 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+</head>
+
+<body style="height:600px; " [ngStyle]="{'display':visible?'none':'block'}">
+
+  <br>
+  <div style="opacity: 0.8; background-color: black; margin-top: 20px; width: 350px; padding:10px; margin:auto;" class="col-md4-mx-auto" id="wrapper">
+<form class="container" [formGroup]="form" #f (ngSubmit)="login(f)" style="text-align: center;">
+  <div class="container" style="align-content: center; margin-top: 20px;" >
+    <h3 style="color: white;">Sign-up</h3>
+    <p style="color: white;">Please fill in this form to create an account.</p>
+    <hr style="border-top: 1px dashed white;">
+
+    <div class="formGroup" >
+    <input formControlName="email" [(ngModel)]="user.email" type="text" placeholder="Enter Email" email class="form-control" >
+    <div style="font-size: 12px; height:30px; color:white; text-align: left;" *ngIf="Email.invalid && (Email.dirty)">
+        <div *ngIf="Email.errors.required" style="margin:0px;">*Email is required.</div>
+        <div *ngIf="Email.errors.email && !Email.errors.required" style="margin:0px;">*Invalid email.</div>
+  </div> 
+  <br>
+  </div>
+  <div class="formGroup">
+    <input type="password" formControlName="password" [(ngModel)]="user.password" placeholder="Enter Password" class="form-control" >
+    
+    <div *ngIf="Password.touched && Password.invalid" style="font-size: 12px; height:30px; color:white; text-align: left;">
+      <div *ngIf="Password.errors.required">*Password is required</div>
+    </div>
+  </div>
+  <br>
+  <div class="formGroup">
+    <input type="text" formControlName="phone" [(ngModel)]="user.phonenumber" placeholder="Enter PhoneNumber"  class="form-control" >
+    
+    <div *ngIf="PhoneNumber.touched && PhoneNumber.invalid" style="font-size: 12px; height:30px; color:white; text-align: left;">*Phone Number is invalid
+    <div *ngIf="PhoneNumber.errors.minlength">*Phone Number should be minimum {{PhoneNumber.errors.minlength.requiredLength}} Numbers</div>
+    <div *ngIf="PhoneNumber.errors.required">*Phone Number is required</div>
+    </div>
+  </div>
+  <br>
+    
+  <div class="formGroup">
+    <button class="btn btn-outline-success my-2 my-sm-1" style="margin:10px 0 0 0;" 
+    [disabled]="form.invalid" type="submit">Sign-up</button>
+
+    <p style="text-align: center; color:white;" > Already have an account? </p> 
+<button class="btn btn-outline-primary my-2 my-sm-1" style="margin:0 0 0 0;" id="log" 
+type="button" (click)="btnClick()">Log-in</button>
+  </div>
+  <br>
+  </div>
+</form>
+</div>
+
+
+</body>
+
+<!-- <div *ngIf="visible">
+    <router-outlet></router-outlet>
+</div> -->
+    </html>

@@ -1,0 +1,52 @@
+<div class="container">    
+   
+            
+    <div id="signupbox" style=" margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <div class="panel-title">Critic Admin</div>
+               
+            </div>  
+            <div class="panel-body" >
+            
+                   
+                            
+
+                    <form  class="form-horizontal" [formGroup]="form"  (ngSubmit)="onSubmit()" >
+                      
+                        
+                        <div class="form-group">
+                            <label for="id_username" class="control-label col-md-4">Title<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 ">
+                                <input class="input-md  textinput textInput form-control" formControlName="title" [(ngModel)]="critic.title" id="id_username"  name="title" style="margin-bottom: 10px" type="text" />
+                            </div>
+                        </div>
+
+                        <div id="div_id_email" class="form-group">
+                            <label for="id_email" class="control-label col-md-4  requiredField">Critic<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 ">
+                                <input class="input-md emailinput form-control" formControlName="critic" [(ngModel)]="critic.critic"id="id_theater" name="critic"  style="margin-bottom: 10px" type="text" />
+                            </div>     
+                        </div>
+
+                        <div id="div_id_email" class="form-group">
+                            <label for="id_email" class="control-label col-md-4  requiredField">Review<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 ">
+                                <input class="textarea" formControlName="review" [(ngModel)]="critic.review"id="id_theater" name="review"  style="margin-bottom: 10px" type="text" />
+                            </div>     
+                        </div>
+                        <div class="form-group"> 
+                            <div class="aab controls col-md-4 "></div>
+                            <div class="controls col-md-8 ">
+                                <input type="submit" name="Submit" value="Submit" class="btn btn-primary btn btn-info" id="submit-id-signup" />
+                                
+                            </div>
+                        </div> 
+                        </form>
+                        </div>
+        </div>
+        </div>
+        </div>
+        <router-outlet></router-outlet>
+
+                        
