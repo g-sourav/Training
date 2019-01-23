@@ -285,11 +285,7 @@ submitqes(questions) {
     one.removeAt(i);
   }
   addOption(a) {
-if(this.opt>2){
-  alert(" only four options are allowed");
 
-}
-else{
    
       const one = a.get('arr2') as FormArray;
 
@@ -297,7 +293,7 @@ else{
      
       this.opt++;
       console.log(this.opt);
-}
+
     
   }
   removeOption(j, a) {

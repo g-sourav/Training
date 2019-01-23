@@ -138,7 +138,7 @@
                   </div>
                   <div class="clearfix"></div>
 
-                  <div class="margin-20">
+                  <div [hidden]="a.get('arr2').controls.length>=4"class="margin-20">
 
                     <button (click)="addOption(a)" type="button" class="btn btn-link">Add Another Option +</button>
                     <div class="form-group pull-right">
@@ -183,7 +183,7 @@
                     </div>
                   </div>
                   <div class="clearfix"></div>
-                  <div class="margin-20">
+                  <div [hidden]="a.get('arr3').controls.length>=3" class="margin-20">
 
                     <button (click)="addHint(a)" type="button" class="btn btn-link"> Add Another Hint +</button>
                     <div class="form-group pull-right">
