@@ -1,9 +1,39 @@
-<mxfile host="app.diagrams.net" modified="2023-11-27T13:12:18.401Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" version="22.1.4" etag="5AeGnCuUMqbEvse5E0QL" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-27T13:16:10.347Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="dp3O-Uq4e6Ah4UWvx5t-" version="22.1.4" type="github">
   <diagram name="Page-1" id="auaKLkSMVJanpDFXAz-d">
-    <mxGraphModel>
+    <mxGraphModel dx="1050" dy="534" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="T_1F0KEA8JIzQCjMQwvN-1" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/essential-pack-2/48/49-Responsive-128.png" vertex="1" parent="1">
+          <mxGeometry x="100" y="170" width="128" height="128" as="geometry" />
+        </mxCell>
+        <mxCell id="T_1F0KEA8JIzQCjMQwvN-2" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" target="T_1F0KEA8JIzQCjMQwvN-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="230" y="230" as="sourcePoint" />
+            <mxPoint x="570" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="T_1F0KEA8JIzQCjMQwvN-3" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.storage;pointerEvents=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="150" width="130" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="T_1F0KEA8JIzQCjMQwvN-4" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/compute/Function_Apps.svg;" vertex="1" parent="1">
+          <mxGeometry x="350" y="238" width="68" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="T_1F0KEA8JIzQCjMQwvN-5" value="http call to retrive data from storage to show user transactions in different category using AZURE Function" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="278.5" y="298" width="211" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="T_1F0KEA8JIzQCjMQwvN-6" value="WEB UI" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="120" y="310" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="T_1F0KEA8JIzQCjMQwvN-7" value="Azure Storage DB" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="575" y="310" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="T_1F0KEA8JIzQCjMQwvN-8" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.45;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="T_1F0KEA8JIzQCjMQwvN-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="240" as="sourcePoint" />
+            <mxPoint x="230" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
